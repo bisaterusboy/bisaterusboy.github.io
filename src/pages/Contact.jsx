@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/priceList.css";
+// import "../assets/css/priceList.css";
 
 function Contact() {
   const contactMethods = [
@@ -30,15 +30,15 @@ function Contact() {
       color: 'accent',
       response: 'Respon langsung'
     },
-    {
-      id: 4,
-      name: 'Live Chat',
-      description: 'Chat langsung dengan tim support',
-      icon: 'bi bi-chat-dots',
-      link: '#',
-      color: 'primary',
-      response: 'Respon real-time'
-    }
+    // {
+    //   id: 4,
+    //   name: 'Live Chat',
+    //   description: 'Chat langsung dengan tim support',
+    //   icon: 'bi bi-chat-dots',
+    //   link: '#',
+    //   color: 'primary',
+    //   response: 'Respon real-time'
+    // }
   ];
 
   // Icon Component with fallback
@@ -79,7 +79,7 @@ function Contact() {
         
         <div className="row g-4">
           {contactMethods.map((method) => (
-            <div key={method.id} className="col-lg-3 col-md-6">
+            <div key={method.id} className="col-lg-4 col-md-6">
               <div className={getColorClass(method.color)}>
                 <div className="package-icon">
                   <Icon iconClass={method.icon} size="fs-1" />
@@ -106,61 +106,34 @@ function Contact() {
           ))}
         </div>
 
-        {/* Contact Form Section */}
+        {/* Google Maps Section */}
         <div className="row mt-5">
           <div className="col-12">
             <div className="card card-custom p-4 rounded-4 shadow">
-              <h4 className="text-primary-custom text-center mb-4">Kirim Pesan</h4>
-              <form>
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      placeholder="Nama Lengkap"
-                      style={{ backgroundColor: 'var(--bg-primary)', borderColor: 'var(--border-color)', color: 'var(--text-primary)' }}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <input 
-                      type="email" 
-                      className="form-control" 
-                      placeholder="Email"
-                      style={{ backgroundColor: 'var(--bg-primary)', borderColor: 'var(--border-color)', color: 'var(--text-primary)' }}
-                    />
-                  </div>
-                  <div className="col-12">
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      placeholder="Subjek"
-                      style={{ backgroundColor: 'var(--bg-primary)', borderColor: 'var(--border-color)', color: 'var(--text-primary)' }}
-                    />
-                  </div>
-                  <div className="col-12">
-                    <textarea 
-                      className="form-control" 
-                      rows="5" 
-                      placeholder="Pesan Anda"
-                      style={{ backgroundColor: 'var(--bg-primary)', borderColor: 'var(--border-color)', color: 'var(--text-primary)' }}
-                    ></textarea>
-                  </div>
-                  <div className="col-12 text-center">
-                    <button 
-                      type="submit" 
-                      className="btn btn-primary-custom fw-semibold px-4 py-2"
-                    >
-                      <Icon iconClass="bi bi-send" size="fs-6" />
-                      <span className="ms-2">Kirim Pesan</span>
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <h4 className="text-primary-custom text-center mb-4">Lokasi Kami</h4>
+              <div className="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2110.120395876658!2d108.33581321669405!3d-6.339026198479288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb956021b98d3%3A0xc4c57c3604eab4d9!2sMITRACOM!5e1!3m2!1sid!2sid!4v1755525840031!5m2!1sid!2sid" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                  width="100%"
+                  height="400"
+                  frameBorder="0"
+                  style={{ border: 0, borderRadius: 'var(--border-radius)' }}
+                  allowFullScreen=""
+                  aria-hidden="false"
+                  tabIndex="0"
+                  title="Google Maps"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Contact Info Section */}
+                {/* Contact Info Section */}
         <div className="row mt-5">
           <div className="col-12">
             <div className="card card-custom p-4 rounded-4 shadow">
@@ -173,7 +146,7 @@ function Contact() {
                     </div>
                     <div>
                       <h6 className="mb-1 fw-semibold" style={{ color: 'var(--text-primary)' }}>Alamat</h6>
-                      <small style={{ color: 'var(--text-secondary)' }}>Jakarta, Indonesia</small>
+                      <small style={{ color: 'var(--text-secondary)' }}>Jl. Jend. Sudirman No.327, Karanganyar, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45213</small>
                     </div>
                   </div>
                 </div>
@@ -236,31 +209,9 @@ function Contact() {
             </div>
           </div>
         </div>
-
-        {/* Google Maps Section */}
-        <div className="row mt-5">
-          <div className="col-12">
-            <div className="card card-custom p-4 rounded-4 shadow">
-              <h4 className="text-primary-custom text-center mb-4">Lokasi Kami</h4>
-              <div className="map-responsive">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198317.998403377!2d106.68942835110445!3d-6.229386697615586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e8a679f3b7%3A0x301e8f1fc28bf70!2sJakarta!5e0!3m2!1sen!2sid!4v1602095955400!5m2!1sen!2sid"
-                  width="100%"
-                  height="400"
-                  frameBorder="0"
-                  style={{ border: 0, borderRadius: 'var(--border-radius)' }}
-                  allowFullScreen=""
-                  aria-hidden="false"
-                  tabIndex="0"
-                  title="Google Maps"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
 
-export default Contact; 
+export default Contact;
