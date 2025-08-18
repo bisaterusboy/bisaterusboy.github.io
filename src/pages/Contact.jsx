@@ -113,12 +113,7 @@ function Contact() {
               <h4 className="text-primary-custom text-center mb-4">Lokasi Kami</h4>
               <div className="map-responsive">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2110.120395876658!2d108.33581321669405!3d-6.339026198479288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb956021b98d3%3A0xc4c57c3604eab4d9!2sMITRACOM!5e1!3m2!1sid!2sid!4v1755525840031!5m2!1sid!2sid" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
+                
                   width="100%"
                   height="400"
                   frameBorder="0"

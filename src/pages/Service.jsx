@@ -1,6 +1,7 @@
-
 import React from "react";
+import "../assets/css/priceList.css";
 
+// layanankami
 const services = [
   {
     title: "Web Design",
@@ -64,9 +65,69 @@ const services = [
   }
 ];
 
+//pricelist
+const packages = [
+    {
+      id: 1,
+      name: 'Classic',
+      price: 'Rp. 120.000,-',
+      speed: '5 Mbps (Up to*)',
+      features: [
+        'Home Broadband',
+        'Tanpa FUP',
+        'Unlimited Download',
+        'Unlimited Upload'
+      ],
+      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 1',
+      color: 'primary'
+    },
+    {
+      id: 2,
+      name: 'Bronze',
+      price: 'Rp. 165.000,-',
+      speed: '10 Mbps (Up to*)',
+      features: [
+        'Home Broadband',
+        'Tanpa FUP',
+        'Unlimited Download',
+        'Unlimited Upload'
+      ],
+      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 2',
+      color: 'secondary'
+    },
+    {
+      id: 3,
+      name: 'Silver',
+      price: 'Rp. 190.000,-',
+      speed: '20 Mbps (Up to*)',
+      features: [
+        'Home Broadband',
+        'Tanpa FUP',
+        'Unlimited Download',
+        'Unlimited Upload'
+      ],
+      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 3',
+      color: 'accent'
+    },
+    {
+      id: 4,
+      name: 'Gold',
+      price: 'Rp. 390.000',
+      speed: '30 Mbps (Up to*)',
+      features: [
+        'Home Broadband',
+        'Tanpa FUP',
+        'Unlimited Download',
+        'Unlimited Upload'
+      ],
+      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 4',
+      color: 'primary'
+    }
+  ];
+
 function Service() {
   return (
-    <section className="section-padding" style={{ background: 'linear-gradient(120deg, #111 60%, var(--primary-color) 100%)', minHeight: '100vh' }}>
+    <section className="section-padding" style={{ background: 'linear-gradient(120deg, #000000ff 60%, var(--primary-color) 100%)', minHeight: '100vh' }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="section-title" style={{ color: 'var(--primary-color)', fontWeight: 'bold', letterSpacing: '2px' }}>Layanan Kami</h2>
@@ -121,3 +182,4 @@ function Service() {
 }
 
 export default Service;
+

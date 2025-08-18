@@ -165,9 +165,8 @@ const Footer = () => {
       {/* Footer Credit Section */}
       <footer className="footer" id="footer-credit" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div id="credit-kiri">
-            <strong>Support :</strong>
-            <a
+          <div id="credit-center">
+            {/* <a
               href="http://webanakcirebon.blogspot.com"
               rel="nofollow"
               target="_blank"
@@ -175,9 +174,9 @@ const Footer = () => {
             >
               {" "}
               Blog Gado Gado
-            </a>{" "}
-            |
-            <a
+            </a>{" "} */}
+            
+            {/* <a
               href="http://indomediakita.blogspot.com"
               rel="nofollow"
               target="_blank"
@@ -185,9 +184,9 @@ const Footer = () => {
             >
               {" "}
               Indo Media Kita
-            </a>{" "}
-            |
-            <a
+            </a>{" "} */}
+            
+            {/* <a
               href="http://gistechindo.blogspot.com"
               rel="nofollow"
               target="_blank"
@@ -195,9 +194,9 @@ const Footer = () => {
             >
               {" "}
               Gistechindo
-            </a>{" "}
-            |
-            <a
+            </a>{" "} */}
+            
+            {/* <a
               href="http://wongaslicirebon.blogspot.com"
               rel="nofollow"
               target="_blank"
@@ -205,29 +204,29 @@ const Footer = () => {
             >
               {" "}
               Wong Asli Cirebon
-            </a>
-            <br />
-            Copyright © {currentYear}
+            </a> */}
+            
+            © Copyright {currentYear} | All Rights Reserved by 
             <a
               className="sitename"
-              href="https://gistechindo.blogspot.com/"
-              title="GISTECHINDO"
+              href="https://mitracom.id/"
+              title="Terjangkau hingga pelosok negri"
               style={{ color: 'var(--text-light)' }}
             >
               {" "}
-              MITRACOM
+              mitracom.id
             </a>
-            &nbsp; All rights reserved.
+            
           </div>
-          <div id="credit-kanan">
+          {/* <div id="credit-kanan">
             Design by{" "}
             <a href="http://www.duniakomputer.net/" title="Mas Kholis" style={{ color: 'var(--text-light)' }}>
               {" "}
               MITRACOM
             </a>
-            {/* <br />
-            powered by <a href="//www.blogger.com"> </a> */}
-          </div>
+            <br />
+            powered by <a href="//www.blogger.com"> </a>
+          </div> */}
         </div>
       </footer>
       <ScrollToTopButton />
