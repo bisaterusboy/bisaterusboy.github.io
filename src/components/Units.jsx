@@ -56,8 +56,8 @@ function Units() {
   const services = [
     {
       id: 1,
-      icon: "bi bi-wifi",
-      title: "Internet Fiber Optik",
+      icon: "bi bi-camera",
+      title: "Internet Fiber ",
       description: "Koneksi internet super cepat menggunakan teknologi fiber optic terdepan dengan kecepatan hingga 100 Mbps.",
       color: "primary"
     },

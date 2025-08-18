@@ -136,7 +136,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link fw-bold text-decoration-none" to="/services" style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}>
-                  Layanan
+                  Layanan & Produk
                 </Link>
               </li>
               {/* <li className="nav-item">
@@ -144,11 +144,11 @@ function Navbar() {
                   Disclaimer
                 </Link>
               </li> */}
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link fw-bold text-decoration-none" to="/pricelist" style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}>
                   Pasang Iklan
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link fw-bold text-decoration-none" to="/contact" style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}>
                   Kontak

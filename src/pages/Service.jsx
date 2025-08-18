@@ -127,7 +127,7 @@ const packages = [
 
 function Service() {
   return (
-    <section className="section-padding" style={{ background: 'linear-gradient(120deg, #000000ff 60%, var(--primary-color) 100%)', minHeight: '100vh' }}>
+    <section className="section-padding" style={{ background: 'linear-gradient(165deg, #b9b740 20%, #ff0000b5 50%)', minHeight: '100vh' }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="section-title" style={{ color: 'var(--primary-color)', fontWeight: 'bold', letterSpacing: '2px' }}>Layanan Kami</h2>
