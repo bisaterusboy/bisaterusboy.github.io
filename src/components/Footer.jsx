@@ -56,9 +56,9 @@ const Footer = () => {
                     {[
                       { name: "Internet Home", icon: "🏠", link: "/" },
                       { name: "Internet Dedicated", icon: "👥", link: "/about" },
-                      { name: "Personal Komputer", icon: "🛠️", link: "/services" },
+                      { name: "Service Komputer", icon: "🛠️", link: "/services" },
                       { name: "Penjualan", icon: "📄", link: "/terms-of-service" },
-                      { name: "Camara & CCTV", icon: "🔒", link: "/privacy-policy" },
+                      { name: "CCTV", icon: "🔒", link: "/privacy-policy" },
                     ].map((item, idx) => (
                       <li key={idx}>
                         <a
