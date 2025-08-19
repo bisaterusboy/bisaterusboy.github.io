@@ -9,7 +9,7 @@ import Slider from "../components/Slider";
 const Home = () => {
   return (
     <div style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
-      <CarouselComponent />
+      {/* <CarouselComponent /> */}
       <Slider/>
       <Units />
     </div>
