@@ -1,23 +1,48 @@
 import React from "react";
-import "../assets/css/Footer.css"; // Assuming you have a CSS file for Footer styles
-import ScrollToTopButton from "./ScrollToTopBotton";
-
+import { Link } from "react-router-dom";
+// import ScrollToTop from "./ScrollToTop";
 import eLogo1 from "../assets/img/eslog2.png";
-
+import "../assets/css/Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const servicesLinks = [
+    { name: "Home Broadband", link: "/services" },
+    { name: "Business Internet", link: "/services" },
+    { name: "Wifi Hotspot", link: "/services" },
+    { name: "Dedicated Internet", link: "/services" },
+    { name: "Cloud CCTV", link: "/services" },
+  ];
+
+  const hoursItems = [
+    { label: "Administrasi", value: "Senin - Jumat 08.00–17.00" },
+    { label: "Teknis", value: "Senin - Minggu 08.00–21.00" },
+  ];
+
+  const contacts = [
+    { label: "Telepon", display: "+62 821-1777-7187", href: "tel:+6282117777187" },
+    { label: "Email", display: "info@esanet.id", href: "mailto:info@esanet.id" },
+    { label: "Website", display: "esanet.id", href: "https://esanet.id", external: true },
+  ];
+
+  const columns = [
+    { key: 'brand', type: 'brand' },
+    { key: 'services', type: 'links', title: 'Layanan Kami', items: servicesLinks },
+    { key: 'hours', type: 'hours', title: 'Jam Operasional', items: hoursItems },
+    { key: 'contacts', type: 'contacts', title: 'Kontak Kami', items: contacts },
+  ];
   return (
     <>
-     <div
+      <div
         className="info pt-5 pb-4"
         style={{
-          backgroundColor: "#111",
-          borderTop: "3px solid var(--primary-color)",
-          borderBottom: "3px solid var(--primary-color)",
+          backgroundImage:
+            "linear-gradient(-10deg, #dc3545 9%, #ffc107 33%, #007bff 66%)",
+          backgroundSize: "120% 120%",
+          // borderTop: "3px solid var(--primary-color)",
+          // borderBottom: "3px solid var(--primary-color)",
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        }} 
-        id="footer-top"
+        }}
       >
         <div className="container">
           <div className="row gy-4">
@@ -229,7 +254,7 @@ const Footer = () => {
           </div> */}
         </div>
       </footer>
-      <ScrollToTopButton />
+      {/* <ScrollToTop /> */}
     </>
   );
 };

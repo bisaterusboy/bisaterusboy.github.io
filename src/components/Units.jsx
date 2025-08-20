@@ -1,14 +1,13 @@
-import "../assets/css/Units.css";
-import React from "react";
-import '../assets/css/PathnetSlider.css'
+import { useState } from 'react';
+import "../assets/css/priceList.css";
+import '../assets/css/PathnetSlider.css';
 
 // Icon Component with fallback
-const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
+const Icon = ({ iconClass, size = "fs-6" }) => {
   return (
     <i 
       className={`${iconClass} ${size}`} 
       style={{ 
-        fontFamily: '"bootstrap-icons" !important',
         display: 'inline-block',
         verticalAlign: 'middle'
       }}
@@ -18,10 +17,29 @@ const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
 };
 
 function Units() {
+  const [addressQuery, setAddressQuery] = useState('');
+  const [coverageStatus, setCoverageStatus] = useState('');
+  const [checking, setChecking] = useState(false);
+
+  const handleCoverageCheck = (event) => {
+    event.preventDefault();
+    const trimmedQuery = addressQuery.trim();
+    if (!trimmedQuery) {
+      setCoverageStatus('Masukkan alamat lengkap Anda terlebih dahulu.');
+      return;
+    }
+    setChecking(true);
+    setCoverageStatus('');
+    setTimeout(() => {
+      setCoverageStatus('Layanan tersedia di area Anda. Silakan pilih paket di bawah ini!');
+      setChecking(false);
+    }, 900);
+  };
+
   // --- About Section ---
   const aboutFeatures = [
     {
-      icon: "bi bi-speedometer",
+      icon: "bi bi-speedometer2",
       title: "Kecepatan Tinggi",
       description: "Menggunakan teknologi fiber optic terdepan untuk kecepatan internet yang stabil dan cepat",
       color: "primary"
@@ -39,26 +57,26 @@ function Units() {
       color: "accent"
     },
     {
-      icon: "bi bi-graph-up",
+      icon: "bi bi-graph-up-arrow",
       title: "Monitoring Real-time",
       description: "Sistem monitoring PRTG untuk memastikan kualitas layanan tetap optimal",
       color: "primary"
     }
   ];
+
   const aboutStats = [
-    { number: "1000+", label: "Pelanggan Aktif", color: "primary", icon: "bi bi-people" },
-    { number: "99.9%", label: "Uptime SLA", color: "secondary", icon: "bi bi-check-circle" },
-    { number: "24/7", label: "Customer Support", color: "accent", icon: "bi bi-clock" },
-    { number: "5+", label: "Tahun Pengalaman", color: "primary", icon: "bi bi-award" }
+    { number: "1000+", label: "Pelanggan Aktif", color: "primary", icon: "bi bi-people-fill" },
+    { number: "99.9%", label: "Uptime SLA", color: "secondary", icon: "bi bi-check-circle-fill" },
+    { number: "24/7", label: "Customer Support", color: "accent", icon: "bi bi-clock-fill" },
+    { number: "5+", label: "Tahun Pengalaman", color: "primary", icon: "bi bi-award-fill" }
   ];
 
   // --- Services Section ---
-
   const services = [
     {
       id: 1,
-      icon: "bi bi-camera",
-      title: "Internet Fiber ",
+      icon: "bi bi-wifi",
+      title: "Internet Fiber Optik",
       description: "Koneksi internet super cepat menggunakan teknologi fiber optic terdepan dengan kecepatan hingga 100 Mbps.",
       color: "primary"
     },
@@ -115,7 +133,6 @@ function Units() {
       whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Classic',
       color: 'secondary',
       popular: false
-
     },
     {
       id: 2,
@@ -182,8 +199,8 @@ function Units() {
     {
       icon: "bi bi-envelope",
       title: "Email",
-      content: "info@mitracom-isp.com",
-      link: "mailto:info@mitracom-isp.com",
+      content: "info@mitracom.id",
+      link: "mailto:info@mitracom.id",
       color: "accent"
     },
     {
@@ -207,6 +224,7 @@ function Units() {
         return 'text-primary-custom';
     }
   };
+
   const getBgClass = (color) => {
     switch (color) {
       case 'primary':
@@ -219,42 +237,22 @@ function Units() {
         return 'bg-primary-custom';
     }
   };
-  const getPackageColorClass = (color) => {
-    switch (color) {
-      case 'primary':
-        return 'package-card';
-      case 'secondary':
-        return 'package-card secondary';
-      case 'accent':
-        return 'package-card accent';
-      default:
-        return 'package-card';
-    }
-  };
 
- 
 	const logos = [
-		{ id: 1, name: 'Meta', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=Meta' },
-		{ id: 2, name: 'Surge', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=Surge' },
-		{ id: 3, name: 'NTT', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=NTT' },
-		{ id: 4, name: 'UIN SSC', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=UIN+SSC' },
-		{ id: 5, name: 'MZ', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=MZ' },
-		{ id: 6, name: 'Hotel', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=GRAGE' },
-		{ id: 7, name: 'DPPKB', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=DPPKB' },
-		{ id: 8, name: 'neuCentrIX', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=neuCentrIX' },
-		{ id: 9, name: 'Livaysa', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=Livaysa' },
-		{ id: 10, name: 'Login Media', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=Login+Media' },
-		{ id: 11, name: 'SMK 1', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=SMK' },
-		{ id: 12, name: 'Instansi', url: 'https://dummyimage.com/160x60/ffffff/111827&png=1&text=Instansi' }
+		{ id: 1, name: 'APJII', url: '../assets/img/banner1.jpg' },
+		{ id: 2, name: 'HSP', url: '../assets/img/banner1.jpg' },
+		{ id: 3, name: 'NTT', url: '../assets/img/banner1.jpg' },
+		{ id: 4, name: 'LINTAS ARTA', url: '../assets/img/banner1.jpg' },
+		{ id: 5, name: 'MVNET', url: '../assets/img/banner1.jpg' },
+    { id: 6, name: 'TIS', url: '../assets/img/banner1.jpg' },
+    { id: 7, name: 'MIKROTIK', url: '../assets/img/banner1.jpg' },
+    { id: 8, name: 'KOMINFO', url: '../assets/img/banner1.jpg' },
 	]
 
-	const rowItems = [...logos, ...logos] // duplicate for seamless loop
+	const rowItems = [...logos, ...logos, ...logos ] // duplicate for seamless loop
 
   return (
-
     <div className="wrapper" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
-      {/* --- About Section --- */}
-      {/* --- Portfolio Section --- */}
       <section id="plans" className="section-padding">
         <div className="container">
           <div className="text-center mb-4">
@@ -271,9 +269,9 @@ function Units() {
                       ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' 
                       : pkg.id === 1 
                         ? 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
-                        : pkg.id === 3
-                          ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
-                          : 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                        : pkg.id === 2
+                          ? 'linear-gradient(135deg, #4f86feff 0%, #0066feff 100%)'
+                          : 'linear-gradient(135deg, #ff7e05ff 0%, #f93842ff 100%)',
                     border: pkg.popular ? '3px solid #ffd700' : '2px solid rgba(255,255,255,0.3)',
                     transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
                     boxShadow: pkg.popular 
@@ -285,7 +283,7 @@ function Units() {
                 >
                   {pkg.popular && (
                     <div className="position-absolute top-0 start-50 translate-middle-x" style={{ transform: 'translateX(-50%) translateY(-50%)' }}>
-                      <span className="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold shadow-lg" style={{ fontSize: '0.9rem' }}>
+                      <span className="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold shadow-lg" style={{ fontSize: '1.2rem' }}>
                         🔥 TERPOPULER
                       </span>
                     </div>
@@ -295,13 +293,14 @@ function Units() {
                       background: 'rgba(255,255,255,0.2)', 
                       color: 'white',
                       backdropFilter: 'blur(10px)',
+                      fontSize:'1.2rem',
                       border: '1px solid rgba(255,255,255,0.3)'
                     }}>
                       {pkg.name}
                     </span>
                   </div>
                   <div className="text-center my-4">
-                    <div className="display-4 fw-bold mb-1" style={{ 
+                    <div className="display-5 fw-bold mb-1" style={{ 
                       color: 'white',
                       textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                     }}>
@@ -340,11 +339,9 @@ function Units() {
                      }}
                      onMouseOver={(e) => {
                        e.target.style.transform = 'translateY(-2px)';
-                       e.target.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
                      }}
                      onMouseOut={(e) => {
                        e.target.style.transform = 'translateY(0)';
-                       e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
                      }}
                      target="_blank" 
                      rel="noopener noreferrer">
@@ -356,113 +353,61 @@ function Units() {
             ))}
           </div>
         </div>
-      </section>      
+      </section>
 
-
-
-      {/* --- Services Section --- */}
-      <section id="services" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      {/* Services Section */}
+      <section className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-title">Layanan Kami</h2>
-              <p className="section-subtitle">
-                Kami menyediakan berbagai layanan internet berkualitas tinggi untuk memenuhi kebutuhan Anda
-              </p>
-            </div>
+          <div className="text-center mb-4">
+            <h2 className="section-title">Layanan Kami</h2>
+            <p className="section-subtitle">Solusi internet lengkap untuk kebutuhan Anda</p>
           </div>
           <div className="row g-4">
             {services.map((service) => (
-              <div key={service.id} className="col-lg-4 col-md-6">
-                <div className="card card-custom h-100">
+              <div key={service.id} className="col-md-6 col-lg-4">
+                <div className="card h-100 border-0 shadow-sm service-card">
                   <div className="card-body text-center p-4">
-                    <div className={`${getBgClass(service.color)} text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4`} style={{ width: '80px', height: '80px', margin: '0 auto' }}>
-                      <Icon iconClass={service.icon} size="fs-2" />
+                    <div className={`${getBgClass(service.color)} text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3`} style={{ width: '64px', height: '64px' }}>
+                      <Icon iconClass={service.icon} size="fs-4" />
                     </div>
-                    <h5 className={`card-title mb-3 ${getColorClass(service.color)} fw-semibold`}>{service.title}</h5>
-                    <p className="card-text text-muted">{service.description}</p>
-                    <div className="mt-3">
-                      <span className={`badge ${getBgClass(service.color)} text-white px-3 py-2 rounded-pill`}>
-                        <Icon iconClass="bi bi-check-circle" size="fs-6" />
-                        <span className="ms-1">Tersedia</span>
-                      </span>
-                    </div>
+                    <h5 className="fw-semibold mb-2">{service.title}</h5>
+                    <p className="text-muted mb-0">{service.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="row mt-5">
-            <div className="col-lg-12 text-center">
-              <div className="card card-custom p-4">
-                <h4 className="text-primary-custom mb-3">Mengapa Memilih Kami?</h4>
-                <div className="row g-3">
-                  <div className="col-md-3">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-primary-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-check-lg" />
-                      </div>
-                      <span className="fw-semibold">Kecepatan Stabil</span>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-secondary-custom text-dark rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-check-lg" />
-                      </div>
-                      <span className="fw-semibold">Harga Terjangkau</span>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-accent-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-check-lg" />
-                      </div>
-                      <span className="fw-semibold">Support 24/7</span>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-primary-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-check-lg" />
-                      </div>
-                      <span className="fw-semibold">Instalasi Cepat</span>
-                    </div>
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      <section className="pathnet py-5">
+        <h2 className="section-heading text-center mb-4">OUR PARTNERS</h2>
+        <div className="brand-rows">
+          <div className="marquee" role="list" aria-label="logo marquee top">
+            <div className="marquee__track">
+              {rowItems.map((item, idx) => (
+                <div key={`top-${item.id}-${idx}`} className="brand-slide" role="listitem">
+                  <div className="client-card d-flex align-items-center justify-content-center">
+                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+          <div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee bottom">
+            <div className="marquee__track">
+              {rowItems.map((item, idx) => (
+                <div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
+                  <div className="client-card d-flex align-items-center justify-content-center">
+                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-
-      <section className="pathnet  py-5">
-			<h2 className="section-heading text-center mb-4">OURS PATHNER</h2>
-			<div className="brand-rows">
-				<div className="marquee" role="list" aria-label="logo marquee top">
-					<div className="marquee__track">
-						{rowItems.map((item, idx) => (
-							<div key={`top-${item.id}-${idx}`} className="brand-slide" role="listitem">
-								<div className="client-card d-flex align-items-center justify-content-center">
-									<img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-				<div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee bottom">
-					<div className="marquee__track">
-						{rowItems.map((item, idx) => (
-							<div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
-								<div className="client-card d-flex align-items-center justify-content-center">
-									<img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
-		</section>
 
       {/* Contact Info Section */}
       <section className="section-padding">
@@ -509,7 +454,7 @@ function Units() {
                   <Icon iconClass="bi bi-whatsapp" />
                   <span className="ms-2">WhatsApp</span>
                 </a>
-                <a href="tel:+6282260601982" className="btn btn-primary-custom rounded-pill">
+                <a href="tel:+6282260601982" className="btn btn-primary rounded-pill">
                   <Icon iconClass="bi bi-telephone" />
                   <span className="ms-2">Telepon</span>
                 </a>

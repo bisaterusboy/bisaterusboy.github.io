@@ -1,13 +1,48 @@
+/* ===== BOOTSTRAP ICONS ===== */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css');
+
+/* Ensure Bootstrap Icons font is loaded */
+@font-face {
+  font-family: 'Bootstrap Icons';
+  src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Icon display rules */
+.bi {
+  font-family: 'Bootstrap Icons' !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Specific icon sizes */
+.bi.fs-6 { font-size: 1rem !important; }
+.bi.fs-5 { font-size: 1.25rem !important; }
+.bi.fs-4 { font-size: 1.5rem !important; }
+.bi.fs-3 { font-size: 1.875rem !important; }
+.bi.fs-2 { font-size: 2.25rem !important; }
+.bi.fs-1 { font-size: 3rem !important; }
+
 /* ===== GLOBAL CSS VARIABLES ===== */
 :root {
-  /* Primary Colors */
-  --primary-color: #007bff;
+  /* Primary Colors (Blue, Red, Yellow) */
+  --primary-color: #007bff;  /* Blue */
   --primary-dark: #0056b3;
   --primary-light: #4da6ff;
-  --secondary-color: #6c757d;
-  --accent-color: #b8c72d;
-  --accent-dark: #1e7e34;
-  --accent-light: #5cb85c;
+  --secondary-color: #dc3545; /* Red */
+  --accent-color: #ffc107;    /* Yellow */
+  --accent-dark: #e0a800;
+  --accent-light: #ffd85e;
+  
   
   /* Neutral Colors */
   --dark-color: #343a40;
@@ -24,9 +59,9 @@
   --gray-900: #212529;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #e9df55dc 100%);
-  --gradient-secondary: linear-gradient(180deg, #e42525, #fffb00, #0004ff 200%  ); 
-  --gradient-accent: linear-gradient(180deg, #0004ff, #e42525 100% );
+  --gradient-primary: linear-gradient(135deg, #2a6df4 0%, #007bff 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #dc3545 100%);
+  --gradient-accent: linear-gradient(135deg, #ffd54f 0%, #ffc107 100%);
   --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   
   /* Light Mode Colors */
@@ -76,43 +111,7 @@
   --z-tooltip: 1070;
 }
 
-/* Dark Mode Colors */
-/* [data-theme="dark"] {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --bg-card: #2d2d2d;
-  --bg-overlay: rgba(255, 255, 255, 0.1);
-  --text-primary: #ffffff;
-  --text-secondary: #e0e0e0;
-  --text-muted: #b0b0b0;
-  --text-light: #ffffff;
-  --border-color: #404040;
-  --border-light: #505050;
-  --shadow-color: rgba(0, 0, 0, 0.5);
-  --shadow-light: rgba(0, 0, 0, 0.3);
-  --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  --card-shadow-hover: 0 1rem 2rem rgba(0, 0, 0, 0.7);
-} */
-
-/* Auto dark mode based on system preference */
-/* @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --bg-card: #2d2d2d;
-    --bg-overlay: rgba(255, 255, 255, 0.1);
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --text-muted: #b0b0b0;
-    --text-light: #ffffff;
-    --border-color: #404040;
-    --border-light: #505050;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --shadow-light: rgba(0, 0, 0, 0.3);
-    --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    --card-shadow-hover: 0 1rem 2rem rgba(0, 0, 0, 0.7);
-  }
-} */
+/* Dark Mode disabled globally to keep dark theme only in navbar */
 
 /* ===== RESET & BASE STYLES ===== */
 * {
@@ -182,7 +181,7 @@ a:hover {
 .bg-primary { background-color: var(--primary-color) !important; }
 .bg-secondary { background-color: var(--bg-secondary) !important; }
 .bg-light { background-color: var(--light-color) !important; }
-/* .bg-dark { background-color: var(--dark-color) !important; } */
+.bg-dark { background-color: var(--dark-color) !important; }
 .bg-white { background-color: var(--white-color) !important; }
 
 .border { border: 1px solid var(--border-color) !important; }
