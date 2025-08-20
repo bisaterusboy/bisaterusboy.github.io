@@ -112,7 +112,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Classic',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Classic',
       color: 'secondary',
       popular: false
 
@@ -128,7 +128,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Bronze',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Bronze',
       color: 'secondary',
       popular: false
     },
@@ -143,7 +143,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Silver',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Silver',
       color: 'accent',
       popular: true
     },
@@ -158,7 +158,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Gold',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Gold',
       color: 'secondary',
       popular: false
     }
@@ -301,7 +301,7 @@ function Units() {
                     </span>
                   </div>
                   <div className="text-center my-4">
-                    <div className="display-5 fw-bold mb-1" style={{ 
+                    <div className="display-4 fw-bold mb-1" style={{ 
                       color: 'white',
                       textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                     }}>
@@ -436,8 +436,8 @@ function Units() {
         </div>
       </section>
 
-		<section className="pathnet  py-5">
-			<h2 className="section-heading text-center mb-4">DAFTAR SALURAN</h2>
+      <section className="pathnet  py-5">
+			<h2 className="section-heading text-center mb-4">OURS PATHNER</h2>
 			<div className="brand-rows">
 				<div className="marquee" role="list" aria-label="logo marquee top">
 					<div className="marquee__track">
