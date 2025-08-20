@@ -436,7 +436,7 @@ function Units() {
       </section>
 
       <section className="pathnet  py-5">
-			<h2 className="section-heading text-center mb-4">OURS PATHNER</h2>
+			<h2 className="section-heading text-center mb-4">PARTNER KAMI</h2>
 			<div className="brand-rows">
 				<div className="marquee" role="list" aria-label="logo marquee top">
 					<div className="marquee__track">
