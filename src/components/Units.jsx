@@ -253,119 +253,111 @@ function Units() {
 
     <div className="wrapper" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
       {/* --- About Section --- */}
-      
-
       {/* --- Portfolio Section --- */}
-      <section id="packages" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section id="plans" className="section-padding">
         <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="section-title text-primary-custom">Paket Internet</h2>
-            <p className="section-subtitle text-secondary-custom">HOME BROADBAND</p>
+          <div className="text-center mb-4">
+            <h2 className="section-title">Paket Internet Rumah</h2>
+            <p className="section-subtitle">Pilih paket terbaik sesuai kebutuhan keluarga</p>
           </div>
           <div className="row g-4">
             {packages.map((pkg) => (
               <div key={pkg.id} className="col-lg-3 col-md-6">
-                <div className={getPackageColorClass(pkg.color)}>
-                  <div className="package-icon">
-                    <Icon iconClass={pkg.icon} size="fs-1" />
+                <div 
+                  className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
+                  style={{ 
+                    background: pkg.popular 
+                      ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' 
+                      : pkg.id === 1 
+                        ? 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+                        : pkg.id === 3
+                          ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+                          : 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                    border: pkg.popular ? '3px solid #ffd700' : '2px solid rgba(255,255,255,0.3)',
+                    transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
+                    boxShadow: pkg.popular 
+                      ? '0 15px 35px rgba(102, 126, 234, 0.4), 0 5px 15px rgba(0,0,0,0.1)' 
+                      : '0 8px 25px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0,0,0,0.1)',
+                    color: 'white',
+                    transition: 'all 0.3s ease'
+                  }}
+                >
+                  {pkg.popular && (
+                    <div className="position-absolute top-0 start-50 translate-middle-x" style={{ transform: 'translateX(-50%) translateY(-50%)' }}>
+                      <span className="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold shadow-lg" style={{ fontSize: '0.9rem' }}>
+                        🔥 TERPOPULER
+                      </span>
+                    </div>
+                  )}
+                  <div className="d-flex justify-content-center mb-3">
+                    <span className="badge rounded-pill px-4 py-2 fw-bold" style={{ 
+                      background: 'rgba(255,255,255,0.2)', 
+                      color: 'white',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255,255,255,0.3)'
+                    }}>
+                      {pkg.name}
+                    </span>
                   </div>
-                  <h4 className="h5 fw-semibold mb-2">{pkg.name}</h4>
-                  <h2 className="h3 fw-bold mb-3">{pkg.price}</h2>
-                  <div className="mb-4">
-                    <p className="mb-3 fw-medium">{pkg.speed}</p>
+                  <div className="text-center my-4">
+                    <div className="display-5 fw-bold mb-1" style={{ 
+                      color: 'white',
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    }}>
+                      {pkg.speed.replace(' (Up to*)', '')}
+                    </div>
+                    <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>Kecepatan hingga</div>
+                  </div>
+                  <div className="text-center mb-4">
+                    <div className="h2 fw-bold mb-0" style={{ 
+                      color: 'white',
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                    }}>
+                      {pkg.price}
+                    </div>
+                    <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>per bulan</div>
+                  </div>
+                  <ul className="list-unstyled mb-4">
                     {pkg.features.map((feature, featureIndex) => (
-                      <p key={featureIndex} className="small mb-1 text-white-75">
-                        <Icon iconClass="bi bi-check-circle" size="fs-6" />
-                        <span className="ms-2">{feature}</span>
-                      </p>
+                      <li key={featureIndex} className="d-flex align-items-center mb-3">
+                        <span className="me-3" style={{ color: '#4ade80', fontSize: '1.2rem' }}>
+                          <Icon iconClass="bi bi-check-circle-fill" />
+                        </span>
+                        <span className="small" style={{ color: 'rgba(255,255,255,0.9)' }}>{feature}</span>
+                      </li>
                     ))}
-                  </div>
-                  <a href={pkg.whatsapp} className="btn btn-light text-primary-custom fw-semibold w-100 rounded-pill" target="_blank" rel="noopener noreferrer">
-                    <Icon iconClass="bi bi-whatsapp" size="fs-6" />
-                    <span className="ms-2">Pesan Sekarang</span>
+                  </ul>
+                  <a href={pkg.whatsapp} className="btn w-100 rounded-pill fw-bold py-3" 
+                     style={{ 
+                       background: pkg.popular 
+                         ? 'linear-gradient(45deg, #ffd700, #ffed4e)' 
+                         : 'linear-gradient(45deg, #ffffff, #f8f9fa)',
+                       color: pkg.popular ? '#000' : '#333',
+                       border: 'none',
+                       boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                       transition: 'all 0.3s ease'
+                     }}
+                     onMouseOver={(e) => {
+                       e.target.style.transform = 'translateY(-2px)';
+                       e.target.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
+                     }}
+                     onMouseOut={(e) => {
+                       e.target.style.transform = 'translateY(0)';
+                       e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+                     }}
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    <Icon iconClass="bi bi-whatsapp" />
+                    <span className="ms-2">Berlangganan Sekarang</span>
                   </a>
                 </div>
               </div>
             ))}
           </div>
-          {/* Features Section */}
-          <div className="row mt-5">
-            <div className="col-12">
-              <div className="card card-custom p-4">
-                <h4 className="text-primary-custom text-center mb-4">Fitur Unggulan</h4>
-                <div className="row g-3">
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-primary-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-graph-up" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">PRTG</h6>
-                        <small className="text-muted">Live Trafik Monitoring service</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-secondary-custom text-dark rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-shield-check" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">SLA</h6>
-                        <small className="text-muted">Service level agreement (SLA) 99.9%</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-accent-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-tools" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">Free Installation</h6>
-                        <small className="text-muted">Syarat & Ketentuan Berlaku</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-primary-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-lightning-charge" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">Internet Cepat</h6>
-                        <small className="text-muted">Super cepat, Stabil & Murah</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-secondary-custom text-dark rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-speedometer" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">Stabil Latency</h6>
-                        <small className="text-muted">Terjamin Ke Stabilan nya</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-4">
-                    <div className="d-flex align-items-center">
-                      <div className="bg-accent-custom text-white rounded-circle p-2 me-3">
-                        <Icon iconClass="bi bi-headset" />
-                      </div>
-                      <div>
-                        <h6 className="mb-1 fw-semibold">Operator Support 24/7</h6>
-                        <small className="text-muted">Cepat respon dan Support yang cepat 24/7</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+      </section>      
+
+
 
       {/* --- Services Section --- */}
       <section id="services" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
