@@ -12,7 +12,7 @@ function Slider() {
       image: banner1,
       title: 'Konektivitas Cepat dan Stabil',
       subtitle: 'Solusi internet andal untuk kebutuhan rumah dan bisnis Anda',
-      ctaText: 'Pelajari Layanan',
+      ctaText: 'Layanan Kami',
       ctaLink: '/services',
     },
     {
