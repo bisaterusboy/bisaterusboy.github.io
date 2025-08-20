@@ -300,7 +300,7 @@ function Units() {
                     </span>
                   </div>
                   <div className="text-center my-4">
-                    <div className="display-5 fw-bold mb-1" style={{ 
+                    <div className="display-4 fw-bold mb-1" style={{ 
                       color: 'white',
                       textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                     }}>
