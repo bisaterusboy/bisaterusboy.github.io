@@ -112,7 +112,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Classic',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Classic',
       color: 'secondary',
       icon: 'bi bi-star'
     },
@@ -127,7 +127,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Bronze',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Bronze',
       color: 'secondary',
       icon: 'bi bi-star'
     },
@@ -142,7 +142,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Silver',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Silver',
       color: 'accent',
       icon: 'bi bi-star'
     },
@@ -157,7 +157,7 @@ function Units() {
         'Unlimited Download',
         'Unlimited Upload'
       ],
-      whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Gold',
+      whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Gold',
       color: 'secondary',
       icon: 'bi bi-star'
     }
