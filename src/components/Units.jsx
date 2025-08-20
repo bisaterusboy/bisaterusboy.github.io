@@ -114,7 +114,8 @@ function Units() {
       ],
       whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Classic',
       color: 'secondary',
-      icon: 'bi bi-star'
+      popular: false
+
     },
     {
       id: 2,
@@ -129,7 +130,7 @@ function Units() {
       ],
       whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Bronze',
       color: 'secondary',
-      icon: 'bi bi-star'
+      popular: false
     },
     {
       id: 3,
@@ -144,7 +145,7 @@ function Units() {
       ],
       whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Silver',
       color: 'accent',
-      icon: 'bi bi-star'
+      popular: true
     },
     {
       id: 4,
@@ -159,7 +160,7 @@ function Units() {
       ],
       whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Gold',
       color: 'secondary',
-      icon: 'bi bi-star'
+      popular: false
     }
   ];
 
@@ -435,8 +436,8 @@ function Units() {
         </div>
       </section>
 
-      <section className="pathnet  py-5">
-			<h2 className="section-heading text-center mb-4">OURS PATHNER</h2>
+		<section className="pathnet  py-5">
+			<h2 className="section-heading text-center mb-4">DAFTAR SALURAN</h2>
 			<div className="brand-rows">
 				<div className="marquee" role="list" aria-label="logo marquee top">
 					<div className="marquee__track">
@@ -463,41 +464,58 @@ function Units() {
 			</div>
 		</section>
 
-      {/* --- Contact Section --- */}
-      <section id="contact" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      {/* Contact Info Section */}
+      <section className="section-padding">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-title">Hubungi Kami</h2>
-              <p className="section-subtitle">
-                Siap melayani kebutuhan internet Anda dengan profesional dan ramah
-              </p>
-              <div className="row mt-5">
-            <div className="col-12 text-center">
-              <div className="card card-custom p-4">
-                <div className="d-flex flex-wrap justify-content-center gap-3">
-                  <a href="https://wa.me/6282260601982?text=Hallo, saya ingin bertanya tentang layanan internet Mitracom ISP" className="btn btn-success rounded-pill px-4 py-2" target="_blank" rel="noopener noreferrer">
-                    <Icon iconClass="bi bi-whatsapp" size="fs-6" />
-                    <span className="ms-2">WhatsApp</span>
-                  </a>
-                  <a href="tel:+6282260601982" className="btn btn-primary-custom rounded-pill px-4 py-2">
-                    <Icon iconClass="bi bi-telephone" size="fs-6" />
-                    <span className="ms-2">Telepon</span>
-                  </a>
-                  <a href="mailto:info@mitracom-isp.com" className="btn btn-accent-custom rounded-pill px-4 py-2">
-                    <Icon iconClass="bi bi-envelope" size="fs-6" />
-                    <span className="ms-2">Email</span>
-                  </a>
+          <div className="text-center mb-4">
+            <h2 className="section-title">Hubungi Kami</h2>
+            <p className="section-subtitle">Tim kami siap membantu Anda</p>
+          </div>
+          <div className="row g-4">
+            {contactInfo.map((contact, index) => (
+              <div key={index} className="col-md-6 col-lg-3">
+                <div className="text-center p-4">
+                  <div className={`${getBgClass(contact.color)} text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3`} style={{ width: '64px', height: '64px' }}>
+                    <Icon iconClass={contact.icon} size="fs-4" />
+                  </div>
+                  <h6 className="fw-semibold mb-2">{contact.title}</h6>
+                  {contact.link ? (
+                    <a href={contact.link} className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
+                      {contact.content}
+                    </a>
+                  ) : (
+                    <p className="text-muted mb-0">{contact.content}</p>
+                  )}
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="row align-items-center g-4">
+            <div className="col-lg-8">
+              <div className="p-4 rounded-4" style={{ background: 'var(--bg-secondary)' }}>
+                <h4 className="mb-2">Butuh Bantuan?</h4>
+                <p className="text-muted mb-0">Tim support kami siap membantu setiap saat. Hubungi kami melalui WhatsApp atau Telepon.</p>
+              </div>
+            </div>
+            <div className="col-lg-4 text-lg-end">
+              <div className="d-flex gap-2 justify-content-lg-end">
+                <a href="https://wa.me/6282260601982" className="btn btn-success rounded-pill">
+                  <Icon iconClass="bi bi-whatsapp" />
+                  <span className="ms-2">WhatsApp</span>
+                </a>
+                <a href="tel:+6282260601982" className="btn btn-primary-custom rounded-pill">
+                  <Icon iconClass="bi bi-telephone" />
+                  <span className="ms-2">Telepon</span>
+                </a>
               </div>
             </div>
           </div>
-            </div>
-          </div>
-          
-          {}
-          {/* Quick Contact Buttons */}
-          
         </div>
       </section>
     </div>
