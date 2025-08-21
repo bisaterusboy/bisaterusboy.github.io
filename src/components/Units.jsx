@@ -1,7 +1,26 @@
 import { useState } from 'react';
 import "../assets/css/priceList.css";
 import '../assets/css/PathnetSlider.css';
-import logo1 from "../assets/img/eslog2.png";
+// partner kami 1
+import logo1 from "../assets/img/partner/apjii.png";
+import logo2 from "../assets/img/partner/hsp.png";
+import logo3 from "../assets/img/partner/mikrotik.png";
+import logo4 from "../assets/img/partner/ntt.png";
+import logo5 from "../assets/img/partner/mvnet.png";
+import logo6 from "../assets/img/partner/tis.png";
+import logo7 from "../assets/img/partner/cyberplus.png";
+import logo8 from "../assets/img/partner/Komdigi.png";
+
+// partner kami 2
+import logoa from "../assets/img/partner/BKPSDM.png";
+import logob from "../assets/img/partner/Dishub.jpg";
+import logoc from "../assets/img/partner/Ditpolairud.png";
+import logod from "../assets/img/partner/easynet.png";
+import logoe from "../assets/img/partner/ionet.png";
+import logof from "../assets/img/partner/pulsanet.png";
+import logog from "../assets/img/partner/Wifique.png";
+import logoh from "../assets/img/partner/polytama.png";
+
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6" }) => {
@@ -240,17 +259,30 @@ function Units() {
   };
 
 	const logos = [
-		{ id: 1, name: 'APJII', url: logo1 },
-		{ id: 2, name: 'HSP', url: '../assets/img/banner1.jpg' },
-		{ id: 3, name: 'NTT', url: '../assets/img/banner1.jpg' },
-		{ id: 4, name: 'LINTAS ARTA', url: '../assets/img/banner1.jpg' },
-		{ id: 5, name: 'MVNET', url: '../assets/img/banner1.jpg' },
-    { id: 6, name: 'TIS', url: '../assets/img/banner1.jpg' },
-    { id: 7, name: 'MIKROTIK', url: '../assets/img/banner1.jpg' },
-    { id: 8, name: 'KOMINFO', url: '../assets/img/banner1.jpg' },
+		{ id: 1, name: '', url: logo1 },
+		{ id: 2, name: '', url: logo2 },
+		{ id: 3, name: '', url: logo3 },
+		{ id: 4, name: '', url: logo4 },
+		{ id: 5, name: '', url: logo5 },
+    { id: 6, name: '', url: logo6 },
+    { id: 7, name: '', url: logo7 },
+    { id: 8, name: '', url: logo8 },
 	]
 
 	const rowItems = [...logos, ...logos, ...logos ] // duplicate for seamless loop
+
+  const logos1 = [
+		{ id: 1, name: '', url: logoa },
+		{ id: 2, name: '', url: logob },
+		{ id: 3, name: '', url: logoc },
+		{ id: 4, name: '', url: logod },
+		{ id: 5, name: '', url: logoe },
+    { id: 6, name: '', url: logof },
+    { id: 7, name: '', url: logog },
+    { id: 8, name: '', url: logoh },
+	]
+
+	const rowItems1 = [...logos1, ...logos1, ...logos1 ] // duplicate for seamless loop
 
   return (
     <div className="wrapper" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
@@ -398,7 +430,7 @@ function Units() {
           </div>
           <div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee bottom">
             <div className="marquee__track">
-              {rowItems.map((item, idx) => (
+              {rowItems1.map((item, idx) => (
                 <div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
                   <div className="client-card d-flex align-items-center justify-content-center">
                     <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
