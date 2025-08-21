@@ -382,7 +382,7 @@ function Units() {
 
       {/* Partner Section */}
       <section className="pathnet py-5">
-        <h2 className="section-heading text-center mb-4">OUR PARTNERS</h2>
+        <h2 className="section-heading text-center mb-4">PARTNER KAMI</h2>
         <div className="brand-rows">
           <div className="marquee" role="list" aria-label="logo marquee top">
             <div className="marquee__track">
@@ -410,7 +410,7 @@ function Units() {
       </section>
 
       {/* Contact Info Section */}
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="container">
           <div className="text-center mb-4">
             <h2 className="section-title">Hubungi Kami</h2>
@@ -436,7 +436,7 @@ function Units() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="section-padding">
@@ -450,11 +450,11 @@ function Units() {
             </div>
             <div className="col-lg-4 text-lg-end">
               <div className="d-flex gap-2 justify-content-lg-end">
-                <a href="https://wa.me/6282260601982" className="btn btn-success rounded-pill">
+                <a href="https://wa.me/6287727999117" className="btn btn-success rounded-pill">
                   <Icon iconClass="bi bi-whatsapp" />
                   <span className="ms-2">WhatsApp</span>
                 </a>
-                <a href="tel:+6282260601982" className="btn btn-primary rounded-pill">
+                <a href="tel:+6287727999117" className="btn btn-primary rounded-pill">
                   <Icon iconClass="bi bi-telephone" />
                   <span className="ms-2">Telepon</span>
                 </a>
