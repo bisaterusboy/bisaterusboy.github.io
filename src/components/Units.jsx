@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import "../assets/css/priceList.css";
 import '../assets/css/PathnetSlider.css';
+import logo1 from "../assets/img/eslog2.png";
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6" }) => {
@@ -239,7 +240,7 @@ function Units() {
   };
 
 	const logos = [
-		{ id: 1, name: 'APJII', url: '../assets/img/banner1.jpg' },
+		{ id: 1, name: 'APJII', url: logo1 },
 		{ id: 2, name: 'HSP', url: '../assets/img/banner1.jpg' },
 		{ id: 3, name: 'NTT', url: '../assets/img/banner1.jpg' },
 		{ id: 4, name: 'LINTAS ARTA', url: '../assets/img/banner1.jpg' },
@@ -409,35 +410,7 @@ function Units() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      {/* <section className="section-padding">
-        <div className="container">
-          <div className="text-center mb-4">
-            <h2 className="section-title">Hubungi Kami</h2>
-            <p className="section-subtitle">Tim kami siap membantu Anda</p>
-          </div>
-          <div className="row g-4">
-            {contactInfo.map((contact, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="text-center p-4">
-                  <div className={`${getBgClass(contact.color)} text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3`} style={{ width: '64px', height: '64px' }}>
-                    <Icon iconClass={contact.icon} size="fs-4" />
-                  </div>
-                  <h6 className="fw-semibold mb-2">{contact.title}</h6>
-                  {contact.link ? (
-                    <a href={contact.link} className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                      {contact.content}
-                    </a>
-                  ) : (
-                    <p className="text-muted mb-0">{contact.content}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
+      
       {/* CTA Section */}
       <section className="section-padding">
         <div className="container">

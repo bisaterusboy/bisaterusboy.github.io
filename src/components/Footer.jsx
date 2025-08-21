@@ -37,7 +37,7 @@ const Footer = () => {
         className="info pt-5 pb-4"
         style={{
           backgroundImage:
-            "linear-gradient(-10deg, #dc3545 9%, #ffc107 33%, #007bff 66%)",
+            "linear-gradient(-10deg, rgb(220, 53, 69) 9%, rgb(7, 127, 255) 33%, rgba(83, 225, 179, 0.85) 66%)", 
           backgroundSize: "120% 120%",
           // borderTop: "3px solid var(--primary-color)",
           // borderBottom: "3px solid var(--primary-color)",
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 <address className="footer-contact pt-3 mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
                   <div><span style={{ marginRight: "8px" }}></span>PT. MITRACOM SOLUSI TEKNOLOGI </div>
-                  <div><span style={{ marginRight: "8px" }}></span>The Best Partner For Your Business</div>
+                  <div><span style={{ marginRight: "8px" }}></span>Technology Solutions For Unlimited Connection</div>
                   <div className="mt-3">
                     <strong><span style={{ marginRight: "6px" }}></span>Phone:</strong> <span>+62 877-2799-9117</span>
                   </div>

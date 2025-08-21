@@ -4,96 +4,27 @@ import React from "react";
 const About = () => {
   return (
     <div style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
-      {/* <div className="container">
-        <header className="blog-header py-3">
-          <div className="row flex-nowrap justify-content-between align-items-center">
-            <div className="col-4 pt-1">
-              <a className="link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-                Hubungi Kami
-              </a>
-            </div>
-            <div className="col-4 text-center">
-              <a className="blog-header-logo" href="#" style={{ color: 'var(--text-primary)' }}>
-                Kanggawe Technology
-              </a>
-            </div>
-            <div className="col-4 d-flex justify-content-end align-items-center">
-              <a className="link-secondary" href="#" aria-label="Cari" style={{ color: 'var(--text-secondary)' }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="mx-3"
-                  role="img"
-                  viewBox="0 0 24 24"
-                >
-                  <title>Cari</title>
-                  <circle cx="10.5" cy="10.5" r="7.5" />
-                  <path d="M21 21l-5.2-5.2" />
-                </svg>
-              </a>
-              <a className="btn btn-sm btn-outline-secondary" href="#" style={{ borderColor: 'var(--border-color)', color: 'var(--text-secondary)' }}>
-                Karir
-              </a>
-            </div>
-          </div>
-        </header>
-
-        <div className="nav-scroller py-1 mb-2">
-          <nav className="nav d-flex justify-content-between">
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Beranda
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Tentang Kami
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Layanan
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Portfolio
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Tim
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Berita
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Karir
-            </a>
-            <a className="p-2 link-secondary" href="#" style={{ color: 'var(--text-secondary)' }}>
-              Kontak
-            </a>
-          </nav>
-        </div>
-      </div> */}
 
       <main className="container">
         <div className="p-4 p-md-5 mb-4 text-white rounded" style={{ backgroundColor: 'var(--primary-color)' }}>
           <div className="col-md-6 px-0">
-            <h1 className="display-4 fst-italic">
+            {/* <h1 className="display-4 fst-italic">
               Tentang Kanggawe Technology
-            </h1>
-            <p className="lead my-3">
+            </h1> */}
+            {/* <p className="lead my-3">
               Kami adalah perusahaan teknologi yang berkomitmen untuk memberikan solusi inovatif 
               dalam pengembangan web, aplikasi mobile, dan layanan digital yang membantu bisnis 
               berkembang di era digital.
-            </p>
-            <p className="lead mb-0">
+            </p> */}
+            {/* <p className="lead mb-0">
               <a href="#" className="text-white fw-bold">
                 Pelajari Lebih Lanjut...
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
 
-        <div className="row mb-2">
+        {/* <div className="row mb-2">
           <div className="col-md-6">
             <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--bg-card)' }}>
               <div className="col p-4 d-flex flex-column position-static">
@@ -166,7 +97,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="row g-5">
           <div className="col-md-8 pb-5">
@@ -175,7 +106,7 @@ const About = () => {
             <article className="blog-post">
               <h2 className="blog-post-title" style={{ color: 'var(--text-primary)' }}>Visi & Misi Kami</h2>
               <p className="blog-post-meta" style={{ color: 'var(--text-secondary)' }}>
-                Didirikan pada 2020 oleh <a href="#" style={{ color: 'var(--primary-color)' }}>Tim Kanggawe</a>
+                Didirikan pada 2010<a href="#" style={{ color: 'var(--primary-color)' }}></a>
               </p>
 
               <p style={{ color: 'var(--text-secondary)' }}>
@@ -351,7 +282,7 @@ const About = () => {
                 </ol>
               </div>
 
-              <div className="p-4" style={{ backgroundColor: 'var(--bg-card)', borderRadius: 'var(--border-radius)' }}>
+              {/* <div className="p-4" style={{ backgroundColor: 'var(--bg-card)', borderRadius: 'var(--border-radius)' }}>
                 <h4 className="fst-italic" style={{ color: 'var(--text-primary)' }}>Hubungi Kami</h4>
                 <ol className="list-unstyled">
                   <li>
@@ -367,7 +298,7 @@ const About = () => {
                     <a href="#" style={{ color: 'var(--text-secondary)' }}>Alamat: Jakarta, Indonesia</a>
                   </li>
                 </ol>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
