@@ -125,7 +125,7 @@ const About = () => {
               <h2 style={{ color: 'var(--text-primary)' }}>Nilai-Nilai Kami</h2>
               <p style={{ color: 'var(--text-secondary)' }}>Berikut adalah prinsip-prinsip yang memandu setiap langkah kami:</p>
               <blockquote className="blockquote" style={{ borderLeft: '4px solid var(--primary-color)', paddingLeft: '1rem', backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: 'var(--border-radius)' }}>
-                <p style={{ color: 'var(--text-secondary)' }}>"Solusi Teknologi Untuk Koneksi Tanpa Batas."</p>
+                <p style={{ color: 'var(--text-secondary)' }}>"Technology Solutions For Unlimited Connection."</p>
               </blockquote>
               <p style={{ color: 'var(--text-secondary)' }}>
                 Kami percaya bahwa teknologi harus mudah digunakan, bermanfaat, dan memberikan 
@@ -138,14 +138,13 @@ const About = () => {
                 kebutuhan digital bisnis Anda:
               </p>
               <ul style={{ color: 'var(--text-secondary)' }}>
-                <li>Pengembangan Website Responsif & SEO-friendly</li>
+                <li>Layanan Internet Fiber Optik</li>
                 <li>
-                  Aplikasi Mobile Native & Cross-platform (iOS & Android)
+                  CCTV & Keamanan bisnis anda
                 </li>
-                <li>E-commerce & Sistem Manajemen Konten</li>
-                <li>API Development & Integrasi Sistem</li>
-                <li>UI/UX Design & Branding Digital</li>
-                <li>Maintenance & Support Teknologi</li>
+                <li>Maintenance Jaringan Bisnis anda</li>
+                <li>Service komputer & laptop</li>
+                <li>Marketing & Penjualan</li>
               </ul>
               <p style={{ color: 'var(--text-secondary)' }}>Proses kerja kami yang terstruktur:</p>
               <ol style={{ color: 'var(--text-secondary)' }}>
@@ -157,7 +156,7 @@ const About = () => {
                 <li>Deployment & Launch</li>
                 <li>Maintenance & Support</li>
               </ol>
-              <p style={{ color: 'var(--text-secondary)' }}>Teknologi yang kami kuasai:</p>
+              {/* <p style={{ color: 'var(--text-secondary)' }}>Teknologi yang kami kuasai:</p>
               <dl style={{ color: 'var(--text-secondary)' }}>
                 <dt style={{ color: 'var(--text-primary)' }}>Frontend Development</dt>
                 <dd>
@@ -169,13 +168,13 @@ const About = () => {
                 <dd>
                   React Native, Flutter, Swift, Kotlin, Android SDK
                 </dd>
-              </dl>
+              </dl> */}
               <h2 style={{ color: 'var(--text-primary)' }}>Keunggulan Kami</h2>
               <p style={{ color: 'var(--text-secondary)' }}>
                 Kami bangga dengan <strong>pengalaman dan keahlian</strong> tim kami dalam 
-                teknologi terbaru. Setiap proyek dikerjakan dengan <em>dedikasi tinggi</em> 
-                dan <code style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }}>best practices</code> 
-                industri. Lihat <a href="#" style={{ color: 'var(--primary-color)' }}>portfolio kami</a> untuk buktinya.
+                teknologi terbaru. Setiap proyek dikerjakan dengan <em>dedikasi tinggi </em> 
+                dan <code style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-primary)' }}>best practices </code> 
+                industri.<a href="#" style={{ color: 'var(--primary-color)' }}></a> 
               </p>
               <h3 style={{ color: 'var(--text-primary)' }}>Statistik Perusahaan</h3>
               <p style={{ color: 'var(--text-secondary)' }}>Berikut adalah pencapaian kami:</p>
@@ -194,19 +193,19 @@ const About = () => {
                       <td style={{ borderColor: 'var(--border-color)' }}>1</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Proyek Selesai</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>150+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2024</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2025</td>
                     </tr>
                     <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>2</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Klien Puas</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>100+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2024</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2025</td>
                     </tr>
                     <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>3</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Tim Developer</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>25+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2024</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2025</td>
                     </tr>
                   </tbody>
                   <tfoot>
@@ -214,22 +213,22 @@ const About = () => {
                       <td style={{ borderColor: 'var(--border-color)' }}>4</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Rating Kepuasan</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>4.9/5</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2024</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2025</td>
                     </tr>
                   </tfoot>
                 </table>
               </div>
-              <h3 style={{ color: 'var(--text-primary)' }}>Tim Kami</h3>
+              {/* <h3 style={{ color: 'var(--text-primary)' }}>Tim Kami</h3>
               <p style={{ color: 'var(--text-secondary)' }}>Tim profesional yang siap membantu Anda:</p>
               <img
                 src="https://via.placeholder.com/800x400"
                 className="img-fluid"
                 alt="Tim Kanggawe Technology"
                 style={{ borderRadius: 'var(--border-radius)' }}
-              />
+              /> */}
             </article>
 
-            <nav className="blog-pagination" aria-label="Pagination">
+            {/* <nav className="blog-pagination" aria-label="Pagination">
               <a className="btn btn-outline-primary" href="#" style={{ borderColor: 'var(--primary-color)', color: 'var(--primary-color)' }}>
                 Portfolio Kami
               </a>
@@ -240,7 +239,7 @@ const About = () => {
               >
                 Hubungi Kami
               </a>
-            </nav>
+            </nav> */}
           </div>
 
           <div className="col-md-4">
@@ -260,28 +259,22 @@ const About = () => {
                 <h4 className="fst-italic" style={{ color: 'var(--text-primary)' }}>Layanan Unggulan</h4>
                 <ol className="list-unstyled mb-0">
                   <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Website Development</a>
+                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Layanan Internet Fiber Optik</a>
                   </li>
                   <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Mobile App Development</a>
+                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Maintenance Jaringan Bisnis anda</a>
                   </li>
                   <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>E-commerce Solutions</a>
+                    <a href="#" style={{ color: 'var(--text-secondary)' }}>CCTV & Keamanan bisnis anda</a>
                   </li>
                   <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>UI/UX Design</a>
+                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Service komputer & laptop</a>
                   </li>
                   <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>API Development</a>
+                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Marketing & Penjualan</a>
                   </li>
                   <li>
                     <a href="#" style={{ color: 'var(--text-secondary)' }}>Digital Marketing</a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Cloud Solutions</a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ color: 'var(--text-secondary)' }}>Maintenance & Support</a>
                   </li>
                 </ol>
               </div>
