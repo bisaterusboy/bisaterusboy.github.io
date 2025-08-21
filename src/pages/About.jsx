@@ -109,21 +109,23 @@ const About = () => {
                 Didirikan pada 2010<a href="#" style={{ color: 'var(--primary-color)' }}></a>
               </p>
 
-              <p style={{ color: 'var(--text-secondary)' }}>
-                Kanggawe Technology adalah perusahaan teknologi yang berfokus pada pengembangan 
-                solusi digital inovatif. Kami berkomitmen untuk membantu bisnis dan organisasi 
-                mengoptimalkan kehadiran digital mereka melalui teknologi yang tepat dan desain yang menarik.
-              </p>
+              <ul style={{ color: 'var(--text-secondary)' }}>
+                <li>Menjadi penyedia layanan dan solusi teknologi informasi yang inovatif, handal dan terpercaya dengan harga yang bersaing.</li>
+              <li>Menjadi perusahaan penyedia jasa internet terbaik dan terpecaya.</li>
+              </ul>
               <hr style={{ borderColor: 'var(--border-color)' }} />
-              <p style={{ color: 'var(--text-secondary)' }}>
-                Dengan tim yang berpengalaman dan passion terhadap teknologi, kami terus berinovasi 
-                untuk memberikan solusi terbaik bagi klien kami. Setiap proyek yang kami kerjakan 
-                adalah kesempatan untuk menciptakan sesuatu yang luar biasa dan berdampak positif.
-              </p>
+
+              <ul style={{ color: 'var(--text-secondary)' }}>
+                <li>Meningkatkan pelayanan untuk mencapai kepuasa konsumen dalam bidang jasa koneksi internet.</li>
+              <li>Memeratakan jaringan koneksi internet ke seluruh pelosok daerah.</li>
+              <li>Meningkatnya kebutuhan akan infrastruktur jaringan yang handal.</li>
+              <li>PT Mitracom Solusi Teknologi (Mitracom) telah mulai merintis jalan untuk menjadi salah satu Penyedia Layanan Internet terbaik di Indonesia.</li>
+              </ul>
+              
               <h2 style={{ color: 'var(--text-primary)' }}>Nilai-Nilai Kami</h2>
               <p style={{ color: 'var(--text-secondary)' }}>Berikut adalah prinsip-prinsip yang memandu setiap langkah kami:</p>
               <blockquote className="blockquote" style={{ borderLeft: '4px solid var(--primary-color)', paddingLeft: '1rem', backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: 'var(--border-radius)' }}>
-                <p style={{ color: 'var(--text-secondary)' }}>"Teknologi yang baik adalah teknologi yang melayani manusia, bukan sebaliknya."</p>
+                <p style={{ color: 'var(--text-secondary)' }}>"Solusi Teknologi Untuk Koneksi Tanpa Batas."</p>
               </blockquote>
               <p style={{ color: 'var(--text-secondary)' }}>
                 Kami percaya bahwa teknologi harus mudah digunakan, bermanfaat, dan memberikan 
@@ -244,11 +246,13 @@ const About = () => {
           <div className="col-md-4">
             <div className="position-sticky py-3 mt-3" style={{ top: "2rem" }}>
               <div className="p-4 mb-3 mt-4 rounded" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                <h4 className="fst-italic" style={{ color: 'var(--text-primary)' }}>Tentang Kanggawe</h4>
+                <h4 className="fst-italic" style={{ color: 'var(--text-primary)' }}>Tentang Mitracom</h4>
                 <p className="mb-0" style={{ color: 'var(--text-secondary)' }}>
-                  Kanggawe Technology adalah perusahaan teknologi yang berfokus pada pengembangan 
-                  solusi digital inovatif. Didirikan pada tahun 2020, kami telah membantu 
-                  ratusan bisnis mengoptimalkan kehadiran digital mereka.
+                  PT Mitracom Solusi Teknologi  Adalah Perusahaan Yang Bergerak Dalam Bidang Penyedia Jasa Jaringan Internet, Kami Berdiri Pada Tahun 2010.
+                  Kenapa "Technology Solutions For Unlimited Connection" Kami bukan sekadar penjual produk teknologi. Kami adalah mitra ahli yang memahami 
+                  tantangan dan menyediakan jawaban yang lengkap, efektif, dan 
+                  terintegrasi untuk membantu bisnis atau aktivitas  berjalan lebih baik melalui penerapan teknologi yang tepat
+                Kami Akan Terus Berkembang, Baik Secara Teknologi, dan Kami Utamakan Pelayanan Terhadap Pelanggan-Pelanggan Kami. Dengan Komitmen - Layanan - Kepercayaan
                 </p>
               </div>
 
