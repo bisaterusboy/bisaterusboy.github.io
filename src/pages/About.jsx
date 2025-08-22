@@ -1,13 +1,20 @@
 // src/pages/About.jsx
 import React from "react";
+import header from "../assets/img/tentang-kami.png";
 
 const About = () => {
   return (
     <div style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
 
       <main className="container">
-        <div className="p-4 p-md-5 mb-4 text-white rounded" style={{ backgroundColor: 'var(--primary-color)' }}>
+        <div className="pb-4 text-white rounded" >
+           <img src={header} alt="Logo" style={{ 
+                                width: "100%", height: "300px" 
+                                }}/>
           <div className="col-md-6 px-0">
+            
+                                                                    
+                              
             {/* <h1 className="display-4 fst-italic">
               Tentang Kanggawe Technology
             </h1> */}

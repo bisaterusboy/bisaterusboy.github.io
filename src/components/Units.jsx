@@ -284,6 +284,19 @@ function Units() {
 
 	const rowItems1 = [...logos1, ...logos1, ...logos1 ] // duplicate for seamless loop
 
+  const logos3 = [
+		{ id: 1, name: '', url: logoa },
+		{ id: 2, name: '', url: logob },
+		{ id: 3, name: '', url: logoc },
+		{ id: 4, name: '', url: logod },
+		{ id: 5, name: '', url: logoe },
+    { id: 6, name: '', url: logof },
+    { id: 7, name: '', url: logog },
+    { id: 8, name: '', url: logoh },
+	]
+
+	const rowItems3 = [...logos3, ...logos3, ...logos3 ] // duplicate for seamless loop
+
   return (
     <div className="wrapper" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
       <section id="plans" className="section-padding">
@@ -432,6 +445,17 @@ function Units() {
             <div className="marquee__track">
               {rowItems1.map((item, idx) => (
                 <div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
+                  <div className="client-card d-flex align-items-center justify-content-center">
+                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="marquee" role="list" aria-label="logo marquee top">
+            <div className="marquee__track">
+              {rowItems3.map((item, idx) => (
+                <div key={`top-${item.id}-${idx}`} className="brand-slide" role="listitem">
                   <div className="client-card d-flex align-items-center justify-content-center">
                     <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
                   </div>
