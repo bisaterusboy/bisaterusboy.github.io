@@ -21,6 +21,16 @@ import logof from "../assets/img/partner/pulsanet.png";
 import logog from "../assets/img/partner/Wifique.png";
 import logoh from "../assets/img/partner/polytama.png";
 
+// partner kami 3
+import logo1a from "../assets/img/partner/Setda.png";
+import logo1b from "../assets/img/partner/pptr.png";
+import logo1c from "../assets/img/partner/smr.png";
+import logo1d from "../assets/img/partner/thc.png";
+import logo1e from "../assets/img/partner/kingpolah.png";
+import logo1f from "../assets/img/partner/grahasudirman.png";
+import logo1g from "../assets/img/partner/Inspektorat.jpg";
+import logo1h from "../assets/img/partner/dadap.png";
+
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6" }) => {
@@ -285,14 +295,14 @@ function Units() {
 	const rowItems1 = [...logos1, ...logos1, ...logos1 ] // duplicate for seamless loop
 
   const logos3 = [
-		{ id: 1, name: '', url: logoa },
-		{ id: 2, name: '', url: logob },
-		{ id: 3, name: '', url: logoc },
-		{ id: 4, name: '', url: logod },
-		{ id: 5, name: '', url: logoe },
-    { id: 6, name: '', url: logof },
-    { id: 7, name: '', url: logog },
-    { id: 8, name: '', url: logoh },
+		{ id: 1, name: '', url: logo1a },
+		{ id: 2, name: '', url: logo1b },
+		{ id: 3, name: '', url: logo1c },
+		{ id: 4, name: '', url: logo1d },
+		{ id: 5, name: '', url: logo1e },
+    { id: 6, name: '', url: logo1f },
+    { id: 7, name: '', url: logo1g },
+    { id: 8, name: '', url: logo1h },
 	]
 
 	const rowItems3 = [...logos3, ...logos3, ...logos3 ] // duplicate for seamless loop
