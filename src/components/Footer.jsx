@@ -152,7 +152,7 @@ const Footer = () => {
                     
                     {[
                       { name: "Kontak", icon: "📞", link: "/contact" },
-                      { name: "info@mitracom.id", icon: "📩", link: "/" }, 
+                      { name: "info@mitracom.id", icon: "📩", link: "mailto:info@mitracom.id" }, 
                       { name: "mitracom.id", icon: "🌐", link: "/" },
                       { name: "Kebijakan & Privasi", icon: "🔒", link: "/privacy-policy" },
                     ].map((item, idx) => (
