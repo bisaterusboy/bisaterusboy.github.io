@@ -8,7 +8,7 @@ function Contact() {
       name: 'WhatsApp',
       description: 'Hubungi kami via WhatsApp',
       icon: 'bi bi-whatsapp',
-      link: 'https://wa.me/6282260601982?text=Hallo, saya ingin berkonsultasi',
+      link: 'https://wa.me/6287727999117?text=Hallo, saya ingin berkonsultasi',
       color: 'primary',
       response: 'Respon dalam 5 menit'
     },
@@ -17,7 +17,7 @@ function Contact() {
       name: 'Email',
       description: 'Kirim email ke tim kami',
       icon: 'bi bi-envelope',
-      link: 'mailto:info@kanggawe.com',
+      link: 'mailto:info@mitracom.id',
       color: 'secondary',
       response: 'Respon dalam 24 jam'
     },
@@ -26,7 +26,7 @@ function Contact() {
       name: 'Telepon',
       description: 'Hubungi langsung via telepon',
       icon: 'bi bi-telephone',
-      link: 'tel:+6282260601982',
+      link: 'tel:+6287727999117',
       color: 'accent',
       response: 'Respon langsung'
     },
@@ -73,8 +73,8 @@ function Contact() {
     <section id="contact" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Hubungi Kami</h2>
-          <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}>PILIH METODE KONTAK YANG TEPAT</p>
+          <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Kontak Kami</h2>
+          <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}>silahkan hubungi kami dan kami akan menghubungi Anda kembali.</p>
         </div>
         
         <div className="row g-4">

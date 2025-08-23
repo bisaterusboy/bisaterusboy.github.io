@@ -76,7 +76,7 @@ function PrivacyPolicy() {
                     Download Full Policy
                   </button>
                   <button className="btn btn-secondary-custom">
-                    <i className="bi bi-arrow-left me-2"></i>
+                    <i className="bi bi-arrow-left me-2" ></i>
                     Back to Home
                   </button>
                 </div>

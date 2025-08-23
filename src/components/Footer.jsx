@@ -21,8 +21,8 @@ const Footer = () => {
 
   const contacts = [
     { label: "Telepon", display: "+62 821-1777-7187", href: "tel:+6282117777187" },
-    { label: "Email", display: "info@esanet.id", href: "mailto:info@esanet.id" },
-    { label: "Website", display: "esanet.id", href: "https://esanet.id", external: true },
+    { label: "Email", display: "info@mitracom.id", href: "mailto:info@mitracom.id" },
+    { label: "Website", display: "mitracom.id", href: "https://mitracom.id", external: true },
   ];
 
   const columns = [
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
-              <div className="py-5 h-100 d-flex flex-column justify-content-between">
+              <div className="py-5 h d-flex flex-column justify-content-between">
                 <div className="mb-3" style={{ height: "40px" }}> {/* Container untuk logo */}
                   <img src={eLogo1} alt="Logo" style={{ 
                     width: "70%", height: "70px" 
@@ -57,11 +57,11 @@ const Footer = () => {
                 </div>
                 <address className="footer-contact pt-3 mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
                   <div><span style={{ marginRight: "8px" }}></span>PT. MITRACOM SOLUSI TEKNOLOGI </div>
-                  <div><span style={{ marginRight: "8px" }}></span>Technology Solutions For Unlimited Connection</div>
-                  <div className="mt-3">
+                  <div><span style={{ marginRight: "8px" }}></span>The Best Partner Your Internet Connection</div>
+                  {/* <div className="mt-3">
                     <strong><span style={{ marginRight: "6px" }}></span>Phone:</strong> <span>+62 877-2799-9117</span>
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <strong><span style={{ marginRight: "6px" }}>📩</span>Email:</strong>{" "}
                     <a
                       href="mailto:info@mitracom.id"
@@ -69,7 +69,7 @@ const Footer = () => {
                     >
                       info@mitracom.id
                     </a>
-                  </div>
+                  </div> */}
                 </address>
               </div>
             </div>
@@ -80,10 +80,10 @@ const Footer = () => {
                 <ul className="list-unstyled mb-0">
                     {[
                       { name: "Internet Home", icon: "🏠", link: "/" },
-                      { name: "Internet Dedicated", icon: "👥", link: "/about" },
-                      { name: "Service Komputer", icon: "🛠️", link: "/services" },
-                      { name: "Penjualan", icon: "📄", link: "/terms-of-service" },
-                      { name: "CCTV", icon: "🔒", link: "/privacy-policy" },
+                      { name: "Internet Dedicated", icon: "👥", link: "/" },
+                      { name: "Service Komputer", icon: "🛠️", link: "/" },
+                      { name: "Penjualan", icon: "📄", link: "/" },
+                      { name: "CCTV", icon: "🔒", link: "/" },
                     ].map((item, idx) => (
                       <li key={idx}>
                         <a
@@ -149,12 +149,12 @@ const Footer = () => {
               <div className="py-5 h-8 d-flex flex-column justify-content-between">
                 <h4 className="mb-3" style={{ color: "#fff", letterSpacing: "1px" }}>Kontak Kami</h4>
                               <ul className="list-unstyled mb-0">
+                    
                     {[
-                      { name: "Home", icon: "🏠", link: "/" },
-                      { name: "About us", icon: "👥", link: "/about" },
-                      { name: "Services", icon: "🛠️", link: "/services" },
-                      { name: "Terms of service", icon: "📄", link: "/terms-of-service" },
-                      { name: "Privacy policy", icon: "🔒", link: "/privacy-policy" },
+                      { name: "Kontak", icon: "📞", link: "/contact" },
+                      { name: "info@mitracom.id", icon: "📩", link: "/" }, 
+                      { name: "mitracom.id", icon: "🌐", link: "/" },
+                      { name: "Kebijakan & Privasi", icon: "🔒", link: "/privacy-policy" },
                     ].map((item, idx) => (
                       <li key={idx}>
                         <a

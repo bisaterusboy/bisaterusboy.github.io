@@ -132,7 +132,7 @@ const About = () => {
               <h2 style={{ color: 'var(--text-primary)' }}>Nilai-Nilai Kami</h2>
               <p style={{ color: 'var(--text-secondary)' }}>Berikut adalah prinsip-prinsip yang memandu setiap langkah kami:</p>
               <blockquote className="blockquote" style={{ borderLeft: '4px solid var(--primary-color)', paddingLeft: '1rem', backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: 'var(--border-radius)' }}>
-                <p style={{ color: 'var(--text-secondary)' }}>"Technology Solutions For Unlimited Connection."</p>
+                <p style={{ color: 'var(--text-secondary)' }}>"The Best Partner Your Internet Connection"</p>
               </blockquote>
               <p style={{ color: 'var(--text-secondary)' }}>
                 Kami percaya bahwa teknologi harus mudah digunakan, bermanfaat, dan memberikan 
@@ -200,20 +200,20 @@ const About = () => {
                       <td style={{ borderColor: 'var(--border-color)' }}>1</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Proyek Selesai</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>150+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2025</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2025</td>
                     </tr>
                     <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>2</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Klien Puas</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>100+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2020-2025</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2025</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>3</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Tim Developer</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>25+</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>2025</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                   <tfoot>
                     <tr>
@@ -255,7 +255,7 @@ const About = () => {
                 <h4 className="fst-italic" style={{ color: 'var(--text-primary)' }}>Tentang Mitracom</h4>
                 <p className="mb-0" style={{ color: 'var(--text-secondary)' }}>
                   PT Mitracom Solusi Teknologi  Adalah Perusahaan Yang Bergerak Dalam Bidang Penyedia Jasa Jaringan Internet, Kami Berdiri Pada Tahun 2010.
-                  Kenapa "Technology Solutions For Unlimited Connection" Kami bukan sekadar penjual produk teknologi. Kami adalah mitra ahli yang memahami 
+                  Kenapa "The Best Partner Your Internet Connection" Kami bukan sekadar penjual produk teknologi. Kami adalah mitra ahli yang memahami 
                   tantangan dan menyediakan jawaban yang lengkap, efektif, dan 
                   terintegrasi untuk membantu bisnis atau aktivitas  berjalan lebih baik melalui penerapan teknologi yang tepat
                 Kami Akan Terus Berkembang, Baik Secara Teknologi, dan Kami Utamakan Pelayanan Terhadap Pelanggan-Pelanggan Kami. Dengan Komitmen - Layanan - Kepercayaan
