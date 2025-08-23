@@ -30,15 +30,7 @@ function Contact() {
       color: 'accent',
       response: 'Respon langsung'
     },
-    // {
-    //   id: 4,
-    //   name: 'Live Chat',
-    //   description: 'Chat langsung dengan tim support',
-    //   icon: 'bi bi-chat-dots',
-    //   link: '#',
-    //   color: 'primary',
-    //   response: 'Respon real-time'
-    // }
+
   ];
 
   // Icon Component with fallback
