@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/priceList.css";
-import "../assets/css/Service.css"
+import "../assets/css/Service.css";
 
 // layanankami
 const services = [
@@ -16,23 +16,11 @@ const services = [
     icon: "bi bi-laptop",
     color: "primary"
   },
-  // {
-  //   title: "Product Management",
-  //   desc: "Manajemen produk digital, mulai dari perencanaan hingga peluncuran.",
-  //   icon: "bi bi-box-seam",
-  //   color: "secondary"
-  // },
   {
     title: "Marketing",
     desc: "Jasa digital marketing, promosi online, dan strategi pemasaran efektif.",
     icon: "bi bi-megaphone",
     color: "accent"
-  },
-  {
-    title: "Graphic Design",
-    desc: "Desain grafis kreatif untuk branding, promosi, dan kebutuhan bisnis Anda.",
-    icon: "bi bi-brush",
-    color: "primary"
   },
   {
     title: "Layanan Internet",
@@ -53,8 +41,8 @@ const services = [
     color: "accent"
   },
   {
-    title: "CCTV & IPTV",
-    desc: "Instalasi dan maintenance CCTV serta layanan IPTV.",
+    title: "CCTV & Security",
+    desc: "Instalasi dan maintenance CCTV serta layanan CCTV Security.",
     icon: "bi bi-camera-video",
     color: "primary"
   },
@@ -66,52 +54,112 @@ const services = [
   }
 ];
 
+//pricelist
+const packages = [
+  {
+    id: 1,
+    name: 'Classic',
+    price: 'Rp. 120.000,-',
+    speed: '5 Mbps (Up to*)',
+    features: [
+      'Home Broadband',
+      'Tanpa FUP',
+      'Unlimited Download',
+      'Unlimited Upload'
+    ],
+    whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 1',
+    color: 'primary'
+  },
+  {
+    id: 2,
+    name: 'Bronze',
+    price: 'Rp. 165.000,-',
+    speed: '10 Mbps (Up to*)',
+    features: [
+      'Home Broadband',
+      'Tanpa FUP',
+      'Unlimited Download',
+      'Unlimited Upload'
+    ],
+    whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 2',
+    color: 'secondary'
+  },
+  {
+    id: 3,
+    name: 'Silver',
+    price: 'Rp. 190.000,-',
+    speed: '20 Mbps (Up to*)',
+    features: [
+      'Home Broadband',
+      'Tanpa FUP',
+      'Unlimited Download',
+      'Unlimited Upload'
+    ],
+    whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 3',
+    color: 'accent'
+  },
+  {
+    id: 4,
+    name: 'Gold',
+    price: 'Rp. 390.000',
+    speed: '30 Mbps (Up to*)',
+    features: [
+      'Home Broadband',
+      'Tanpa FUP',
+      'Unlimited Download',
+      'Unlimited Upload'
+    ],
+    whatsapp: 'https://wa.me/6282260601982?text=Hallo, saya ingin memesan Home 4',
+    color: 'primary'
+  }
+];
 
 function Service() {
   return (
-    <section className="section-padding" style={{background:'#dad5d5ff'}} >
+    <section className="section-padding" style={{ background: '', minHeight: '100vh' }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="section-title" style={{ color: 'var(--primary-color)', fontWeight: 'bold', letterSpacing: '2px' }}>Layanan Kami</h2>
-          <p className="section-subtitle" style={{ color: 'var(--text-secondary)', fontSize: '1.15rem' }}>Produk & Jasa Unggulan untuk kebutuhan digital Anda</p>
+
+          <h4 className="mt-5" style={{ color: 'var(--text-dark)', fontSize: '' }}><marquee behavior="" direction="">Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan infrastruktur anda - dari sistem infrastruktur hingga layanan berbasis teknologi terkini</marquee></h4>
+
+
         </div>
         <div className="row g-4 justify-content-center">
           {services.map((srv, idx) => (
             <div key={idx} className="col-lg-4 col-md-6">
               <div className="service-card card-custom p-4 rounded-4 shadow text-center border-0"
                 style={{
-                //   minHeight: '280px',
-                //   background: 'linear-gradient(135deg, #40cc7fff 70%, var(--primary-color) 100%)',
-                //   color: '#eee',
-                //   transition: 'transform 0.2s, box-shadow 0.2s',
-                //   boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)'
-              //  }}
-              //   onMouseOver={e => {
-              //     e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)';
-              //     e.currentTarget.style.boxShadow = '0 16px 40px 0 rgba(31,38,135,0.28)';
-              //   }}
-              //   onMouseOut={e => {
-              //     e.currentTarget.style.transform = 'none';
-              //     e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.18)';
+                  minHeight: '280px',
+                  background: '#13A7D4',
+                  color: '#eee',
+                  transition: 'transform 0.2s, box-shadow 0.5s',
+                  boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)'
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)';
+                  e.currentTarget.style.boxShadow = '0 16px 40px 0 rgba(31,38,135,0.28)';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.transform = 'none';
+                  e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.18)';
                 }}
               >
                 <div className="mb-3">
-                  <i className={`${srv.icon} fs-1`} style={{ color: 'var(--primary-color)', fontSize: '3rem', textShadow: '0 2px 8px #0002' }}></i>
+                  <i className={`${srv.icon} fs-1`} style={{ fontSize: '3rem', textShadow: '0 2px 8px #0002' }}></i>
                 </div>
-                <h4 className="fw-bold mb-2" style={{ color: 'var(--primary-color)', fontSize: '1.35rem', letterSpacing: '1px' }}>{srv.title}</h4>
-                <p className="mb-2" style={{ color: '#252222ff', fontSize: '1.08rem' }}>{srv.desc}</p>
+                <h4 className="fw-bold mb-2" style={{ color: '#FFFFFF', fontSize: '1.35rem', letterSpacing: '1px' }}>{srv.title}</h4>
+                <p className="mb-2" style={{ color: '#FFFFFF', fontSize: '1.08rem' }}>{srv.desc}</p>
                 <div className="mt-3">
-                  <span className="badge bg-primary" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
-                    {srv.title.includes('Internet') && 'Home & Business'}
-                    {srv.title.includes('Komputer') && 'Hardware & Software'}
-                    {srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}
-                    {srv.title.includes('CCTV') && 'Keamanan & Hiburan'}
-                    {srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}
-                    {srv.title === 'Web Design' && 'Desain Modern'}
-                    {srv.title === 'Web Development' && 'Aplikasi Web'}
-                    {srv.title === 'Product Management' && 'Digital Product'}
-                    {srv.title === 'Marketing' && 'Promosi Online'}
-                    {srv.title === 'Graphic Design' && 'Branding & Promosi'}
+                  <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
+                    <a href="http://localhost:5173/business">{srv.title.includes('Internet') && 'Home & Business'}</a>
+                    <a href="http://localhost:5173/hardwaresoftware">{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
+                    <a href="http://localhost:5173/maintenanceinternet">{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
+                    <a href="http://localhost:5173/kamera">{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
+                    <a href="http://localhost:5173/konsultan">{srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}</a>
+                    <a href="http://localhost:5173/webdesign">{srv.title === 'Web Design' && 'Desain Modern'}</a>
+                    <a href="http://localhost:5173/aplikasiweb">{srv.title === 'Web Development' && 'Aplikasi Web'}</a>
+                    <a href="http://localhost:5173/marketing">{srv.title === 'Marketing' && 'Promosi Online'}</a>
                   </span>
                 </div>
               </div>
@@ -119,9 +167,11 @@ function Service() {
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }
 
 export default Service;
+
+
 
