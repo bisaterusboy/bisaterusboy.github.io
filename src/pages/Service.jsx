@@ -152,14 +152,14 @@ function Service() {
                 <p className="mb-2" style={{ color: '#FFFFFF', fontSize: '1.08rem' }}>{srv.desc}</p>
                 <div className="mt-3">
                   <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
-                    <a href="https://bisaterusboy.github.io/business">{srv.title.includes('Internet') && 'Home & Business'}</a>
-                    <a href="https://bisaterusboy.github.io/hardwaresoftware">{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
-                    <a href="https://bisaterusboy.github.io/maintenanceinternet">{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
-                    <a href="https://bisaterusboy.github.io/kamera">{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
-                    <a href="https://bisaterusboy.github.io/konsultan">{srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}</a>
-                    <a href="https://bisaterusboy.github.io/webdesign">{srv.title === 'Web Design' && 'Desain Modern'}</a>
-                    <a href="https://bisaterusboy.github.io/aplikasiweb">{srv.title === 'Web Development' && 'Aplikasi Web'}</a>
-                    <a href="https://bisaterusboy.github.io/marketing">{srv.title === 'Marketing' && 'Promosi Online'}</a>
+                    <a href="business">{srv.title.includes('Internet') && 'Home & Business'}</a>
+                    <a href="hardwaresoftware">{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
+                    <a href="maintenanceinternet">{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
+                    <a href="kamera">{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
+                    <a href="konsultan">{srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}</a>
+                    <a href="webdesign">{srv.title === 'Web Design' && 'Desain Modern'}</a>
+                    <a href="aplikasiweb">{srv.title === 'Web Development' && 'Aplikasi Web'}</a>
+                    <a href="marketing">{srv.title === 'Marketing' && 'Promosi Online'}</a>
                   </span>
                 </div>
               </div>
