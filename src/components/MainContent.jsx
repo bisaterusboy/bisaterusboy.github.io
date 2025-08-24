@@ -12,8 +12,14 @@ import Service from "../pages/Service";
 import NotFound from "../pages/NotFound";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfService from "../pages/TermsOfService";
-// import Sidebar from "./Sidebar";
-// import CarouselComponent from "./CarouselComponent";
+import Business from "../pages/Business";
+import Konsultan from "../pages/Konsultan";
+import Kamera from "../pages/Kamera";
+import Maintenanceinternet from "../pages/Maintenanceinternet";
+import Hardwaresoftware from "../pages/Hardwaresoftware";
+import Marketing from "../pages/Marketing";
+import Aplikasiweb from "../pages/Aplikasiweb";
+import Webdesign from "../pages/Webdesign";
 
 const MainContent = () => {
   return (
@@ -31,7 +37,15 @@ const MainContent = () => {
           <Route path="/services" element={<Service />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/pricelist" element={<Iklan />} />          
+          <Route path="/business" element={<Business />} />
+          <Route path="/konsultan" element={<Konsultan />} />
+          <Route path="/kamera" element={<Kamera />} />
+          <Route path="/maintenanceinternet" element={<Maintenanceinternet />} />
+          <Route path="/hardwaresoftware" element={<Hardwaresoftware />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/aplikasiweb" element={<Aplikasiweb />} />
+          <Route path="/webdesign" element={<Webdesign />} />
+          <Route path="/pricelist" element={<Iklan />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/*" element={<NotFound />} />

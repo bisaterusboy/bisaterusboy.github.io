@@ -52,7 +52,7 @@ function Kamera() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>CCTV & Security</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="http://localhost:5173/">Home</a> / Keamanan dan Hiburan</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Keamanan dan Hiburan</p>
                 </div>
 
                 {/* Google Maps Section */}

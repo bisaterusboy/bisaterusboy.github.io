@@ -52,10 +52,10 @@ function Aplikasiweb() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Web Development</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="http://localhost:5173/">Home</a> / Web Development</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Web Development</p>
                 </div>
 
-                <img src="foto4.jpg" class="card-img-top rounded-5 shadow mb-3" alt="..."></img>
+                {/* <img src="foto4.jpg" class="card-img-top rounded-5 shadow mb-3" alt="..."></img> */}
 
                 {/* Google Maps Section */}
                 <div className="row mt-2">
