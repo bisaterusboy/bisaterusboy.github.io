@@ -152,7 +152,7 @@ function Service() {
                 <p className="mb-2" style={{ color: '#FFFFFF', fontSize: '1.08rem' }}>{srv.desc}</p>
                 <div className="mt-3">
                   <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
-                    <a href="https://bisaterusboy.github.io/bussines">{srv.title.includes('Internet') && 'Home & Business'}</a>
+                    <a href="https://bisaterusboy.github.io/business">{srv.title.includes('Internet') && 'Home & Business'}</a>
                     <a href="https://bisaterusboy.github.io/hardwaresoftware">{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
                     <a href="https://bisaterusboy.github.io/maintenanceinternet">{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
                     <a href="https://bisaterusboy.github.io/kamera">{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
