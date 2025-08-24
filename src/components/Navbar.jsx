@@ -2,7 +2,7 @@ import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faLinkedinIn, faYoutube, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faWhatsapp, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import eLogo from "../assets/img/eslog1.png";
 
 // Icon Component with fallback
@@ -198,7 +198,18 @@ function Navbar() {
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
               </li> */}
-              
+              <li className="nav-item">
+                <a
+                  className="nav-link fw-bold text-decoration-none"
+                  href="https://api.whatsapp.com/send/?phone=6287727999117&text=Hallo%2C+saya+tertarik+ingin+memesan+layanan+Internetnya&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
+                  title="whatsapp"
+                >
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                </a>
+              </li>              
             </ul>
           </div>
         </div>

@@ -4,6 +4,11 @@ import '../assets/css/Slider.css'
 import SliderLib from 'react-slick'
 import banner1 from '../assets/img/banner-1.jpg'
 import banner2 from '../assets/img/banner-2.jpg'
+import banner3 from '../assets/img/banner-3.jpg'
+import banner4 from '../assets/img/banner-4.png'
+import banner6 from '../assets/img/banner-6.png'
+import banner5 from '../assets/img/banner-5.jpg'
+
 
 function Slider() {
   const slides = [
@@ -14,10 +19,33 @@ function Slider() {
       subtitle: 'Solusi internet andal untuk kebutuhan rumah dan bisnis Anda',
       ctaText: 'Layanan Kami',
       ctaLink: '/services',
-    },
-    {
+    },{
       id: 2,
       image: banner2,
+      title: 'Dukungan 24/7 Profesional',
+      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
+      ctaText: 'Hubungi Kami',
+      ctaLink: '/contact',
+    },
+    {
+      id: 3,
+      image: banner3,
+      title: 'Dukungan 24/7 Profesional',
+      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
+      ctaText: 'Hubungi Kami',
+      ctaLink: '/contact',
+    },{
+      id: 4,
+      image: banner4,
+      title: 'Dukungan 24/7 Profesional',
+      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
+      ctaText: 'Hubungi Kami',
+      ctaLink: '/contact',
+    },
+
+    {
+      id: 5,
+      image: banner5,
       title: 'Dukungan 24/7 Profesional',
       subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
       ctaText: 'Hubungi Kami',
