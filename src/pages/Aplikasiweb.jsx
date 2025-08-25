@@ -55,7 +55,7 @@ function Aplikasiweb() {
                     <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Web Development</p>
                 </div>
 
-                {/* <img src="foto4.jpg" class="card-img-top rounded-5 shadow mb-3" alt="..."></img> */}
+                <img src="foto4.jpg" class="card-img-top rounded-5 shadow mb-3" alt="..."></img>
 
                 {/* Google Maps Section */}
                 <div className="row mt-2">
