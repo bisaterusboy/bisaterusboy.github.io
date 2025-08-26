@@ -1,6 +1,6 @@
 import React from "react";
 // import "../assets/css/priceList.css";
-import internet1 from '../assets/img/internet1.png'
+import cctv from '../assets/img/cctv.jpg'
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
@@ -65,7 +65,9 @@ function Kamera() {
                                     Mitracom, sebagai penyedia layanan internet terdepan, tidak hanya fokus pada konektivitas. Kami memahami bahwa keamanan adalah prioritas utama bagi rumah dan bisnis Anda. Untuk itu, Mitracom hadir dengan solusi CCTV & Security yang terintegrasi, memberikan Anda ketenangan pikiran melalui perlindungan yang komprehensif. <br /> <br />
                                     Dalam dunia yang serba digital, ancaman keamanan tidak hanya datang dari luar jaringan, tetapi juga dari lingkungan fisik. Kehadiran kamera pengawas (CCTV) menjadi esensial untuk memantau aktivitas, mencegah tindak kriminal, dan memberikan bukti saat terjadi insiden.
                                 </p>
-                                <img src="cctv.jpg" class="card-img-top rounded-5 shadow" alt="..."></img>
+                                <center><img src={cctv} class="card-img-top rounded-5 shadow" alt="..."
+                                style={{ width: "65%", height: "400px" }}
+                                ></img></center>
 
                                 <h2 className="mt-5"><span class="badge text-bg-secondary"><Icon iconClass="bi bi-eyeglasses" size="fs-2" /></span> Mengapa Memilih Layanan CCTV & Security Mitracom? </h2>
                                 <p className="mt-2 d-flex justify-content-between text-justify">

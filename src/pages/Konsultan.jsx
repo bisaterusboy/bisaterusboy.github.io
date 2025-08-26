@@ -1,6 +1,7 @@
 import React from "react";
 // import "../assets/css/priceList.css";
-// import internet1 from '../assets/img/internet1.png'
+import konsultan1 from '../assets/img/konsultan1.jpeg'
+import konsultan2 from '../assets/img/konsultan2.webp'
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
@@ -103,8 +104,8 @@ function Konsultan() {
                                             </ol>
                                         </div>
                                         <div className="col-md-6">
-                                            <img src="konsultan.webp" class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
-                                            <img src="konsultan1.jpeg" class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
+                                            <img src={konsultan1} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
+                                            <img src={konsultan2} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
                                         </div>
                                     </div>
                                 </div>

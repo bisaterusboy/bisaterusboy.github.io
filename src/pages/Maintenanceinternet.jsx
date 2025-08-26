@@ -1,6 +1,8 @@
 import React from "react";
 // import "../assets/css/priceList.css";
-import jaringan1 from '../assets/img/jaringan1.jpg'
+import jaringan1 from '../assets/img/jaringan1.webp'
+import jaringan2 from '../assets/img/jaringan2.jpg'
+import jaringan3 from '../assets/img/jaringan3.jpg'
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
@@ -91,10 +93,10 @@ function Maintenanceinternet() {
                                             <img src={jaringan1} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
                                             <div className="row">
                                                 <div className="col-md-6">
-                                                    <img src={jaringan1} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
+                                                    <img src={jaringan2} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
                                                 </div>
                                                 <div className="col-md-6">
-                                                    <img src={jaringan1} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
+                                                    <img src={jaringan3} class="card-img-top rounded-5 shadow mb-3 w-100" alt="..."></img>
                                                 </div>
                                             </div>
                                         </div>
