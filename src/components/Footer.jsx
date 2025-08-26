@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className="info pt-5 pb-4"
+        className="info pt-3 pb-3"
         style={{
           backgroundImage:
             "linear-gradient(-10deg, rgb(220, 53, 69) 9%, rgb(7, 127, 255) 33%, rgba(83, 225, 179, 0.85) 66%)", 
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
-              <div className="py-5 h d-flex flex-column justify-content-between">
+              <div className="py-3 h d-flex flex-column justify-content-between">
                 <div className="mb-3" style={{ height: "40px" }}> {/* Container untuk logo */}
                   <img src={eLogo1} alt="Logo" style={{ 
                     width: "70%", height: "70px" 
@@ -75,9 +75,9 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-4">
-              <div className="py-5 h-100">
-                <h4 className="mb-3" style={{ color: "#fff", letterSpacing: "1px" }}>Layanan Kami</h4>
-                <ul className="list-unstyled mb-0">
+              <div className="py-3 h-100">
+                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" ,}}>Layanan Kami</h4>
+                <ul className="list-unstyled mx-2">
                     {[
                       { name: "Internet Home", icon: "🏠", link: "/" },
                       { name: "Internet Dedicated", icon: "👥", link: "/" },
@@ -114,13 +114,13 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-4">
-              <div className="py-5 h-100">
-                <h4 className="mb-3" style={{ color: "#fff", letterSpacing: "1px" }}>
+              <div className="py-3 h-100">
+                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>
                   
                   Jam Operasional
                 </h4>
                 <div className="operational-hours">
-                  <div className="mb-3">
+                  <div className="mx-2">
                     <h5 style={{ color: "#fff", marginBottom: "8px" }}>
                       
                       Administrasi
@@ -131,7 +131,7 @@ const Footer = () => {
                       </div>
                     </div>
                   </div>
-                  <div>
+                  <div className="mx-2"> 
                     <h5 style={{ color: "#fff", marginBottom: "8px" }}>
                       Teknis
                     </h5>
@@ -146,8 +146,8 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-2 col-md-12">
-              <div className="py-5 h-8 d-flex flex-column justify-content-between">
-                <h4 className="mb-3" style={{ color: "#fff", letterSpacing: "1px" }}>Kontak Kami</h4>
+              <div className="py-3 h-8 d-flex flex-column justify-content-between">
+                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>Kontak Kami</h4>
                               <ul className="list-unstyled mb-0">
                     
                     {[
