@@ -215,7 +215,7 @@ function Navbar() {
         </div>
       </nav>
       
-      <div style={{ paddingTop: '70px' }}></div>
+      <div style={{ paddingTop: '40px' }}></div>
     </>
   );
 }

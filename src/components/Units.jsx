@@ -94,12 +94,7 @@ function Units() {
     }
   ];
 
-  const aboutStats = [
-    { number: "1000+", label: "Pelanggan Aktif", color: "primary", icon: "bi bi-people-fill" },
-    { number: "99.9%", label: "Uptime SLA", color: "secondary", icon: "bi bi-check-circle-fill" },
-    { number: "24/7", label: "Customer Support", color: "accent", icon: "bi bi-clock-fill" },
-    { number: "5+", label: "Tahun Pengalaman", color: "primary", icon: "bi bi-award-fill" }
-  ];
+
 
   // --- Services Section ---
   const services = [
@@ -451,7 +446,7 @@ function Units() {
               ))}
             </div>
           </div>
-          <div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee bottom">
+          <div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee center">
             <div className="marquee__track">
               {rowItems1.map((item, idx) => (
                 <div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
@@ -488,7 +483,7 @@ function Units() {
               </div>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <div className="d-flex gap-2 justify-content-lg-end">
+              <div className="d-flex gap-2 justify-content-lg-center">
                 <a href="https://wa.me/6287727999117" className="btn btn-success rounded-pill">
                   <Icon iconClass="bi bi-whatsapp" />
                   <span className="ms-2">WhatsApp</span>
