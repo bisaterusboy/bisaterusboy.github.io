@@ -52,7 +52,7 @@ function Webdesign() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Web Design</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Design Modern</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="services">Layanan & Produk</a> / Design Modern</p>
                 </div>
 
                 {/* Google Maps Section */}
@@ -62,9 +62,9 @@ function Webdesign() {
                             <div className="col-md-12">
                                 <h2><span class="badge text-bg-secondary"><Icon iconClass="bi bi-stars" size="fs-2" /></span> Jasa Web Design Profesional  </h2>
 
-                                <img src={internet1} className="card-img-top rounded-5 shadow mt-3" alt="..." 
+                                <center><img src={internet1} className="card-img-top rounded-5 shadow mt-3" alt="..." 
                                 style={{ width: "80%", height: "400px" }}
-                                ></img>
+                                ></img></center>
 
                                 <p className="mt-2 d-flex justify-content-between mt-3 text-justify">
                                     Di era digital yang kompetitif ini, sebuah website bukan lagi sekadar informasi, melainkan aset digital terpenting Anda. Desain website yang menarik, profesional, dan mudah digunakan adalah kunci untuk membangun kepercayaan, meningkatkan kredibilitas, dan mendorong pertumbuhan bisnis. <br />

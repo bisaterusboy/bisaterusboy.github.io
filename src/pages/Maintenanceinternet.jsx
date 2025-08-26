@@ -54,7 +54,7 @@ function Maintenanceinternet() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Maintenance Jaringan</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Jaringan LAN / WiFi</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="services">Layanan & Produk</a> / Jaringan LAN / WiFi</p>
                 </div>
 
 

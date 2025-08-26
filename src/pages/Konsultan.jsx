@@ -53,7 +53,7 @@ function Konsultan() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>IT Solution & Konsultasi</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Konsultasi & Pengembangan</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="services">Layanan & Produk</a> / Konsultasi & Pengembangan</p>
                 </div>
 
 

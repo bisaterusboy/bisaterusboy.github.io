@@ -52,7 +52,7 @@ function Hardwaresoftware() {
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 className="section-title" style={{ color: 'var(--text-primary)' }}>Service Komputer & Laptop</h2>
-                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Hardware & Software</p>
+                    <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="services">Layanan & Produk</a> / Hardware & Software</p>
                 </div>
 
                 <center><img src={servicepc1} class="card-img-top rounded-5 shadow mb-3" alt="..."
