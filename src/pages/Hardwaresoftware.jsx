@@ -1,6 +1,6 @@
 import React from "react";
 // import "../assets/css/priceList.css";
-// import internet1 from '../assets/img/internet1.png'
+import servicepc1 from '../assets/img/servicepc1.png'
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
@@ -55,7 +55,9 @@ function Hardwaresoftware() {
                     <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}> <a href="/">Home</a> / Hardware & Software</p>
                 </div>
 
-                <img src="foto5.jpg" class="card-img-top rounded-5 shadow mb-3" alt="..."></img>
+                <center><img src={servicepc1} class="card-img-top rounded-5 shadow mb-3" alt="..."
+                style={{ width: "65%", height: "400px" }}
+                ></img></center>
 
                 {/* Google Maps Section */}
                 <div className="row mt-5">

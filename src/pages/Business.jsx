@@ -1,6 +1,6 @@
 import React from "react";
 // import "../assets/css/priceList.css";
-import internet1 from '../assets/img/internet1.png'
+import bisnis1 from '../assets/img/bisnis1.png'
 
 // Icon Component with fallback
 const Icon = ({ iconClass, size = "fs-6", fallback = "●" }) => {
@@ -65,7 +65,9 @@ function Business() {
                                     Mitracom adalah penyedia layanan internet yang berdedikasi untuk menghadirkan koneksi cepat, stabil, dan aman bagi masyarakat dan pelaku usaha di wilayah Kabupaten Indramayu. Kami memahami bahwa kebutuhan akan akses digital yang andal semakin penting dalam kehidupan sehari-hari, baik untuk keperluan pribadi maupun profesional. <br />
                                     Kami menawarkan solusi internet yang dirancang khusus untuk rumah tangga dan bisnis, dengan berbagai pilihan paket yang fleksibel dan dapat disesuaikan dengan kebutuhan pengguna. Didukung oleh tim teknis yang ramah, responsif, dan profesional, Mitracom memastikan setiap pelanggan mendapatkan pengalaman layanan yang optimal—mulai dari proses instalasi hingga dukungan teknis berkelanjutan.
                                 </p>
-                                <img src="internet1.png" class="card-img-top rounded-5 shadow" alt="..."></img>
+                                <img src={bisnis1} class="card-img-top rounded-5 shadow" alt="..."
+                                style={{ width: "50%", height: "300px" }}
+                                ></img>
 
                                 <h2 className="mt-5"><span class="badge text-bg-secondary"><Icon iconClass="bi bi-house" size="fs-2" /></span> Layanan Internet Rumah </h2>
                                 <p className="mt-2 d-flex justify-content-between text-justify">

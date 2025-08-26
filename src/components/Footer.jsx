@@ -86,7 +86,7 @@ const Footer = () => {
                       { name: "CCTV", icon: "🔒", link: "/" },
                     ].map((item, idx) => (
                       <li key={idx}>
-                        <a
+                        {/* <a
                           href={item.link}
                           className="footer-link"
                           style={{
@@ -104,9 +104,9 @@ const Footer = () => {
                             e.target.style.color = "var(--text-light)";
                             e.target.style.borderBottom = "2px solid transparent";
                           }}
-                        >
+                        > */}
                           <span style={{ marginRight: "6px" }}>{item.icon}</span>{item.name}
-                        </a>
+                        {/* </a> */}
                       </li>
                     ))}
                 </ul>

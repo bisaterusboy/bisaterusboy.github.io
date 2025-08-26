@@ -62,7 +62,9 @@ function Webdesign() {
                             <div className="col-md-12">
                                 <h2><span class="badge text-bg-secondary"><Icon iconClass="bi bi-stars" size="fs-2" /></span> Jasa Web Design Profesional  </h2>
 
-                                <img src="internet1.png" class="card-img-top rounded-5 shadow mt-3" alt="..."></img>
+                                <img src={internet1} className="card-img-top rounded-5 shadow mt-3" alt="..." 
+                                style={{ width: "80%", height: "400px" }}
+                                ></img>
 
                                 <p className="mt-2 d-flex justify-content-between mt-3 text-justify">
                                     Di era digital yang kompetitif ini, sebuah website bukan lagi sekadar informasi, melainkan aset digital terpenting Anda. Desain website yang menarik, profesional, dan mudah digunakan adalah kunci untuk membangun kepercayaan, meningkatkan kredibilitas, dan mendorong pertumbuhan bisnis. <br />

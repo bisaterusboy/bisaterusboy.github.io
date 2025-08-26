@@ -30,27 +30,12 @@ function Slider() {
     {
       id: 3,
       image: banner3,
-      title: 'Dukungan 24/7 Profesional',
-      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
-      ctaText: 'Hubungi Kami',
-      ctaLink: '/contact',
-    },{
-      id: 4,
-      image: banner4,
-      title: 'Dukungan 24/7 Profesional',
-      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
+      title: 'Layanan Internet yang Murah Dan Terjangkau',
+      subtitle: 'Pemasangan Gratis Syarat Ketentuan Berlaku',
       ctaText: 'Hubungi Kami',
       ctaLink: '/contact',
     },
 
-    {
-      id: 5,
-      image: banner5,
-      title: 'Dukungan 24/7 Profesional',
-      subtitle: 'Tim support siap membantu kapan pun Anda membutuhkan',
-      ctaText: 'Hubungi Kami',
-      ctaLink: '/contact',
-    },
   ]
 
   const settings = {
