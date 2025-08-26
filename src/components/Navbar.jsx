@@ -102,7 +102,7 @@ function Navbar() {
             <img
               src={eLogo}
               alt="Logo"
-              style={{ width: "100%", height: "35px" }}
+              style={{ height: "30px" }}
             />
           </Link>
           
