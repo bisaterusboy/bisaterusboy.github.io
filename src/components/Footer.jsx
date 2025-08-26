@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-4">
-              <div className="py-3 h-100">
+              <div className="py h-100">
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" ,}}>Layanan Kami</h4>
                 <ul className="list-unstyled mx-2">
                     {[
@@ -114,7 +114,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-4">
-              <div className="py-3 h-100">
+              <div className="py h-100">
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>
                   
                   Jam Operasional
@@ -146,7 +146,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-2 col-md-12">
-              <div className="py-3 h-8 d-flex flex-column justify-content-between">
+              <div className="py h-8 d-flex flex-column justify-content-between">
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>Kontak Kami</h4>
                               <ul className="list-unstyled mb-0">
                     
