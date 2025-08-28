@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap'; // Gunakan Bootstrap untuk styling
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Fungsi untuk menangani scroll
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    const scrollY = window.pageYOffset || window.scrollY;
+    
+    if (scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
 
-  // Fungsi untuk scroll ke atas dengan animasi slow motion
+  // Fungsi untuk scroll ke atas dengan animasi smooth
   const scrollToTop = () => {
-    const scrollStep = -window.scrollY / (1500 / 15); // Durasi lebih lambat (1500 ms)
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 15); // Mengatur kecepatan per frame
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   useEffect(() => {
+    // Panggil toggleVisibility sekali untuk mengecek posisi awal
+    toggleVisibility();
+    
     window.addEventListener('scroll', toggleVisibility);
 
     return () => {
@@ -36,30 +35,44 @@ const ScrollToTopButton = () => {
     };
   }, []);
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <div>
-      {isVisible && (
-        <Button
-          onClick={scrollToTop}
-          className="scroll-to-top-btn"
-          style={{
-            position: 'fixed',
-            bottom: '50px',
-            right: '50px',
-            zIndex: 1000,
-            borderRadius: '50%',
-            width: '50px',
-            height: '50px',
-            backgroundColor: '#007bff',
-            color: 'white',
-            fontSize: '24px',
-            textAlign: 'center',
-          }}
-        >
-         <FontAwesomeIcon icon={faChevronUp} />
-        </Button>
-      )}
-    </div>
+    <button
+      onClick={scrollToTop}
+      style={{
+        position: 'fixed',
+        bottom: '120px',
+        right: '20px',
+        zIndex: 1001,
+        width: '50px',
+        height: '50px',
+        borderRadius: '50%',
+        backgroundColor: '#007bff',
+        border: 'none',
+        color: 'white',
+        fontSize: '18px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+        transition: 'all 0.3s ease',
+        cursor: 'pointer'
+      }}
+      onMouseEnter={(e) => {
+        e.target.style.backgroundColor = '#0056b3';
+        e.target.style.transform = 'translateY(-3px)';
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.backgroundColor = '#007bff';
+        e.target.style.transform = 'translateY(0)';
+      }}
+      title="Scroll to top"
+    >
+      <FontAwesomeIcon icon={faChevronUp} />
+    </button>
   );
 };
 
