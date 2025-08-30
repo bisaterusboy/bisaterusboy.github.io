@@ -15,8 +15,8 @@ const Footer = () => {
   ];
 
   const hoursItems = [
-    { label: "Administrasi", value: "Senin - Jumat 08.00–17.00" },
-    { label: "Teknis", value: "Senin - Minggu 08.00–21.00" },
+    { label: "Office", value: "Senin - Jumat 08.00–17.00" },
+    { label: "Teknis", value: "Senin - Minggu 08.00–24.00" },
   ];
 
   const contacts = [
@@ -47,15 +47,15 @@ const Footer = () => {
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
-              <div className="py-3 h d-flex flex-column justify-content-between">
+              <div className=" d-flex flex-column justify-content-between">
                 <div className="mb-3" style={{ height: "40px" }}> {/* Container untuk logo */}
                   <img src={eLogo1} alt="Logo" style={{ 
-                    width: "70%", height: "70px" 
+                      height: "50px" 
                     }}
                                                         
                   />
                 </div>
-                <address className="footer-contact pt-3 mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
+                <address className="footer-contact pt mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
                   <div><span style={{ marginRight: "8px" }}></span>PT. MITRACOM SOLUSI TEKNOLOGI </div>
                   <div><span style={{ marginRight: "8px" }}></span>The Best Partner Your Internet Connection</div>
                   {/* <div className="mt-3">
@@ -123,11 +123,11 @@ const Footer = () => {
                   <div className="mx-2">
                     <h5 style={{ color: "#fff", marginBottom: "8px" }}>
                       
-                      Administrasi
+                      Office
                     </h5>
                     <div style={{ color: "var(--text-light)" }}>
                       <div>
-                        Senin - Sabtu: <span style={{ fontWeight: "500" }}>08:00-16:30</span>
+                        Senin - Sabtu: <span style={{ fontWeight: "500" }}>08:00-17:00</span>
                       </div>
                     </div>
                   </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                     </h5>
                     <div style={{ color: "var(--text-light)" }}>
                       <div>
-                        Senin - Minggu: <span style={{ fontWeight: "500" }}>08:00-22:00</span>
+                        Senin - Minggu: <span style={{ fontWeight: "500" }}>08:00-24:00</span>
                       </div>
                     </div>
                   </div>

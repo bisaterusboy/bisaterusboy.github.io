@@ -30,7 +30,7 @@ function Slider() {
     {
       id: 3,
       image: banner3,
-      title: 'Layanan Internet yang Murah Dan Terjangkau',
+      title: 'Layanan Internet Murah Dan Terjangkau',
       subtitle: 'Pemasangan Gratis Syarat Ketentuan Berlaku',
       ctaText: 'Hubungi Kami',
       ctaLink: '/contact',

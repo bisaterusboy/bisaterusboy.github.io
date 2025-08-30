@@ -102,7 +102,7 @@ function Navbar() {
             <img
               src={eLogo}
               alt="Logo"
-              style={{ height: "30px" }}
+              style={{ height: "35px" }}
             />
           </Link>
           
@@ -198,7 +198,7 @@ function Navbar() {
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
               </li> */}
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
                   href="https://api.whatsapp.com/send/?phone=6287727999117&text=Hallo%2C+saya+tertarik+ingin+memesan+layanan+Internetnya&type=phone_number&app_absent=0"
@@ -209,7 +209,7 @@ function Navbar() {
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
-              </li>              
+              </li>               */}
             </ul>
           </div>
         </div>

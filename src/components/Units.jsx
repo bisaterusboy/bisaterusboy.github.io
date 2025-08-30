@@ -307,8 +307,8 @@ function Units() {
       <section id="plans" className="section-padding">
         <div className="container">
           <div className="text-center mb-4">
-            <h2 className="section-title">Paket Internet Rumah</h2>
-            <p className="section-subtitle">Pilih paket terbaik sesuai kebutuhan keluarga</p>
+            <h2 className="section-title">Paket Internet</h2>
+            <p className="section-subtitle">Home Broadband</p>
           </div>
           <div className="row g-4">
             {packages.map((pkg) => (
@@ -357,7 +357,7 @@ function Units() {
                     }}>
                       {pkg.speed.replace(' (Up to*)', '')}
                     </div>
-                    <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>Kecepatan hingga</div>
+                    {/* <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>Kecepatan hingga</div> */}
                   </div>
                   <div className="text-center mb-4">
                     <div className="h2 fw-bold mb-0" style={{ 
@@ -411,7 +411,7 @@ function Units() {
         <div className="container">
           <div className="text-center mb-4">
             <h2 className="section-title">Layanan Kami</h2>
-            <p className="section-subtitle">Solusi internet lengkap untuk kebutuhan Anda</p>
+            <p className="section-subtitle">Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan anda</p>
           </div>
           <div className="row g-4">
             {services.map((service) => (
