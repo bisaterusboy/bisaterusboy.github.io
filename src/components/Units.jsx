@@ -98,48 +98,25 @@ function Units() {
 
   // --- Services Section ---
   const services = [
-    {
-      id: 1,
-      icon: "bi bi-wifi",
-      title: "Internet Fiber Optik",
-      description: "Koneksi internet super cepat menggunakan teknologi fiber optic terdepan dengan kecepatan hingga 100 Mbps.",
-      color: "primary"
-    },
-    {
-      id: 2,
-      icon: "bi bi-router",
-      title: "WiFi Hotspot",
-      description: "Layanan WiFi hotspot untuk area publik dengan coverage yang luas dan keamanan terjamin.",
-      color: "secondary"
-    },
-    {
-      id: 3,
-      icon: "bi bi-building",
-      title: "Internet Bisnis",
-      description: "Solusi internet khusus untuk bisnis dengan bandwidth dedicated dan support 24/7.",
-      color: "accent"
-    },
-    {
-      id: 4,
-      icon: "bi bi-shield-check",
-      title: "Keamanan Jaringan",
-      description: "Sistem keamanan jaringan tingkat enterprise dengan firewall dan monitoring real-time.",
-      color: "primary"
-    },
-    {
-      id: 5,
-      icon: "bi bi-headset",
-      title: "Customer Support",
-      description: "Tim support profesional siap membantu 24/7 dengan response time yang cepat.",
-      color: "secondary"
-    },
-    {
-      id: 6,
-      icon: "bi bi-tools",
-      title: "Maintenance",
-      description: "Layanan maintenance rutin dan perbaikan cepat untuk memastikan koneksi stabil.",
-      color: "accent"
-    }
+   {
+    title: "Layanan Internet",
+    description: "Paket internet cepat dan stabil untuk rumah & bisnis.",
+    icon: "bi bi-wifi",
+    color: "primary"
+  },
+  {
+    title: "CCTV & Security",
+    description: "Instalasi dan maintenance CCTV serta layanan CCTV Security.",
+    icon: "bi bi-camera-video",
+    color: "primary"
+  },
+  {
+    title: "IT Solution & Konsultasi",
+    description: "Solusi IT, konsultasi, dan pengembangan sistem sesuai kebutuhan.",
+    icon: "bi bi-lightbulb",
+    color: "secondary"
+  },
+
   ];
 
   // --- Portfolio Section ---
@@ -147,6 +124,7 @@ function Units() {
     {
       id: 1,
       name: 'Classic',
+      logo: 'a',
       price: 'Rp. 120.000,-',
       speed: '10 Mbps (Up to*)',
       features: [
@@ -162,6 +140,7 @@ function Units() {
     {
       id: 2,
       name: 'Bronze',
+      logo: 'b',
       price: 'Rp. 165.000,-',
       speed: '15 Mbps (Up to*)',
       features: [
@@ -177,6 +156,7 @@ function Units() {
     {
       id: 3,
       name: 'Silver',
+      logo: 'c',
       price: 'Rp. 190.000,-',
       speed: '25 Mbps (Up to*)',
       features: [
@@ -192,6 +172,7 @@ function Units() {
     {
       id: 4,
       name: 'Gold',
+      logo: 'd',
       price: 'Rp. 390.000',
       speed: '35 Mbps (Up to*)',
       features: [
@@ -344,10 +325,10 @@ function Units() {
                       background: 'rgba(255,255,255,0.2)', 
                       color: 'white',
                       backdropFilter: 'blur(10px)',
-                      fontSize:'1.2rem',
+                      fontSize:'1.5rem',
                       border: '1px solid rgba(255,255,255,0.3)'
                     }}>
-                      {pkg.name}
+                      {pkg.name}  {pkg.logo}
                     </span>
                   </div>
                   <div className="text-center my-4">
@@ -406,6 +387,9 @@ function Units() {
         </div>
       </section>
 
+
+      
+
       {/* Services Section */}
       <section className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
@@ -413,7 +397,7 @@ function Units() {
             <h2 className="section-title">Layanan Kami</h2>
             <p className="section-subtitle">Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan anda</p>
           </div>
-          <div className="row g-4">
+          {/* <div className="row g-4">
             {services.map((service) => (
               <div key={service.id} className="col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm service-card">
@@ -423,11 +407,53 @@ function Units() {
                     </div>
                     <h5 className="fw-semibold mb-2">{service.title}</h5>
                     <p className="text-muted mb-0">{service.description}</p>
+                    
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+        <div className="row g-4">
+          {services.map((srv, idx) => (
+            <div key={idx} className="col-md-6 col-lg-4">
+              <div className="card h-100 border-0 shadow-sm service-card"
+                style={{
+                  minHeight: '280px',
+                  background: '#d5eff7ff',
+                  color: '#9e1d1dff',
+                  transition: 'transform 0.2s, box-shadow 0.5s',
+                  boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)'
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)';
+                  e.currentTarget.style.boxShadow = '0 16px 40px 0 rgba(31,38,135,0.28)';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.transform = 'none';
+                  e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.18)';
+                }}
+              >
+                <div className={'${getBgClass(service.color)} mb-3'}>
+                  <i className={`${srv.icon} fs-1`} style={{ fontSize: '3rem', textShadow: '0 2px 8px #0002' }}></i>
+                </div>
+                <h4 className="fw-bold mb-2" style={{ color: '#000000ff', fontSize: '1.35rem', letterSpacing: '1px' }}>{srv.title}</h4>
+                <p className="mb-2" style={{ color: '#000000ff', fontSize: '1.08rem' }}>{srv.description}</p>
+                <div className="mt-3">
+                  <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
+                    <a href="/business" style={{textDecoration: 'none'}}>{srv.title.includes('Internet') && 'Home & Business'}</a>
+                    <a href="/hardwaresoftware" style={{textDecoration: 'none'}}>{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
+                    <a href="/maintenanceinternet" style={{textDecoration: 'none'}}>{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
+                    <a href="/kamera" style={{textDecoration: 'none'}}>{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
+                    <a href="/konsultan" style={{textDecoration: 'none'}}>{srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}</a>
+                    <a href="/webdesign" style={{textDecoration: 'none'}}>{srv.title === 'Web Design' && 'Desain Modern'}</a>
+                    <a href="/aplikasiweb" style={{textDecoration: 'none'}}>{srv.title === 'Web Development' && 'Aplikasi Web'}</a>
+                    <a href="/marketing" style={{textDecoration: 'none'}}>{srv.title === 'Marketing' && 'Promosi Online'}</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         </div>
       </section>
 

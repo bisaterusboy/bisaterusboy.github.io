@@ -214,7 +214,7 @@
 }
 
 .service-card .bi {
-  color: var(--white-color);
+  color: var(--primary-dark);
   font-size: 3rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.2);
   transition: var(--transition);
@@ -222,7 +222,7 @@
 
 .service-card:hover .bi {
   transform: scale(1.1);
-  color: var(--primary-dark);
+  color: var(--secondary-color);
 }
 
 .service-card h4 {
