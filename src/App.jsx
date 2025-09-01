@@ -8,6 +8,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
 import ScrollToTopButton from "./components/ScrollToTopBotton";
+import whatsapp from "./assets/img/wa.png";
 
 const WhatsAppFloat = () => {
   return (
@@ -29,7 +30,11 @@ const WhatsAppFloat = () => {
       rel="noopener noreferrer"
       title="Hubungi Kami via WhatsApp"
     >
-      <i className="bi bi-whatsapp fs-4"></i>
+      <img
+       src={whatsapp}
+       alt="Logo"
+       style={{ width:"300px",height: "100px" }}
+      />
     </a>
   );
 };

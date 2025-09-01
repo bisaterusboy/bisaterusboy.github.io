@@ -305,11 +305,11 @@ function Units() {
                   className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
                   style={{ 
                     background: pkg.popular 
-                      ? 'linear-gradient(135deg, rgb(71, 45, 255) 0%, rgb(227, 12, 12) 100%)' 
+                      ? 'linear-gradient(135deg, rgba(30, 0, 255, 1) 0%, rgb(227, 12, 12) 100%)' 
                       : pkg.id === 1 
                         ? 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)'
                         : pkg.id === 2
-                          ? 'linear-gradient(135deg, #4f86feff 0%, #0066feff 100%)'
+                          ? 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)'
                           : 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)',
                     border: pkg.popular ? '3px solid #ffd700' : '2px solid rgba(255,255,255,0.3)',
                     transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
