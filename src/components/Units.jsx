@@ -32,12 +32,11 @@ import logo1g from "../assets/img/partner/Inspektorat.jpg";
 import logo1h from "../assets/img/partner/dadap.png";
 
 // Assets/img logos
-import internet1 from "../assets/img/internet1.png";
-import internet12 from "../assets/img/internet12.png";
-import eslog1 from "../assets/img/eslog1.png";
-import eslog2 from "../assets/img/eslog2.png";
-import bisnis1 from "../assets/img/bisnis1.png";
-import servicepc1 from "../assets/img/servicepc1.png";
+import eslog1 from "../assets/img/vespa.png";
+import eslog2 from "../assets/img/mobil.png";
+import eslog3 from "../assets/img/roket.png";
+import eslog4 from "../assets/img/heli.png";
+
 
 
 // Icon Component with fallback
@@ -306,12 +305,12 @@ function Units() {
                   className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
                   style={{ 
                     background: pkg.popular 
-                      ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' 
+                      ? 'linear-gradient(135deg, rgb(71, 45, 255) 0%, rgb(227, 12, 12) 100%)' 
                       : pkg.id === 1 
-                        ? 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+                        ? 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)'
                         : pkg.id === 2
                           ? 'linear-gradient(135deg, #4f86feff 0%, #0066feff 100%)'
-                          : 'linear-gradient(135deg, #ff7e05ff 0%, #f93842ff 100%)',
+                          : 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)',
                     border: pkg.popular ? '3px solid #ffd700' : '2px solid rgba(255,255,255,0.3)',
                     transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
                     boxShadow: pkg.popular 
@@ -347,15 +346,15 @@ function Units() {
                       >
                         <img className='rounded-circle'
                           src={
-                            pkg.id === 1 ? internet1 : 
-                            pkg.id === 2 ? internet12 : 
-                            pkg.id === 3 ? eslog1 : 
-                            eslog2
+                            pkg.id === 1 ? eslog1 : 
+                            pkg.id === 2 ? eslog2 : 
+                            pkg.id === 3 ? eslog3 : 
+                            eslog4
                           }
                           alt={`${pkg.name} Logo`}
                           style={{
-                            width: '180px',
-                            height: '180px',
+                            width: '100%',
+                            height: '70px',
                             objectFit: 'contain',
                             transition: 'all 0.3s ease'
                           }}
@@ -461,7 +460,7 @@ function Units() {
           </div> */}
         <div className="row g-4">
           {services.map((srv, idx) => (
-            <div key={idx} className="col-md-6 col-lg-4">
+            <div key={idx} className="col-md-12 col-lg-4">
               <div className="card h-100 border-0 shadow-sm service-card"
                 style={{
                   minHeight: '280px',
