@@ -329,7 +329,40 @@ function Units() {
                     </div>
                   )}
                   
-
+                  <div className="text-center mt-2">
+                    <div className="position-relative d-inline-block">
+                      {/* Main Logo from assets/img */}
+                      <div className="d-inline-flex align-items-center justify-content-center mt-3" style={{
+                        width: '100px',
+                        height: '100px',
+                        background: 'rgba(255,255,255,0.15)',
+                        borderRadius: '50%',
+                        backdropFilter: 'blur(10px)',
+                        border: '2px solid rgba(255,255,255,0.3)',
+                        boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer',
+                        overflow: 'hidden'
+                      }}
+                      >
+                        <img className='rounded-circle'
+                          src={
+                            pkg.id === 1 ? internet1 : 
+                            pkg.id === 2 ? internet12 : 
+                            pkg.id === 3 ? eslog1 : 
+                            eslog2
+                          }
+                          alt={`${pkg.name} Logo`}
+                          style={{
+                            width: '180px',
+                            height: '180px',
+                            objectFit: 'contain',
+                            transition: 'all 0.3s ease'
+                          }}
+                        />
+                      </div>                  
+                    </div>
+                  </div>
                   
                   <div className="d-flex justify-content-center mb-3">
                     <span className="badge rounded-pill px-4 py-2 fw-bold" style={{ 
@@ -343,40 +376,7 @@ function Units() {
                     </span>
                   </div>
                                     {/* Logo Section */}
-                  <div className="text-center mb-4">
-                    <div className="position-relative d-inline-block">
-                      {/* Main Logo from assets/img */}
-                      <div className="d-inline-flex align-items-center justify-content-center mb-3" style={{
-                        width: '100px',
-                        height: '100px',
-                        background: 'rgba(255,255,255,0.15)',
-                        borderRadius: '50%',
-                        backdropFilter: 'blur(10px)',
-                        border: '2px solid rgba(255,255,255,0.3)',
-                        boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                        transition: 'all 0.3s ease',
-                        cursor: 'pointer',
-                        overflow: 'hidden'
-                      }}
-                      >
-                        <img 
-                          src={
-                            pkg.id === 1 ? internet1 : 
-                            pkg.id === 2 ? internet12 : 
-                            pkg.id === 3 ? eslog1 : 
-                            eslog2
-                          }
-                          alt={`${pkg.name} Logo`}
-                          style={{
-                            width: '80px',
-                            height: '80px',
-                            objectFit: 'contain',
-                            transition: 'all 0.3s ease'
-                          }}
-                        />
-                      </div>                  
-                    </div>
-                  </div>
+
                   <div className="text-center my-4">
                     <div className="display-6 fw-bold mb-1" style={{ 
                       color: 'white',
