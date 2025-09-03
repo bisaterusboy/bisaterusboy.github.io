@@ -313,7 +313,7 @@ function Units() {
                   className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
                   style={{ 
                     background: pkg.popular 
-                      ? 'linear-gradient(135deg, rgba(78, 75, 82, 1) 0%, rgba(58, 56, 56, 1) 100%)' 
+                      ? 'linear-gradient(135deg, rgba(131, 120, 145, 1) 0%, rgba(58, 56, 56, 1) 100%)' 
                       : pkg.id === 1 
                         ? 'linear-gradient(135deg, rgba(31, 122, 175, 1) 0%, rgba(13, 35, 59, 1) 100%)'
                         : pkg.id === 2
@@ -340,8 +340,8 @@ function Units() {
                     <div className="position-relative d-inline-block">
                       {/* Main Logo from assets/img */}
                       <div className="d-inline-flex align-items-center justify-content-center mt-3" style={{
-                        width: '100px',
-                        height: '100px',
+                        width: '130px',
+                        height: '130px',
                         background: 'rgba(255,255,255,0.15)',
                         borderRadius: '50%',
                         backdropFilter: 'blur(10px)',
@@ -362,7 +362,7 @@ function Units() {
                           alt={`${pkg.name} Logo`}
                           style={{
                             width: '100%',
-                            height: '97px',
+                            height: '',
                             objectFit: 'contain',
                             transition: 'all 0.3s ease'
                           }}
@@ -402,7 +402,7 @@ function Units() {
                     </div>
                     <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}></div>
                   </div>
-                  <ul className="list-unstyled mb-4">
+                  <ul className="text-center mb-4">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="d-flex align-items-center mb-3">
                         <span className="me-3" style={{ color: '#4ade80', fontSize: '1.2rem' }}>
