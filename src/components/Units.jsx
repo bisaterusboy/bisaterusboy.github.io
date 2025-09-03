@@ -32,10 +32,10 @@ import logo1g from "../assets/img/partner/Inspektorat.jpg";
 import logo1h from "../assets/img/partner/dadap.png";
 
 // Assets/img logos
-import eslog1 from "../assets/img/vespa.png";
-import eslog2 from "../assets/img/mobil.png";
-import eslog3 from "../assets/img/roket.png";
-import eslog4 from "../assets/img/heli.png";
+import eslog1 from "../assets/img/classic.png";
+import eslog2 from "../assets/img/bronze.png";
+import eslog3 from "../assets/img/silver.png";
+import eslog4 from "../assets/img/gold.png";
 
 
 
@@ -130,15 +130,17 @@ function Units() {
   const packages = [
     {
       id: 1,
-      name: 'Classic',
+      name: '',//nama layanan
       logo: 'a',
       price: 'Rp. 120.000,-',
-      speed: '10 Mbps (Up to*)',
+      speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
+        '10 Mbps (Up to*)',
         'Tanpa FUP',
         'Unlimited Download',
-        'Unlimited Upload'
+        'Unlimited Upload',
+        'S&K Berlaku'
       ],
       whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Classic',
       color: 'secondary',
@@ -146,15 +148,17 @@ function Units() {
     },
     {
       id: 2,
-      name: 'Bronze',
+      name: '',//nama layanan
       logo: 'b',
       price: 'Rp. 165.000,-',
-      speed: '15 Mbps (Up to*)',
+      speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
+        '15 Mbps (Up to*)',
         'Tanpa FUP',
         'Unlimited Download',
-        'Unlimited Upload'
+        'Unlimited Upload',
+        'S&K Berlaku'
       ],
       whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Bronze',
       color: 'secondary',
@@ -162,15 +166,17 @@ function Units() {
     },
     {
       id: 3,
-      name: 'Silver',
+      name: '', //nama layanan
       logo: 'c',
       price: 'Rp. 190.000,-',
-      speed: '25 Mbps (Up to*)',
+      speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
+        '25 Mbps (Up to*)',
         'Tanpa FUP',
         'Unlimited Download',
-        'Unlimited Upload'
+        'Unlimited Upload',
+        'S&K Berlaku'
       ],
       whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Silver',
       color: 'accent',
@@ -178,15 +184,17 @@ function Units() {
     },
     {
       id: 4,
-      name: 'Gold',
+      name: '',//nama layanan
       logo: 'd',
       price: 'Rp. 390.000',
-      speed: '35 Mbps (Up to*)',
+      speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
+        '35 Mbps (Up to*)',
         'Tanpa FUP',
         'Unlimited Download',
-        'Unlimited Upload'
+        'Unlimited Upload',
+        'S&K Berlaku'
       ],
       whatsapp: 'https://wa.me/6287727999117?text=Hallo, saya tertarik ingin memesan layanan Gold',
       color: 'secondary',
@@ -305,13 +313,13 @@ function Units() {
                   className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
                   style={{ 
                     background: pkg.popular 
-                      ? 'linear-gradient(135deg, rgba(30, 0, 255, 1) 0%, rgb(227, 12, 12) 100%)' 
+                      ? 'linear-gradient(135deg, rgba(78, 75, 82, 1) 0%, rgba(58, 56, 56, 1) 100%)' 
                       : pkg.id === 1 
-                        ? 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)'
+                        ? 'linear-gradient(135deg, rgba(31, 122, 175, 1) 0%, rgba(13, 35, 59, 1) 100%)'
                         : pkg.id === 2
-                          ? 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)'
-                          : 'linear-gradient(135deg, rgb(255, 227, 3) 0%, rgb(254, 0, 0) 100%)',
-                    border: pkg.popular ? '3px solid #ffd700' : '2px solid rgba(255,255,255,0.3)',
+                          ? 'linear-gradient(135deg, rgb(88 76 39) 0%, rgb(76 22 22) 100%)'
+                          : 'linear-gradient(135deg, rgba(77, 71, 20, 1) 0%, rgba(168, 81, 0, 1) 100%)',
+                    border: pkg.popular ? '3px solid #584747ff' : '2px solid rgba(255,255,255,0.3)',
                     transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
                     boxShadow: pkg.popular 
                       ? '0 15px 35px rgba(102, 126, 234, 0.4), 0 5px 15px rgba(0,0,0,0.1)' 
@@ -354,7 +362,7 @@ function Units() {
                           alt={`${pkg.name} Logo`}
                           style={{
                             width: '100%',
-                            height: '70px',
+                            height: '97px',
                             objectFit: 'contain',
                             transition: 'all 0.3s ease'
                           }}
@@ -392,7 +400,7 @@ function Units() {
                     }}>
                       {pkg.price}
                     </div>
-                    <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>per bulan</div>
+                    <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}></div>
                   </div>
                   <ul className="list-unstyled mb-4">
                     {pkg.features.map((feature, featureIndex) => (
@@ -423,7 +431,7 @@ function Units() {
                      target="_blank" 
                      rel="noopener noreferrer">
                     <Icon iconClass="bi bi-whatsapp" />
-                    <span className="ms-2">Berlangganan Sekarang</span>
+                    <span className="ms-2">Pesan Sekarang</span>
                   </a>
                 </div>
               </div>
