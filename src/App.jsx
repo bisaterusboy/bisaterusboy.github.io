@@ -14,12 +14,10 @@ const WhatsAppFloat = () => {
   return (
     <a 
       href="https://wa.me/6287727999117?text=Hallo, saya ingin bertanya tentang layanan internet Mitracom ISP"
-      className="btn btn-success rounded-circle position-fixed"
+      className="btn rounded-circle position-fixed"
       style={{
         bottom: '20px',
-        right: '20px',
-        width: '60px',
-        height: '60px',
+        right: '1px',
         zIndex: 1000,
         display: 'flex',
         alignItems: 'center',
@@ -33,7 +31,7 @@ const WhatsAppFloat = () => {
       <img
        src={whatsapp}
        alt="Logo"
-       style={{ width:"300px",height: "100px" }}
+       style={{ width:"200px",height: "70px" }}
       />
     </a>
   );

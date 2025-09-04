@@ -106,8 +106,8 @@ function Units() {
   // --- Services Section ---
   const services = [
    {
-    title: "Layanan Internet Business (Dedicated)",
-    description: "Paket internet cepat dan stabil untuk bisnis.",
+    title: "Layanan Internet Home & Business",
+    description: "Paket internet Terjangkau, cepat dan stabil untuk bisnis.",
     icon: "bi bi-wifi",
     color: "primary"
   },
@@ -136,7 +136,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        '10 Mbps (Up to*)',
+        'Up To 10 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -154,7 +154,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        '15 Mbps (Up to*)',
+        'Up To 15 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -172,7 +172,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        '25 Mbps (Up to*)',
+        'Up To 25 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -190,7 +190,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        '35 Mbps (Up to*)',
+        'Up To 100 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -493,7 +493,7 @@ function Units() {
                 <p className="mb-2" style={{ color: '#000000ff', fontSize: '1.08rem' }}>{srv.description}</p>
                 <div className="mt-3">
                   <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
-                    <a href="/business" style={{textDecoration: 'none'}}>{srv.title.includes('Internet') && 'Business'}</a>
+                    <a href="/business" style={{textDecoration: 'none'}}>{srv.title.includes('Internet') && 'Home & Business'}</a>
                     <a href="/hardwaresoftware" style={{textDecoration: 'none'}}>{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
                     <a href="/maintenanceinternet" style={{textDecoration: 'none'}}>{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
                     <a href="/kamera" style={{textDecoration: 'none'}}>{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>

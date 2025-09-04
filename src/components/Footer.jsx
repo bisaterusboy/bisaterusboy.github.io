@@ -56,8 +56,8 @@ const Footer = () => {
                   />
                 </div>
                 <address className="footer-contact pt mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
-                  <div><span style={{ marginRight: "8px" }}></span>PT. MITRACOM SOLUSI TEKNOLOGI </div>
-                  <div><span style={{ marginRight: "8px" }}></span>The Best Partner Your Internet Connection</div>
+                  <div><span style={{ marginRight: "4px" }}></span><b>PT. MITRACOM SOLUSI TEKNOLOGI</b></div>
+                  <div><span style={{ marginRight: "4px" }}></span><i>The Best Partner Your Internet Connection</i></div>
                   {/* <div className="mt-3">
                     <strong><span style={{ marginRight: "6px" }}></span>Phone:</strong> <span>+62 877-2799-9117</span>
                   </div> */}
@@ -79,14 +79,14 @@ const Footer = () => {
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" ,}}>Layanan Kami</h4>
                 <ul className="list-unstyled mx-2">
                     {[
-                      { name: "Internet Home", icon: "🏠", link: "/" },
-                      { name: "Internet Dedicated", icon: "👥", link: "/" },
-                      { name: "Service Komputer", icon: "🛠️", link: "/" },
-                      { name: "Penjualan", icon: "📄", link: "/" },
-                      { name: "CCTV", icon: "🔒", link: "/" },
+                      { name: "Internet Home & Bussiness", icon: "🏠", link: "/business" },
+                      { name: "IT Solution & Konsultasi", icon: "👥", link: "/konsultan" },
+                      { name: "Service Komputer & Laptop", icon: "🛠️", link: "/hardwaresoftware" },
+                      { name: "Maintenance Jaringan", icon: "📄", link: "/maintenanceinternet" },
+                      { name: "CCTV & Security", icon: "🔒", link: "/kamera" },
                     ].map((item, idx) => (
                       <li key={idx}>
-                        {/* <a
+                        <a
                           href={item.link}
                           className="footer-link"
                           style={{
@@ -104,9 +104,9 @@ const Footer = () => {
                             e.target.style.color = "var(--text-light)";
                             e.target.style.borderBottom = "2px solid transparent";
                           }}
-                        > */}
+                        >
                           <span style={{ marginRight: "6px" }}>{item.icon}</span>{item.name}
-                        {/* </a> */}
+                        </a>
                       </li>
                     ))}
                 </ul>
