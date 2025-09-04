@@ -36,7 +36,12 @@ import eslog1 from "../assets/img/classic.png";
 import eslog2 from "../assets/img/bronze.png";
 import eslog3 from "../assets/img/silver.png";
 import eslog4 from "../assets/img/gold.png";
-
+// logo untuk layanan kami
+import imgInternet from "../assets/img/internet1.png";
+import imgCctv from "../assets/img/cctv.jpg";
+import imgKonsultan from "../assets/img/konsultan1.jpeg";
+import imgInternet2 from "../assets/img/internet12.png";
+import imgKonsultan2 from "../assets/img/konsultan2.webp";
 
 
 // Icon Component with fallback
@@ -109,19 +114,25 @@ function Units() {
     title: "Layanan Internet Home & Business",
     description: "Paket internet Terjangkau, cepat dan stabil untuk bisnis.",
     icon: "bi bi-wifi",
-    color: "primary"
+    color: "primary",
+    image: imgInternet,
+    images: [imgInternet, imgInternet2, imgInternet]
   },
   {
     title: "CCTV & Security",
     description: "Instalasi dan maintenance CCTV serta layanan CCTV Security.",
     icon: "bi bi-camera-video",
-    color: "primary"
+    color: "primary",
+    image: imgCctv,
+    images: [imgCctv, imgCctv, imgCctv]
   },
   {
     title: "IT Solution & Konsultasi",
     description: "Solusi IT, konsultasi, dan pengembangan sistem sesuai kebutuhan.",
     icon: "bi bi-lightbulb",
-    color: "secondary"
+    color: "secondary",
+    image: imgKonsultan,
+    images: [imgKonsultan, imgKonsultan2, imgKonsultan2]
   },
 
   ];
@@ -313,12 +324,14 @@ function Units() {
                   className={`h-100 p-4 rounded-4 border position-relative ${pkg.popular ? 'popular-card' : ''}`} 
                   style={{ 
                     background: pkg.popular 
-                      ? 'linear-gradient(135deg, rgba(131, 120, 145, 1) 0%, rgba(58, 56, 56, 1) 100%)' 
+                      ? 'linear-gradient(172deg, rgba(212, 211, 208, 1) -5%, rgba(119, 119, 111, 1) 80%)' 
                       : pkg.id === 1 
                         ? 'linear-gradient(135deg, rgba(31, 122, 175, 1) 0%, rgba(13, 35, 59, 1) 100%)'
                         : pkg.id === 2
-                          ? 'linear-gradient(135deg, rgb(88 76 39) 0%, rgb(76 22 22) 100%)'
-                          : 'linear-gradient(135deg, rgba(77, 71, 20, 1) 0%, rgba(168, 81, 0, 1) 100%)',
+                          // ? 'linear-gradient(135deg, rgb(215 161 0) 0%, rgb(255 190 0) 100%)'
+                          ? 'linear-gradient(135deg, rgb(128, 74, 0) 0%, rgba(168, 81, 0, 1) 100%)'
+                          // : 'linear-gradient(135deg, rgb(255, 191, 0) 0%, rgba(168, 81, 0, 1) 100%)',
+                          : 'linear-gradient(10deg, rgb(255, 191, 0) 0%, rgb(193 146 1) 100%)',
                     border: pkg.popular ? '3px solid #584747ff' : '2px solid rgba(255,255,255,0.3)',
                     transform: pkg.popular ? 'scale(1.05)' : 'scale(1)',
                     boxShadow: pkg.popular 
@@ -450,25 +463,10 @@ function Units() {
             <h2 className="section-title">Layanan Kami</h2>
             <p className="section-subtitle">Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan anda</p>
           </div>
-          {/* <div className="row g-4">
-            {services.map((service) => (
-              <div key={service.id} className="col-md-6 col-lg-4">
-                <div className="card h-100 border-0 shadow-sm service-card">
-                  <div className="card-body text-center p-4">
-                    <div className={`${getBgClass(service.color)} text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3`} style={{ width: '64px', height: '64px' }}>
-                      <Icon iconClass={service.icon} size="fs-4" />
-                    </div>
-                    <h5 className="fw-semibold mb-2">{service.title}</h5>
-                    <p className="text-muted mb-0">{service.description}</p>
-                    
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
+
         <div className="row g-4">
           {services.map((srv, idx) => (
-            <div key={idx} className="col-md-12 col-lg-4">
+            <div key={idx} className="col-md-4">
               <div className="card h-100 border-0 shadow-sm service-card"
                 style={{
                   minHeight: '280px',
@@ -486,8 +484,15 @@ function Units() {
                   e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.18)';
                 }}
               >
-                <div className={'${getBgClass(service.color)} mb-3'}>
-                  <i className={`${srv.icon} fs-1`} style={{ fontSize: '3rem', textShadow: '0 2px 8px #0002' }}></i>
+                <div className={` mb-3 d-flex align-items-center justify-content-center`} style={{ 
+                  gap: '8px', padding: '8px', borderRadius: '12px', 
+                  // boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
+                  }}>
+                  {(srv.images || [srv.image, srv.image, srv.image]).map((img, i) => (
+                    <div key={i} className="d-inline-block" style={{ width: '100px', height: '120px', borderRadius: '12px', overflow: 'hidden' }}>
+                      <img src={img} alt={`${srv.title} ${i+1}`} className="img-fluid" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  ))}
                 </div>
                 <h4 className="fw-bold mb-2" style={{ color: '#000000ff', fontSize: '1.35rem', letterSpacing: '1px' }}>{srv.title}</h4>
                 <p className="mb-2" style={{ color: '#000000ff', fontSize: '1.08rem' }}>{srv.description}</p>
