@@ -56,7 +56,7 @@ const Footer = () => {
                   />
                 </div>
                 <address className="footer-contact pt mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
-                  <div><span style={{ marginRight: "4px" }}></span><b>PT. MITRACOM SOLUSI TEKNOLOGI</b></div>
+                  <div className="mypont"><span style={{ marginRight: "4px"}}></span><b>PT. MITRACOM SOLUSI TEKNOLOGI</b></div>
                   <div><span style={{ marginRight: "4px" }}></span><i>The Best Partner Your Internet Connection</i></div>
                   {/* <div className="mt-3">
                     <strong><span style={{ marginRight: "6px" }}></span>Phone:</strong> <span>+62 877-2799-9117</span>

@@ -14,15 +14,15 @@ const WhatsAppFloat = () => {
   return (
     <a 
       href="https://wa.me/6287727999117?text=Hallo, saya ingin bertanya tentang layanan internet Mitracom ISP"
-      className="btn rounded-circle position-fixed"
+      className="position-fixed"
       style={{
         bottom: '20px',
-        right: '1px',
+        right: '10px',
         zIndex: 1000,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+        
       }}
       target="_blank"
       rel="noopener noreferrer"

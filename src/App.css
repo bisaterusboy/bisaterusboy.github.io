@@ -6,6 +6,14 @@
 @import './assets/css/priceList.css';
 @import './assets/css/Footer.css';
 
+@font-face {
+  font-family:'FFE10016T' ;
+  src: url('./assets/font/FE10016T.ttf');
+}
+.mypont{
+  font-family: 'FFE10016T', sans-serif;
+  
+}
 /* ===== SCROLL TO TOP BUTTON ===== */
 .scroll-to-top-btn {
   position: fixed;
