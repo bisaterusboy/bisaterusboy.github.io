@@ -36,12 +36,17 @@ import eslog1 from "../assets/img/classic.png";
 import eslog2 from "../assets/img/bronze.png";
 import eslog3 from "../assets/img/silver.png";
 import eslog4 from "../assets/img/gold.png";
+
 // logo untuk layanan kami
-import imgInternet from "../assets/img/internet1.png";
-import imgCctv from "../assets/img/cctv.jpg";
-import imgKonsultan from "../assets/img/konsultan1.jpeg";
-import imgInternet2 from "../assets/img/internet12.png";
-import imgKonsultan2 from "../assets/img/konsultan2.webp";
+import imgInternet from "../assets/img/layanan/internet1.png";
+import imgInternet2 from "../assets/img/layanan/internet2.png";
+import imgInternet3 from "../assets/img/layanan/internet3.png";
+import imgCctv from "../assets/img/layanan/cctv1.png";
+import imgCctv2 from "../assets/img/layanan/cctv2.png";
+import imgCctv3 from "../assets/img/layanan/cctv3.png";
+import imgKonsultan from "../assets/img/layanan/solution1.png";
+import imgKonsultan2 from "../assets/img/layanan/solution2.png";
+import imgKonsultan3 from "../assets/img/layanan/solution3.png";
 
 
 // Icon Component with fallback
@@ -116,7 +121,7 @@ function Units() {
     icon: "bi bi-wifi",
     color: "primary",
     image: imgInternet,
-    images: [imgInternet, imgInternet2, imgInternet]
+    images: [imgInternet, imgInternet2, imgInternet3]
   },
   {
     title: "CCTV & Security",
@@ -124,7 +129,7 @@ function Units() {
     icon: "bi bi-camera-video",
     color: "primary",
     image: imgCctv,
-    images: [imgCctv, imgCctv, imgCctv]
+    images: [imgCctv, imgCctv2, imgCctv3]
   },
   {
     title: "IT Solution & Konsultasi",
@@ -132,7 +137,7 @@ function Units() {
     icon: "bi bi-lightbulb",
     color: "secondary",
     image: imgKonsultan,
-    images: [imgKonsultan, imgKonsultan2, imgKonsultan2]
+    images: [imgKonsultan, imgKonsultan2, imgKonsultan3]
   },
 
   ];
