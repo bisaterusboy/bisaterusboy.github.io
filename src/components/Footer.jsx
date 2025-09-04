@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
               <div className="py-1 d-flex flex-column justify-content-between">
-                <div className="mb-3" style={{ height: "40px" }}> {/* Container untuk logo */}
+                <div  style={{ height: "40px" }}> {/* Container untuk logo */}
                   <img src={eLogo1} alt="Logo" style={{ 
                       height: "35px" 
                     }}
