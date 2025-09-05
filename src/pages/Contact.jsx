@@ -28,7 +28,7 @@ function Contact() {
       icon: 'bi bi-telephone',
       link: 'tel:+6287727999117',
       color: 'accent',
-      response: 'Respon langsung'
+      response: 'Respon Langsung'
     },
 
   ];
