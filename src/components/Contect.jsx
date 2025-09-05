@@ -28,7 +28,7 @@ function Contect() {
       icon: 'bi bi-telephone',
       link: 'tel:+6282260601982',
       color: 'accent',
-      response: 'Respon langsung'
+      response: 'Respon Langsung'
     },
     {
       id: 4,
