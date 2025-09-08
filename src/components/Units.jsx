@@ -10,26 +10,33 @@ import logo5 from "../assets/img/partner/mvnet.png";
 import logo6 from "../assets/img/partner/tis.png";
 import logo7 from "../assets/img/partner/cyberplus.png";
 import logo8 from "../assets/img/partner/Komdigi.png";
+import logo9 from "../assets/img/partner/diskominfo.jpg";
+import logo10 from "../assets/img/partner/iforte.png";
+import logo11 from "../assets/img/partner/lintasarta.png";
 
 // partner kami 2
-import logoa from "../assets/img/partner/BKPSDM.png";
-import logob from "../assets/img/partner/Dishub.jpg";
+import logoa from "../assets/img/partner/djp.png";
+import logob from "../assets/img/partner/kingpolah.png";
 import logoc from "../assets/img/partner/Ditpolairud.png";
 import logod from "../assets/img/partner/easynet.png";
 import logoe from "../assets/img/partner/ionet.png";
 import logof from "../assets/img/partner/pulsanet.png";
 import logog from "../assets/img/partner/Wifique.png";
 import logoh from "../assets/img/partner/polytama.png";
+import logoi from "../assets/img/partner/Devan.png";
+import logoj from "../assets/img/partner/rsud.png";
 
 // partner kami 3
 import logo1a from "../assets/img/partner/Setda.png";
 import logo1b from "../assets/img/partner/pptr.png";
 import logo1c from "../assets/img/partner/smr.png";
 import logo1d from "../assets/img/partner/thc.png";
-import logo1e from "../assets/img/partner/kingpolah.png";
+import logo1e from "../assets/img/partner/DPUPR.jpg";
 import logo1f from "../assets/img/partner/grahasudirman.png";
-import logo1g from "../assets/img/partner/Inspektorat.jpg";
+import logo1g from "../assets/img/partner/puskesmas.png";
 import logo1h from "../assets/img/partner/dadap.png";
+import logo1i from "../assets/img/partner/disduk.png";
+import logo1j from "../assets/img/partner/kejaksaan.png";
 
 // Assets/img logos
 import eslog1 from "../assets/img/classic.png";
@@ -284,6 +291,9 @@ function Units() {
     { id: 6, name: '', url: logo6 },
     { id: 7, name: '', url: logo7 },
     { id: 8, name: '', url: logo8 },
+    { id: 9, name: '', url: logo9 },
+    { id: 10, name: '', url: logo10 },
+    { id: 11, name: '', url: logo11 },
 	]
 
 	const rowItems = [...logos, ...logos, ...logos ] // duplicate for seamless loop
@@ -297,6 +307,8 @@ function Units() {
     { id: 6, name: '', url: logof },
     { id: 7, name: '', url: logog },
     { id: 8, name: '', url: logoh },
+    { id: 9, name: '', url: logoi },
+    { id: 10, name: '', url: logoj },
 	]
 
 	const rowItems1 = [...logos1, ...logos1, ...logos1 ] // duplicate for seamless loop
@@ -310,6 +322,8 @@ function Units() {
     { id: 6, name: '', url: logo1f },
     { id: 7, name: '', url: logo1g },
     { id: 8, name: '', url: logo1h },
+    { id: 9, name: '', url: logo1i },
+    { id: 10, name: '', url: logo1j },
 	]
 
 	const rowItems3 = [...logos3, ...logos3, ...logos3 ] // duplicate for seamless loop
