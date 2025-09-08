@@ -25,6 +25,7 @@ import logog from "../assets/img/partner/Wifique.png";
 import logoh from "../assets/img/partner/polytama.png";
 import logoi from "../assets/img/partner/Devan.png";
 import logoj from "../assets/img/partner/rsud.png";
+import logok from "../assets/img/partner/fanet.png";
 
 // partner kami 3
 import logo1a from "../assets/img/partner/Setda.png";
@@ -309,6 +310,7 @@ function Units() {
     { id: 8, name: '', url: logoh },
     { id: 9, name: '', url: logoi },
     { id: 10, name: '', url: logoj },
+    { id: 11, name: '', url: logok },
 	]
 
 	const rowItems1 = [...logos1, ...logos1, ...logos1 ] // duplicate for seamless loop
