@@ -124,7 +124,7 @@ function Units() {
   // --- Services Section ---
   const services = [
    {
-    title: "Layanan Internet Home & Business",
+    title: "Internet Home & Business",
     description: "Paket internet Terjangkau, cepat dan stabil untuk bisnis.",
     icon: "bi bi-wifi",
     color: "primary",
