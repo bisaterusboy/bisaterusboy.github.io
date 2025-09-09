@@ -46,15 +46,15 @@ import eslog3 from "../assets/img/silver.png";
 import eslog4 from "../assets/img/gold.png";
 
 // logo untuk layanan kami
-import imgInternet from "../assets/img/layanan/internet1.png";
-import imgInternet2 from "../assets/img/layanan/internet2.png";
-import imgInternet3 from "../assets/img/layanan/internet3.png";
-import imgCctv from "../assets/img/layanan/cctv1.png";
-import imgCctv2 from "../assets/img/layanan/cctv2.png";
-import imgCctv3 from "../assets/img/layanan/cctv3.png";
-import imgKonsultan from "../assets/img/layanan/solution1.png";
-import imgKonsultan2 from "../assets/img/layanan/solution2.png";
-import imgKonsultan3 from "../assets/img/layanan/solution3.png";
+import imgInternet from "../assets/img/layanan/internet1.jpg";
+import imgInternet2 from "../assets/img/layanan/internet2.jpg";
+import imgInternet3 from "../assets/img/layanan/internet3.jpg";
+import imgCctv from "../assets/img/layanan/cctv1.jpg";
+import imgCctv2 from "../assets/img/layanan/cctv2.jpg";
+import imgCctv3 from "../assets/img/layanan/cctv3.jpg";
+import imgKonsultan from "../assets/img/layanan/solution1.jpg";
+import imgKonsultan2 from "../assets/img/layanan/solution2.jpg";
+import imgKonsultan3 from "../assets/img/layanan/solution3.jpg";
 
 
 // Icon Component with fallback
