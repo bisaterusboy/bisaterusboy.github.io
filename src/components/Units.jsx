@@ -50,7 +50,7 @@ import imgInternet from "../assets/img/layanan/internet1.jpg";
 import imgInternet2 from "../assets/img/layanan/internet2.jpg";
 import imgInternet3 from "../assets/img/layanan/internet3.jpg";
 import imgCctv from "../assets/img/layanan/cctv1.jpg";
-import imgCctv2 from "../assets/img/layanan/cctv2.jpg";
+import imgCctv2 from "../assets/img/layanan/cctv2.png";
 import imgCctv3 from "../assets/img/layanan/cctv3.jpg";
 import imgKonsultan from "../assets/img/layanan/solution1.jpg";
 import imgKonsultan2 from "../assets/img/layanan/solution2.jpg";
