@@ -17,7 +17,7 @@ function Contact() {
       name: 'Email',
       description: 'Kirim email ke tim kami',
       icon: 'bi bi-envelope',
-      link: 'mailto:info@mitracom.id',
+      link: 'mailto:noc@mitracom.id',
       color: 'secondary',
       response: 'Respon dalam 24 jam'
     },

@@ -133,11 +133,11 @@ const Footer = () => {
                   </div>
                   <div className="mx-2"> 
                     <h5 style={{ color: "#fff", marginBottom: "8px" }}>
-                      Teknis
+                      Technical Support
                     </h5>
                     <div style={{ color: "var(--text-light)" }}>
                       <div>
-                        Senin - Minggu: <span style={{ fontWeight: "500" }}>08:00-24:00</span>
+                         <span style={{ fontWeight: "500" }}>24 Jam | 7 Hari</span>
                       </div>
                     </div>
                   </div>
