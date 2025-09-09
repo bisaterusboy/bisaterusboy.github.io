@@ -34,7 +34,7 @@ import logo1c from "../assets/img/partner/smr.png";
 import logo1d from "../assets/img/partner/thc.png";
 import logo1e from "../assets/img/partner/DPUPR.jpg";
 import logo1f from "../assets/img/partner/grahasudirman.png";
-import logo1g from "../assets/img/partner/puskesmas.png";
+import logo1g from "../assets/img/partner/Puskesmas.png";
 import logo1h from "../assets/img/partner/dadap.png";
 import logo1i from "../assets/img/partner/disduk.png";
 import logo1j from "../assets/img/partner/kejaksaan.png";
