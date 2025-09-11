@@ -46,7 +46,7 @@ const Footer = () => {
       >
         <div className="container">
           <div className="row gy-4">
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-12">
               <div className="py-1 d-flex flex-column justify-content-between">
                 <div  style={{ height: "40px" }}> {/* Container untuk logo */}
                   <img src={eLogo1} alt="Logo" style={{ 
@@ -74,10 +74,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4">
+            <div className="col-lg-3 col-md-6">
               <div className="py h-100">
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" ,}}>Layanan Kami</h4>
-                <ul className="list-unstyled mx-2">
+                <ul className="list-unstyled mx-2" >
                     {[
                       { name: "Internet Home & Bussiness", icon: "🏠", link: "/business" },
                       { name: "IT Solution & Konsultasi", icon: "👥", link: "/konsultan" },
@@ -113,7 +113,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4">
+            <div className="col-lg-3 col-md-6">
               <div className="py h-100">
                 <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>
                   
