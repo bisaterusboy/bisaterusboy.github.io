@@ -191,46 +191,7 @@ const Footer = () => {
       <footer className="footer" id="footer-credit" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
           <div id="credit-center">
-            {/* <a
-              href="http://webanakcirebon.blogspot.com"
-              rel="nofollow"
-              target="_blank"
-              style={{ color: 'var(--text-light)' }}
-            >
-              {" "}
-              Blog Gado Gado
-            </a>{" "} */}
-            
-            {/* <a
-              href="http://indomediakita.blogspot.com"
-              rel="nofollow"
-              target="_blank"
-              style={{ color: 'var(--text-light)' }}
-            >
-              {" "}
-              Indo Media Kita
-            </a>{" "} */}
-            
-            {/* <a
-              href="http://gistechindo.blogspot.com"
-              rel="nofollow"
-              target="_blank"
-              style={{ color: 'var(--text-light)' }}
-            >
-              {" "}
-              Gistechindo
-            </a>{" "} */}
-            
-            {/* <a
-              href="http://wongaslicirebon.blogspot.com"
-              rel="nofollow"
-              target="_blank"
-              style={{ color: 'var(--text-light)' }}
-            >
-              {" "}
-              Wong Asli Cirebon
-            </a> */}
-            
+                       
             © Copyright {currentYear} | All Rights Reserved by 
             <a
               className="sitename"
