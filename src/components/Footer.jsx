@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import ScrollToTop from "./ScrollToTop";
 import eLogo1 from "../assets/img/eslog2.png";
-import "../assets/css/Footer.css";
+import "../assets/css/footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
