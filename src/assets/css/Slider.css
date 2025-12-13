@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: var(--bg-dark);
+  
 }
 
 /* Hide scrollbar for webkit browsers */
@@ -21,9 +21,9 @@
 
 .hero-slide {
   position: relative;
-  height: clamp(320px, 60vh, 560px);
+  height: clamp(870px, 60vh, 600px);
   overflow: hidden;
-  background: var(--bg-dark);
+  
 }
 
 /* Hide scrollbar for slick slider */
@@ -43,7 +43,7 @@
   transform: scale(1.05);
   transition: transform 8s ease-in-out;
   animation: zoomInOut 8s ease-in-out infinite;
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 
 @keyframes zoomInOut {
@@ -58,7 +58,7 @@
 .hero-slide__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 30%, rgba(73, 70, 70, 0.66));
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 30%, rgba(73, 70, 70, 0.66));
   animation: fadeInOverlay 1.5s ease-out;
 }
 

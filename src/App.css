@@ -93,7 +93,7 @@
     var(--primary-light)
   ); */
   background: linear-gradient(-45deg, #2ad674, #2a9cd6, #d62aa2, #e52971, #38b3e0, #e53bb2);
-  background-size: 400% 400%;
+  background-size: 100% 100%;
   animation: Gradient 15s ease infinite;
   position: relative;
   line-height: 1.6em;

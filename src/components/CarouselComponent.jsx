@@ -1,9 +1,9 @@
 // CarouselComponent.jsx
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import banner1 from '../assets/img/banner-1.jpg'; 
-import banner2 from '../assets/img/banner-2.jpg';
-import banner3 from '../assets/img/banner-3.jpg';
+import banner1 from '../assets/img/banner-1.png'; 
+import banner2 from '../assets/img/banner-2.png';
+import banner3 from '../assets/img/banner-3.png';
 
  
 
@@ -15,7 +15,7 @@ const CarouselComponent = () => {
           className="d-block w-100"
           src={banner1} 
           alt="First slide"
-          style={{ height: 550 }}
+          style={{ height: 400 }}
         />
         {/* <Carousel.Caption style={{ 
           backgroundColor: 'rgba(248, 248, 248, 0.96)', 
@@ -31,7 +31,7 @@ const CarouselComponent = () => {
           className="d-block w-100"
           src={banner2}
           alt="First slide"
-          style={{ height: 550 }}
+          style={{ height: 400 }}
         />
         {/* <Carousel.Caption style={{ 
           backgroundColor: 'rgba(248, 248, 248, 0.96)', 
@@ -47,7 +47,7 @@ const CarouselComponent = () => {
           className="d-block w-100"
           src={banner3} 
           alt="Second slide"
-          style={{ height: 550 }}
+          style={{ height: 400 }}
         />
         {/* <Carousel.Caption style={{ 
           backgroundColor: 'rgba(248, 248, 248, 0.96)', 

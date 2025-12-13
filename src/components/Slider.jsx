@@ -2,12 +2,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../assets/css/Slider.css'
 import SliderLib from 'react-slick'
-import banner1 from '../assets/img/banner-1.jpg'
-import banner2 from '../assets/img/banner-2.jpg'
-import banner3 from '../assets/img/banner-3.jpg'
-import banner4 from '../assets/img/banner-4.png'
-import banner6 from '../assets/img/banner-6.png'
-import banner5 from '../assets/img/banner-5.jpg'
+import banner1 from '../assets/img/banner-1.png'
+import banner2 from '../assets/img/banner-2.png'
+import banner3 from '../assets/img/banner-3.png'
+
 
 
 function Slider() {
@@ -93,7 +91,7 @@ function Slider() {
                   background: 'linear-gradient(135deg, #fff 0%, #f8f9fa 100%)',
                   border: '2px solid rgba(255,255,255,0.3)',
                   backdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                  boxShadow: '0 4px 15px rgba(255, 255, 255, 0)',
                 }}
               >
                 <span className="btn-text">{slide.ctaText}</span>
