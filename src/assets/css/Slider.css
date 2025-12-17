@@ -21,7 +21,7 @@
 
 .hero-slide {
   position: relative;
-  height: clamp(870px, 60vh, 600px);
+  height: clamp(945px, 60vh, 600px);
   overflow: hidden;
   
 }
