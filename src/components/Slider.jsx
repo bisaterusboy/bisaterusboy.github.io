@@ -14,7 +14,7 @@ function Slider() {
       id: 1,
       image: banner1,
       title: 'Internet Wong Dewek',
-      subtitle: 'Dari Indramayu, Untuk Indramayu',
+      subtitle: 'Dari Indramayu, Untuk Indonesia',
       ctaText: 'Layanan Kami',
       ctaLink: '/services',
     },{
@@ -28,7 +28,7 @@ function Slider() {
     {
       id: 3,
       image: banner3,
-      title: ' Internet Warga Indramayu',
+      title: ' Internet Untuk Semua Masyarakat',
       subtitle: 'Harga Saudara, Kualitas Juara',
       ctaText: 'Hubungi Kami',
       ctaLink: '/contact',
