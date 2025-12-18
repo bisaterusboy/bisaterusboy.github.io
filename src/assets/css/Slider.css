@@ -41,8 +41,8 @@
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
-  /* transition: transform 8s ease-in-out; */
-  /* animation: zoomInOut 8s ease-in-out infinite; */
+  transition: transform 8s ease-in-out;
+  animation: zoomInOut 8s ease-in-out infinite;
   filter: brightness(0.9);
 }
 
