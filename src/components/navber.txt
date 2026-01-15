@@ -1,0 +1,132 @@
+import "../assets/css/navbar.css";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"; // Tambahkan icon matahari/bulan
+import eLogo from "../assets/img/eslog1.png";
+
+function Navbar() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  // Initialize dark mode
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }, []);
+
+  // Toggle dark mode function
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    const themeStr = newMode ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', themeStr);
+    localStorage.setItem('theme', themeStr);
+  };
+
+  // Handle scroll logic
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollTop]);
+
+  return (
+    <>
+      <nav
+        className={`navbar navbar-expand-lg fixed-top ${showNavbar ? '' : 'navbar-hidden'}`}
+        id="menutop-wrapper"
+        style={{ 
+          backgroundColor: 'var(--bg-card)',
+          borderBottom: '1px solid var(--border-color)',
+          transition: 'transform 0.3s ease, background-color 0.3s ease'
+        }}
+      >
+        <div className="container">
+          <Link className="navbar-brand" to="/">
+            <img src={eLogo} alt="Logo" style={{ height: "35px" }} />
+          </Link>
+          
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link fw-bold" to="/" style={{ color: 'var(--text-primary)' }}>Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link fw-bold" to="/about" style={{ color: 'var(--text-primary)' }}>Tentang Kami</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link fw-bold" to="/services" style={{ color: 'var(--text-primary)' }}>Layanan & Produk</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link fw-bold" to="/contact" style={{ color: 'var(--text-primary)' }}>Kontak</Link>
+              </li>
+            </ul>
+            
+            <ul className="navbar-nav align-items-lg-center">
+              {/* Dark Mode Toggle Button */}
+              <li className="nav-item me-2">
+                <button 
+                  onClick={toggleDarkMode}
+                  className="btn btn-link nav-link" 
+                  style={{ color: 'var(--text-primary)', border: 'none' }}
+                >
+                  <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                </button>
+              </li>
+              
+              <li className="nav-item">
+                <a className="nav-link" href="https://facebook.com/..." target="_blank" rel="noreferrer" style={{ color: 'var(--text-primary)' }}>
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://instagram.com/..." target="_blank" rel="noreferrer" style={{ color: 'var(--text-primary)' }}>
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://youtube.com/..." target="_blank" rel="noreferrer" style={{ color: 'var(--text-primary)' }}>
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      {/* Spacer agar konten tidak tertutup navbar fixed */}
+      <div style={{ paddingTop: '70px' }}></div>
+    </>
+  );
+}
+
+export default Navbar;
