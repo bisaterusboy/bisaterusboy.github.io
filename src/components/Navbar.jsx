@@ -186,8 +186,8 @@ function Navbar() {
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
-              /* <li className="nav-item">
-                <a
+              <li className="nav-item">
+                {/* <a
                   className="nav-link fw-bold text-decoration-none"
                   href="https://www.tiktok.com/@mitracom.id?is_from_webapp=1&sender_device=pc"
                   target="_blank"
@@ -195,11 +195,11 @@ function Navbar() {
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
                   title="tiktok"
                 >
-                  <FontAwesomeIcon icon={faTiktok} />
-                </a>
-              </li> */
-              /* <li className="nav-item">
-                <a
+                  <FontAwesomeIcon icon={fatiktok} />
+                </a> */}
+              </li>
+             <li className="nav-item">
+                {/* <a
                   className="nav-link fw-bold text-decoration-none"
                   href="https://www.youtube.com/@mitracom_id"
                   rel="noopener noreferrer"
@@ -207,8 +207,8 @@ function Navbar() {
                   title="youtube"
                 >
                   <FontAwesomeIcon icon={faYoutube} />
-                </a>
-              </li>               */
+                </a> */}
+              </li>              
             </ul>
           </div>
         </div>
