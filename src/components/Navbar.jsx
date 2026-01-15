@@ -2,7 +2,7 @@ import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faWhatsapp, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faWhatsapp, faInstagram , faTiktok, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import eLogo from "../assets/img/eslog1.png";
 
 // Icon Component with fallback
@@ -186,18 +186,30 @@ function Navbar() {
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
-                  href="https://www.linkedin.com/in/cbblogger"
+                  href="https://www.tiktok.com/@mitracom.id/"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="LinkedIn"
+                  title="tiktok"
                 >
-                  <FontAwesomeIcon icon={faLinkedinIn} />
+                  <FontAwesomeIcon icon={faTiktok} />
                 </a>
-              </li> */}
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link fw-bold text-decoration-none"
+                  href="https://www.youtube.com/@mitracom_id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
+                  title="Youtube"
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              </li>
               {/* <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
