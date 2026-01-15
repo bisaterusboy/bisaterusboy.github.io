@@ -186,42 +186,29 @@ function Navbar() {
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link fw-bold text-decoration-none"
-                  href="https://www.tiktok.com/@mitracom.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="tiktok"
-                >
-                  <FontAwesomeIcon icon={faTiktok} />
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link fw-bold text-decoration-none"
-                  href="https://www.youtube.com/@mitracom_id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="Youtube"
-                >
-                  <FontAwesomeIcon icon={faYoutube} />
-                </a>
-              </li>
               {/* <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
-                  href="https://api.whatsapp.com/send/?phone=6287727999117&text=Hallo%2C+saya+tertarik+ingin+memesan+layanan+Internetnya&type=phone_number&app_absent=0"
+                  href="https://www.linkedin.com/in/cbblogger"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="whatsapp"
+                  title="LinkedIn"
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
-              </li>               */}
+              </li> */}
+              {/* <li className="nav-item">
+                <a
+                  className="nav-link fw-bold text-decoration-none"
+                  href="https://www.youtube.com/@mitracom_id"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
+                  title="youtube"
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a> */}
+              </li>              
             </ul>
           </div>
         </div>
