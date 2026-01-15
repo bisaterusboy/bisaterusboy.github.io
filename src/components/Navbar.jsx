@@ -193,7 +193,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="LinkedIn"
+                  title="tiktok"
                 >
                   <FontAwesomeIcon icon={faTiktok} />
                 </a>
@@ -204,7 +204,7 @@ function Navbar() {
                   href="https://www.youtube.com/@mitracom_id"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="whatsapp"
+                  title="youtube"
                 >
                   <FontAwesomeIcon icon={faYoutube} />
                 </a>
