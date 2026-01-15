@@ -186,30 +186,29 @@ function Navbar() {
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </li>
-              {/* <li className="nav-item">
+              /* <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
-                  href="https://www.linkedin.com/in/cbblogger"
+                  href="https://www.tiktok.com/@mitracom.id?is_from_webapp=1&sender_device=pc"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
                   title="LinkedIn"
                 >
-                  <FontAwesomeIcon icon={faLinkedinIn} />
+                  <FontAwesomeIcon icon={faTiktok} />
                 </a>
-              </li> */}
-              {/* <li className="nav-item">
+              </li> */
+              /* <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
-                  href="https://api.whatsapp.com/send/?phone=6287727999117&text=Hallo%2C+saya+tertarik+ingin+memesan+layanan+Internetnya&type=phone_number&app_absent=0"
-                  target="_blank"
+                  href="https://www.youtube.com/@mitracom_id"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
                   title="whatsapp"
                 >
-                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <FontAwesomeIcon icon={faYoutube} />
                 </a>
-              </li>               */}
+              </li>               */
             </ul>
           </div>
         </div>
