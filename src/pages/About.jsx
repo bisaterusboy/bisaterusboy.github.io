@@ -220,7 +220,7 @@ const About = () => {
                       <td style={{ borderColor: 'var(--border-color)' }}>4</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Rating Kepuasan</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>4.9/5</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2025</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2025</td>© Copyright {currentYear}
                     </tr>
                   </tfoot>
                 </table>
