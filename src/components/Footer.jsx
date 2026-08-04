@@ -37,7 +37,7 @@ const Footer = () => {
         className="info pt-3 pb-3"
         style={{
           backgroundImage:
-            "linear-gradient(-10deg, rgb(220, 53, 69) 9%, rgb(7, 127, 255) 33%)", 
+            "linear-gradient(-0deg, rgb(158, 156, 32) 10%, rgb(36, 130, 184) 50%)", 
           backgroundSize: "120% 120%",
           // borderTop: "3px solid var(--primary-color)",
           // borderBottom: "3px solid var(--primary-color)",
@@ -192,15 +192,15 @@ const Footer = () => {
         <div className="container">
           <div id="credit-center">
                        
-            © Copyright {currentYear} | All Rights Reserved by 
+            © Copyright {currentYear} PT Mitracom Solusi Teknologi. All Rights Reserved 
             <a
               className="sitename"
-              href="https://mitracom.id/"
+              href=""
               title="Terjangkau hingga pelosok negri"
               style={{ color: 'var(--text-light)' }}
             >
               {" "}
-              mitracom.id
+              
             </a>
             
           </div>
