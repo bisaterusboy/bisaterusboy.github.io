@@ -160,7 +160,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        'Up To 10 Mbps',
+        'Up To 20 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -178,7 +178,7 @@ function Units() {
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        'Up To 15 Mbps',
+        'Up To 30 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -192,11 +192,11 @@ function Units() {
       id: 3,
       name: '', //nama layanan
       logo: 'c',
-      price: 'Rp. 190.000,-',
+      price: 'Rp. 199.000,-',
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',
-        'Up To 25 Mbps',
+        'Up To 50 Mbps',
         'Tanpa FUP',
         'Unlimited Download',
         'Unlimited Upload',
@@ -210,7 +210,7 @@ function Units() {
       id: 4,
       name: '',//nama layanan
       logo: 'd',
-      price: 'Rp. 390.000',
+      price: 'Rp. 249.000',
       speed: '',//kecepatan layanan
       features: [
         'Home Broadband',

@@ -200,13 +200,13 @@ const About = () => {
                       <td style={{ borderColor: 'var(--border-color)' }}>1</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Proyek Selesai</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>150+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2025</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2026</td>
                     </tr>
                     <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>2</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>Klien Puas</td>
                       <td style={{ borderColor: 'var(--border-color)' }}>100+</td>
-                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2025</td>
+                      <td style={{ borderColor: 'var(--border-color)' }}>2010-2026</td>
                     </tr>
                     {/* <tr>
                       <td style={{ borderColor: 'var(--border-color)' }}>3</td>
