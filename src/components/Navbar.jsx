@@ -126,7 +126,7 @@ function Navbar() {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link fw-bold text-decoration-none" to="/" style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}>
-                  Home
+                  Beranda
                 </Link>
               </li>
               <li className="nav-item">

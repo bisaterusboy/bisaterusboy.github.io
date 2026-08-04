@@ -37,7 +37,7 @@ const Footer = () => {
         className="info pt-3 pb-3"
         style={{
           backgroundImage:
-            "linear-gradient(-10deg, rgb(220, 53, 69) 9%, rgb(7, 127, 255) 33%, rgba(83, 225, 179, 0.85) 66%)", 
+            "linear-gradient(-10deg, rgb(220, 53, 69) 9%, rgb(7, 127, 255) 33%)", 
           backgroundSize: "120% 120%",
           // borderTop: "3px solid var(--primary-color)",
           // borderBottom: "3px solid var(--primary-color)",
