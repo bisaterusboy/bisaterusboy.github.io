@@ -35,7 +35,7 @@ function PrivacyPolicy() {
                   <span className="badge text-bg-secondary mt-4"><Icon iconClass="bi bi-shield-lock-fill" size="fs-2" /></span> Kebijakan Privasi
                 </h3>
                 <div className="mt-4 mb-4">
-                  <h6>Terakhir diperbarui: 6 Oktober 2026</h6>
+                  <h6></h6>
                   <p>PT. Mitracom Solusi Teknologi (“Mitracom”, “Kami”) menghargai privasi pengguna dan berkomitmen untuk melindungi informasi yang diproses melalui situs web Mitracom dan aplikasi Mitracom Support.</p>
                 </div>
                 <div className="mb-4">
