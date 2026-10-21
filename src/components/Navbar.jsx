@@ -2,23 +2,9 @@ import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTiktok, faYoutube, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTiktok, faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import eLogo from "../assets/img/eslog1.png";
-
-// Icon Component with fallback
-const Icon = ({ iconClass, size = "fs-6" }) => {
-  return (
-    <i 
-      className={`${iconClass} ${size}`} 
-      style={{ 
-        fontFamily: '"bootstrap-icons" !important',
-        display: 'inline-block',
-        verticalAlign: 'middle'
-      }}
-      title={iconClass.replace('bi bi-', '')}
-    />
-  );
-};
 
 
 
@@ -161,7 +147,19 @@ function Navbar() {
               </li>  */}
             </ul>
             
-            <ul className="navbar-nav">
+            <ul className="navbar-nav align-items-lg-center">
+              {/* <li className="nav-item me-lg-2">
+                <button
+                  type="button"
+                  onClick={toggleDarkMode}
+                  className="btn btn-link nav-link px-2"
+                  style={{ color: 'var(--text-primary)', border: 'none', textDecoration: 'none' }}
+                  title={isDarkMode ? "Ganti ke Mode Terang" : "Ganti ke Mode Gelap"}
+                  aria-label="Toggle dark mode"
+                >
+                  <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                </button>
+              </li> */}
               <li className="nav-item">
                 <a
                   className="nav-link fw-bold text-decoration-none"
@@ -181,7 +179,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="instagram"
+                  title="Instagram"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
@@ -193,7 +191,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="LinkedIn"
+                  title="TikTok"
                 >
                   <FontAwesomeIcon icon={faTiktok} />
                 </a>
@@ -205,7 +203,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: 'var(--text-primary)', transition: 'color 0.3s ease' }}
-                  title="whatsapp"
+                  title="YouTube"
                 >
                   <FontAwesomeIcon icon={faYoutube} />
                 </a>
@@ -215,7 +213,7 @@ function Navbar() {
         </div>
       </nav>
       
-      <div style={{ paddingTop: '40px' }}></div>
+      <div style={{ paddingTop: '65px' }}></div>
     </>
   );
 }

@@ -20,6 +20,7 @@ import Hardwaresoftware from "../pages/Hardwaresoftware";
 import Marketing from "../pages/Marketing";
 import Aplikasiweb from "../pages/Aplikasiweb";
 import Webdesign from "../pages/Webdesign";
+import SliderPreview from "../pages/SliderPreview";
 
 const MainContent = () => {
   return (
@@ -48,6 +49,7 @@ const MainContent = () => {
           <Route path="/pricelist" element={<Iklan />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/slider-preview" element={<SliderPreview />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>

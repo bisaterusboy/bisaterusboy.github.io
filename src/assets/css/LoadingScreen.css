@@ -1,0 +1,482 @@
+/* ============================================================
+   LOADING SCREEN STYLES (VANILLA CSS) - PT MITRACOM SOLUSI TEKNOLOGI
+   ============================================================ */
+
+.mitracom-loading-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #0d2258 0%, #06112c 35%, #030818 70%, #01040d 100%);
+  color: #ffffff;
+  user-select: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, visibility;
+}
+
+/* Exit transition saat selesai */
+.mitracom-loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+/* ============================================================
+   BACKGROUND: FIBER OPTIC AURORA & MESH
+   ============================================================ */
+.load-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.load-glow-1 {
+  width: 48vw;
+  height: 48vw;
+  min-width: 300px;
+  min-height: 300px;
+  left: -8%;
+  top: -12%;
+  background: rgba(0, 102, 255, 0.45);
+  animation: loadOrbFloat1 12s ease-in-out infinite alternate;
+}
+
+.load-glow-2 {
+  width: 45vw;
+  height: 45vw;
+  min-width: 280px;
+  min-height: 280px;
+  right: -10%;
+  bottom: -12%;
+  background: rgba(0, 229, 255, 0.35);
+  animation: loadOrbFloat2 14s ease-in-out infinite alternate;
+}
+
+.load-glow-3 {
+  width: 32vw;
+  height: 32vw;
+  min-width: 220px;
+  min-height: 220px;
+  left: 34%;
+  top: 38%;
+  background: rgba(0, 102, 255, 0.25);
+  animation: loadOrbFloat3 10s ease-in-out infinite alternate;
+}
+
+.load-network-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black 18%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 18%, transparent 78%);
+  pointer-events: none;
+}
+
+.load-sparkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 18px #00e5ff;
+  pointer-events: none;
+  animation: loadSparkleTwinkle 4s ease-in-out infinite;
+}
+
+.s1 { top: 20%; left: 18%; animation-delay: 0.3s; }
+.s2 { top: 25%; right: 20%; animation-delay: 1.5s; }
+.s3 { bottom: 22%; left: 22%; animation-delay: 2.2s; }
+.s4 { bottom: 28%; right: 19%; animation-delay: 0.8s; }
+.s5 { top: 14%; left: 50%; animation-delay: 2.9s; }
+
+/* ============================================================
+   KONTEN UTAMA LOADING
+   ============================================================ */
+.load-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* HUD & LOGO WRAPPER */
+.load-hud {
+  position: relative;
+  width: clamp(220px, 44vw, 300px);
+  height: clamp(220px, 44vw, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.load-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  animation: loadOrbitRotate 22s linear infinite;
+}
+
+.load-orbit-ring::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 12px #00e5ff;
+}
+
+.load-shockwave {
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 2px solid #00e5ff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mitracom-loading-screen.is-completed .load-shockwave {
+  animation: loadShockwaveBoom 0.85s ease-out forwards;
+}
+
+/* Circular SVG Progress */
+.load-circle-svg {
+  position: absolute;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  transform: rotate(-90deg);
+}
+
+.load-track-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 5;
+}
+
+.load-fill-circle {
+  fill: none;
+  stroke: url(#loadGradient);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 691;
+  stroke-dashoffset: 691;
+  transition: stroke-dashoffset 0.08s linear;
+  filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
+}
+
+/* ============================================================
+   LOGO CONTAINER: FADE + SCALE EFFECT
+   ============================================================ */
+.load-logo-container {
+  position: relative;
+  width: clamp(120px, 26vw, 155px);
+  height: clamp(120px, 26vw, 155px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loadLogoEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.load-logo-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  transform: rotate(5deg);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mitracom-loading-screen.is-completed .load-logo-glass {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.load-logo-badge {
+  position: relative;
+  width: 86%;
+  height: 84%;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 32px rgba(0, 102, 255, 0.45);
+  animation: loadLogoPulse 3s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.load-logo-img {
+  width: 100%;
+  height: 100%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.mitracom-loading-screen.is-completed .load-logo-img {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.load-check-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: #0066ff;
+  opacity: 0;
+  transform: scale(0.3) rotate(-30deg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.mitracom-loading-screen.is-completed .load-check-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* ============================================================
+   ANGKA LOADING 0 - 100% PADA TENGAH
+   ============================================================ */
+.load-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -6px;
+  animation: loadTextFadeUp 0.85s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.load-counter-row {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.load-number {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: clamp(48px, 9.5vw, 76px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, #ffffff 20%, rgba(255, 255, 255, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 40px rgba(0, 102, 255, 0.45);
+  min-width: 2.2ch;
+  text-align: right;
+}
+
+.load-symbol {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 600;
+  color: #00e5ff;
+  margin-left: 4px;
+  text-shadow: 0 0 16px #00e5ff;
+}
+
+.load-brand-name {
+  font-size: clamp(14px, 2.6vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.load-brand-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffb703;
+  box-shadow: 0 0 8px #ffb703;
+}
+
+.load-brand-slogan {
+  font-size: clamp(10px, 1.8vw, 12px);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* Status Pesan */
+.load-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  margin-top: 15px;
+}
+
+.load-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+  animation: loadBlink 1.2s infinite ease-in-out;
+}
+
+.mitracom-loading-screen.is-completed .load-status-dot {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: none;
+}
+
+.load-status-text {
+  font-size: clamp(11px, 2.2vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  min-width: 190px;
+  text-align: center;
+}
+
+/* Linear Progress Bar */
+.load-linear-track {
+  width: min(300px, 78vw);
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 16px;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.load-linear-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0066ff, #00e5ff);
+  border-radius: inherit;
+  box-shadow: 0 0 16px #00e5ff;
+  transition: width 0.08s linear;
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+@keyframes loadLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) translateY(28px);
+    filter: blur(14px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes loadLogoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes loadTextFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loadShockwaveBoom {
+  0% {
+    opacity: 0.95;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes loadOrbitRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loadOrbFloat1 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(6vw, 4vh, 0) scale(1.15); }
+}
+@keyframes loadOrbFloat2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-6vw, -5vh, 0) scale(1.12); }
+}
+@keyframes loadOrbFloat3 {
+  0% { transform: translate3d(0, 0, 0) scale(0.9); }
+  100% { transform: translate3d(3vw, -3vh, 0) scale(1.1); }
+}
+
+@keyframes loadSparkleTwinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 0.95; transform: scale(1.4); }
+}
+
+@keyframes loadBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .load-hud {
+    margin-bottom: 14px;
+  }
+  .load-status-pill {
+    margin-top: 10px;
+    padding: 5px 12px;
+  }
+  .load-linear-track {
+    margin-top: 14px;
+  }
+}

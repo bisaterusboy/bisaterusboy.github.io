@@ -1,0 +1,1056 @@
+/* ==========================================================================
+   SLIDER PREVIEW SHOWCASE STYLES
+   Dedicated showcase page for selecting slider designs (8 Samples)
+   ========================================================================== */
+
+.sp-page {
+  background-color: #0b1120;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+/* Header Banner */
+.sp-header {
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15), transparent 70%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50rem;
+  color: #38bdf8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.sp-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.sp-desc {
+  max-width: 650px;
+  margin: 0 auto 1.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Tab Navigation Toolbar */
+.sp-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sp-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 50rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sp-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.sp-tab-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #00b4d8 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.45);
+}
+
+/* Screen Mode Toggle (Desktop / Mobile simulation) */
+.sp-controls-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.sp-view-toggle {
+  display: inline-flex;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 0.3rem;
+  border-radius: 50rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sp-toggle-btn {
+  padding: 0.4rem 1.15rem;
+  border-radius: 50rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sp-toggle-btn.active {
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Stage Frame Wrapper */
+.sp-stage-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  transition: max-width 0.4s ease;
+}
+
+.sp-stage-wrapper.mobile-sim {
+  max-width: 420px;
+  border: 8px solid #1e293b;
+  border-radius: 40px;
+  padding: 0;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* Info Summary Card below slider */
+.sp-info-card {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  padding: 1.75rem 2rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sp-info-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.sp-info-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  max-width: 700px;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 1: CLEAN BANNER (GAMBAR 2)
+   -------------------------------------------------------------------------- */
+.sp-clean-slider {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 56vh, 600px);
+  background: #071530;
+  overflow: hidden;
+}
+
+.mobile-sim .sp-clean-slider {
+  height: 320px;
+}
+
+.sp-clean-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.sp-clean-bg.active {
+  opacity: 1;
+}
+
+.sp-clean-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(7, 21, 48, 0.5) 100%
+  );
+}
+
+.sp-clean-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.sp-clean-title {
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+.mobile-sim .sp-clean-title {
+  font-size: 1.55rem;
+}
+
+.sp-clean-sub {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.85rem;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+}
+
+.mobile-sim .sp-clean-sub {
+  font-size: 0.92rem;
+  margin-bottom: 1.2rem;
+}
+
+.sp-clean-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.8rem 2.3rem;
+  border-radius: 50rem;
+  background: #ffffff;
+  color: #0070e0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+}
+
+.mobile-sim .sp-clean-btn {
+  padding: 0.6rem 1.65rem;
+  font-size: 0.92rem;
+}
+
+/* Dots */
+.sp-dots-bar {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 10;
+}
+
+.mobile-sim .sp-dots-bar {
+  bottom: 0.85rem;
+  gap: 0.45rem;
+}
+
+.sp-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sp-dot.active {
+  width: 30px;
+  height: 8px;
+  border-radius: 50rem;
+  background: #38bdf8;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 2: AROUND THE WORLD (SMART SLIDER 3)
+   -------------------------------------------------------------------------- */
+.sp-atw-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 64px 64px 0px 64px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 560px;
+}
+
+.mobile-sim .sp-atw-wrap {
+  border-radius: 28px 28px 0px 28px;
+  min-height: 420px;
+}
+
+.sp-atw-frame {
+  position: relative;
+  padding: 4.5rem 4rem 5rem;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+}
+
+.mobile-sim .sp-atw-frame {
+  padding: 2.2rem 1.25rem 5rem;
+  min-height: 420px;
+}
+
+.sp-atw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.sp-atw-badge i {
+  color: #38bdf8;
+}
+
+.sp-atw-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.mobile-sim .sp-atw-title {
+  font-size: 1.65rem;
+}
+
+.sp-atw-strong {
+  background: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sp-atw-desc {
+  max-width: 540px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.mobile-sim .sp-atw-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.sp-atw-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50rem;
+  background: #ffffff;
+  color: #030712;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.sp-atw-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ffffff;
+  color: #030712;
+  border-radius: 36px 0px 0px 0px;
+  padding: 1rem 1.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 15;
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-sim .sp-atw-corner {
+  padding: 0.6rem 0.85rem;
+  gap: 0.75rem;
+  border-radius: 20px 0px 0px 0px;
+}
+
+.sp-atw-thumb {
+  width: 60px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.mobile-sim .sp-atw-thumb {
+  width: 44px;
+  height: 30px;
+}
+
+.sp-atw-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-atw-sub {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.sp-atw-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-sim .sp-atw-name {
+  max-width: 90px;
+  font-size: 0.78rem;
+}
+
+.sp-atw-navs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sp-atw-arr {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+
+.mobile-sim .sp-atw-arr {
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+}
+
+.sp-arr-prev {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.sp-arr-next {
+  background: #eab308;
+  color: #0f172a;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 3: MODERN TECH (KANGGAWE FIDELITY)
+   -------------------------------------------------------------------------- */
+.sp-tech-slider {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #071530;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+  overflow: hidden;
+}
+
+.mobile-sim .sp-tech-slider {
+  min-height: 360px;
+  padding: 2rem 1.25rem;
+}
+
+.sp-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.15rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.sp-tech-badge i {
+  color: #38bdf8;
+}
+
+.sp-tech-title {
+  font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.16;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  min-height: calc(1.16em * 2);
+}
+
+.mobile-sim .sp-tech-title {
+  font-size: 1.55rem;
+  min-height: calc(1.2em * 2);
+}
+
+.sp-tech-cursor {
+  display: inline-block;
+  width: 4px;
+  height: 0.9em;
+  background: #38bdf8;
+  margin-left: 5px;
+  vertical-align: baseline;
+  animation: spBlink 0.8s infinite;
+}
+
+.sp-tech-cursor.typing {
+  animation: none;
+  opacity: 1;
+}
+
+@keyframes spBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.sp-tech-desc {
+  max-width: 550px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.sp-tech-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.sp-btn-pri {
+  padding: 0.8rem 1.85rem;
+  border-radius: 50rem;
+  background: linear-gradient(135deg, #0284c7 0%, #00b4d8 100%);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sp-btn-sec {
+  padding: 0.8rem 1.85rem;
+  border-radius: 50rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sp-tech-checks {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  flex-wrap: wrap;
+}
+
+.sp-tech-checks i {
+  color: #2dd4bf;
+  margin-right: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 4: ENTERPRISE GLASS STAT CARD
+   -------------------------------------------------------------------------- */
+.sp-card-slider {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #071530;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+  overflow: hidden;
+}
+
+.sp-card-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.mobile-sim .sp-card-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.sp-stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(16px);
+  border-radius: 1.5rem;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  max-width: 420px;
+}
+
+.mobile-sim .sp-stat-box {
+  padding: 1.25rem 1.5rem;
+}
+
+.sp-stat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sp-stat-tag {
+  color: #2dd4bf;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.sp-stat-live {
+  color: #4ade80;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sp-stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sp-stat-unit {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-left: 0.4rem;
+}
+
+.sp-stat-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sp-spec-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sp-spec-key {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 5: INTERACTIVE SPEED & PRICING TIER CARDS (SaaS / ISP Speed Picker)
+   -------------------------------------------------------------------------- */
+.sp-tier-slider {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  background: #071530;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+  overflow: hidden;
+}
+
+.sp-tier-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.mobile-sim .sp-tier-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.sp-tier-cards-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sp-tier-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.sp-tier-card:hover,
+.sp-tier-card.featured {
+  background: rgba(2, 132, 199, 0.25);
+  border-color: #38bdf8;
+  transform: translateX(6px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.35);
+}
+
+.sp-tier-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sp-tier-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.sp-tier-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.sp-tier-sub {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sp-tier-price {
+  text-align: right;
+}
+
+.sp-tier-val {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #38bdf8;
+}
+
+.sp-tier-per {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 6: CINEMATIC PARALLAX (Apple / Luxury Awwwards Style)
+   -------------------------------------------------------------------------- */
+.sp-cinema-slider {
+  position: relative;
+  width: 100%;
+  height: clamp(520px, 65vh, 680px);
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile-sim .sp-cinema-slider {
+  height: 350px;
+}
+
+.sp-cinema-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%),
+              linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.sp-cinema-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1.25rem;
+  border-radius: 50rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.sp-cinema-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.mobile-sim .sp-cinema-title {
+  font-size: 1.7rem;
+}
+
+.sp-cinema-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sp-cinema-desc {
+  max-width: 620px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 2.2rem;
+  line-height: 1.6;
+}
+
+.mobile-sim .sp-cinema-desc {
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+.sp-cinema-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50rem;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.sp-cinema-btn:hover {
+  background: #f1f5f9;
+  transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 7: THUMBNAIL DOCK BAR SLIDER (Travel / Automotive Portfolio Style)
+   -------------------------------------------------------------------------- */
+.sp-dock-slider {
+  position: relative;
+  width: 100%;
+  height: clamp(520px, 65vh, 680px);
+  background: #071530;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 3rem 4rem 8rem;
+}
+
+.mobile-sim .sp-dock-slider {
+  height: 380px;
+  padding: 2rem 1.25rem 6rem;
+}
+
+.sp-dock-bar {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 15;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.5rem 0.65rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.mobile-sim .sp-dock-bar {
+  gap: 0.45rem;
+  bottom: 0.8rem;
+  padding: 0.35rem 0.45rem;
+}
+
+.sp-dock-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.85rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sp-dock-item.active {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.sp-dock-thumb {
+  width: 48px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.mobile-sim .sp-dock-thumb {
+  width: 32px;
+  height: 22px;
+}
+
+.sp-dock-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mobile-sim .sp-dock-label {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   SAMPLE 8: DIAGONAL ANGLE CUT (Energetic Tech Mesh)
+   -------------------------------------------------------------------------- */
+.sp-diag-slider {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #060e20;
+  display: flex;
+  align-items: center;
+  padding: 4rem 4rem;
+  overflow: hidden;
+}
+
+.mobile-sim .sp-diag-slider {
+  min-height: 350px;
+  padding: 2rem 1.25rem;
+}
+
+.sp-diag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid #22c55e;
+  color: #4ade80;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.sp-diag-title {
+  font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+}
+
+.mobile-sim .sp-diag-title {
+  font-size: 1.55rem;
+}
+
+.sp-diag-cyan {
+  color: #06b6d4;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+}
+
+.sp-diag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+  transition: all 0.25s ease;
+}
+
+.sp-diag-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.6);
+  color: #ffffff;
+}

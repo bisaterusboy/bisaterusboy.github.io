@@ -178,7 +178,10 @@ a:hover {
 .text-light { color: var(--text-light) !important; }
 .text-dark { color: var(--text-primary) !important; }
 
-.bg-primary { background-color: var(--primary-color) !important; }
+.bg-primary { 
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb, 0, 123, 255), var(--bs-bg-opacity, 1)) !important; 
+}
 .bg-secondary { background-color: var(--bg-secondary) !important; }
 .bg-light { background-color: var(--light-color) !important; }
 .bg-dark { background-color: var(--dark-color) !important; }

@@ -1,177 +1,301 @@
-/* ===== NOT FOUND PAGE STYLES ===== */
+/* ==========================================================================
+   404 NOT FOUND PAGE STYLES - PT MITRACOM SOLUSI TEKNOLOGI
+   ========================================================================== */
 
-.notfound-container {
-  min-height: 100vh;
+.notfound-wrapper {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  padding: 80px 20px 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
-  padding: 2rem 1rem;
-}
-
-.notfound-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.notfound-title {
-  font-size: 8rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 8px var(--shadow-color);
-  animation: pulse 2s infinite;
-}
-
-.notfound-subtitle {
-  font-size: var(--font-size-2xl);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  overflow: hidden;
 }
 
-.notfound-description {
-  font-size: var(--font-size-lg);
+/* Ambient glow orb behind 404 */
+.notfound-ambient {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.14) 0%, rgba(6, 182, 212, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: nf-ambient-pulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes nf-ambient-pulse {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.95; }
+}
+
+.notfound-card {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 44px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+/* Floating Status Icon */
+.notfound-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.notfound-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.08);
+  border: 1.5px solid rgba(0, 123, 255, 0.2);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
+  animation: nf-float 3.5s ease-in-out infinite;
+}
+
+@keyframes nf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Network Status Pill Container */
+.notfound-badge-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.notfound-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(220, 53, 69, 0.08);
+  border: 1px solid rgba(220, 53, 69, 0.25);
+  border-radius: 50rem;
+  color: #dc3545;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.notfound-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  box-shadow: 0 0 8px #dc3545;
+  animation: nf-blink 1.5s infinite;
+}
+
+@keyframes nf-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.85); }
+}
+
+/* Giant 404 Hero Display */
+.notfound-code-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 4px 0 12px;
+}
+
+.notfound-code {
+  font-size: clamp(5rem, 12vw, 8rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #007bff 0%, #00d2ff 60%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 10px 30px rgba(0, 123, 255, 0.25);
+  user-select: none;
+}
+
+/* Title & Description */
+.notfound-title {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.4px;
+}
+
+.notfound-desc {
+  font-size: 0.965rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 auto 28px;
 }
 
+/* Main Action Buttons */
 .notfound-actions {
   display: flex;
-  gap: 1rem;
+  gap: 12px;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 32px;
 }
 
-.notfound-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: var(--font-size-base);
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-  border: none;
+.nf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none !important;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
 }
 
-.notfound-btn-primary {
-  background: var(--gradient-primary);
-  color: var(--text-light);
-  box-shadow: var(--shadow-light);
+.nf-btn-primary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
 }
 
-.notfound-btn-primary:hover {
+.nf-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--card-shadow);
-  color: var(--text-light);
-  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 123, 255, 0.45);
+  background: linear-gradient(135deg, #1a88ff 0%, #004fb0 100%);
 }
 
-.notfound-btn-secondary {
-  background: var(--bg-card);
-  color: var(--text-primary);
+.nf-btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary) !important;
   border: 1px solid var(--border-color);
 }
 
-.notfound-btn-secondary:hover {
+.nf-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: var(--border-color);
+  color: var(--primary-color) !important;
+}
+
+.nf-btn-support {
+  background: rgba(37, 211, 102, 0.1);
+  color: #128c7e !important;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.nf-btn-support:hover {
+  transform: translateY(-2px);
+  background: #25d366;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+/* Quick Helpful Links (Pintasan Populer) */
+.notfound-suggestions {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.notfound-sug-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.notfound-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.nf-link-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
   background: var(--bg-secondary);
-  color: var(--text-primary);
-  text-decoration: none;
-  transform: translateY(-1px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
 }
 
-/* Animation for the 404 number */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+.nf-link-chip:hover {
+  background: var(--bg-card);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.12);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .notfound-title {
-    font-size: 6rem;
-  }
-  
-  .notfound-subtitle {
-    font-size: var(--font-size-xl);
-  }
-  
-  .notfound-description {
-    font-size: var(--font-size-base);
+.nf-link-chip i {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+/* Dark mode enhancements */
+[data-theme="dark"] .notfound-card {
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .nf-btn-support {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366 !important;
+}
+
+@media (max-width: 576px) {
+  .notfound-card {
+    padding: 32px 20px;
+    border-radius: 20px;
   }
   
   .notfound-actions {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .notfound-btn {
     width: 100%;
-    max-width: 300px;
+  }
+
+  .nf-btn {
+    width: 100%;
+  }
+
+  .notfound-links-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-@media (max-width: 576px) {
-  .notfound-title {
-    font-size: 4rem;
-  }
-  
-  .notfound-subtitle {
-    font-size: var(--font-size-lg);
-  }
-  
-  .notfound-container {
-    padding: 1rem 0.5rem;
-  }
-}
-
-/* Dark mode adjustments */
-[data-theme="dark"] .notfound-title {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-
-[data-theme="dark"] .notfound-btn-secondary {
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border-color: var(--border-color);
-}
-
-[data-theme="dark"] .notfound-btn-secondary:hover {
-  background: var(--bg-secondary);
-}
-
-/* Accessibility improvements */
-.notfound-btn:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-.notfound-content:focus-within {
-  outline: none;
-}
-
-/* Print styles */
-@media print {
-  .notfound-container {
-    background: white !important;
-    color: black !important;
-  }
-  
-  .notfound-title {
-    color: var(--primary-color) !important;
-    text-shadow: none !important;
-    animation: none !important;
-  }
-  
-  .notfound-actions {
-    display: none !important;
-  }
-}
-  

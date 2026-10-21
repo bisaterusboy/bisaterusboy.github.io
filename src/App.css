@@ -5,6 +5,7 @@
 @import './assets/css/Units.css';
 @import './assets/css/priceList.css';
 @import './assets/css/footer.css';
+@import './assets/css/whatsapp.css';
 
 @font-face {
   font-family:'FFE10016T' ;
@@ -267,6 +268,12 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
   }
 }
 

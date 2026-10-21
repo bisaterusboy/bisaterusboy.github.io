@@ -1,62 +1,97 @@
-/* ===== PATHNET SLIDER COMPONENT STYLES ===== */
-/* This file uses CSS variables defined in index.css */
+/* ==========================================================================
+   PARTNER KAMI (MARQUEE) STYLES - PT MITRACOM SOLUSI TEKNOLOGI
+   ========================================================================== */
 
 .pathnet { 
   position: relative; 
-  padding: 60px 0;
+  padding: 5rem 0 4.5rem;
   background: var(--bg-secondary);
+  overflow: hidden;
 }
 
-.section-heading {
-  font-size: clamp(1.25rem, 1.2vw + 1rem, 2rem);
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: var(--primary-color);
+.partner-header {
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.95rem;
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  border-radius: 50rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.partner-heading {
+  font-size: clamp(1.85rem, 2.5vw + 0.5rem, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
   position: relative;
 }
 
-.section-heading::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
+.partner-heading-line {
+  width: 50px;
   height: 3px;
-  background: var(--gradient-primary);
-  border-radius: 2px;
+  background: linear-gradient(90deg, #007bff, #38bdf8);
+  border-radius: 3px;
+  margin: 0.5rem auto 1rem;
 }
 
+.partner-subtitle {
+  font-size: 0.965rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Marquee Rows with Edge Fade Mask */
 .brand-rows { 
   position: relative; 
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .brand-slide { 
-  padding: 10px 12px; 
+  padding: 8px 10px; 
   flex: 0 0 auto; 
 }
 
-/* CSS-only marquee using keyframes */
+/* CSS Marquee */
 .marquee { 
   overflow: hidden; 
   position: relative; 
-  margin: 1rem 0;
+  margin: 0.65rem 0;
+  display: flex;
 }
 
 .marquee__track {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   min-width: 200%;
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll 38s linear infinite;
   will-change: transform;
 }
 
 .marquee--reverse .marquee__track { 
   animation-direction: reverse; 
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
 }
 
 @keyframes marquee-scroll {
@@ -68,153 +103,53 @@
   }
 }
 
-/* Palindo-like card style */
+/* Modern Client Logo Card */
 .client-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 14px 18px;
-  height: 86px;
-  box-shadow: var(--shadow-light);
-  transition: var(--transition);
+  border-radius: 14px;
+  padding: 12px 20px;
+  height: 82px;
+  min-width: 175px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 180px;
 }
 
 .client-card:hover {
-  box-shadow: var(--card-shadow);
-  transform: translateY(-2px);
-  border-color: var(--primary-color);
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(0, 123, 255, 0.3);
 }
 
 .client-logo {
-  max-width: 150px;
-  max-height: 58px;
+  max-width: 135px;
+  max-height: 52px;
   width: auto;
   height: auto;
-  /* filter: grayscale(100%); */
-  /* opacity: 0.7; */
-  transition: var(--transition);
   object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .client-card:hover .client-logo { 
-  filter: grayscale(0%); 
-  opacity: 1; 
   transform: scale(1.05);
 }
 
-/* Enhanced marquee container */
-.marquee-container {
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-primary);
-  border-radius: var(--border-radius-lg);
-  padding: 2rem 0;
-  box-shadow: var(--shadow-light);
-}
-
-.marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 1rem;
-}
-
-.marquee-track-left {
-  animation: marquee-scroll 25s linear infinite;
-}
-
-.marquee-track-right {
-  animation: marquee-scroll 25s linear infinite reverse;
-}
-
-/* Responsive design */
 @media (max-width: 768px) {
   .pathnet {
-    padding: 40px 0;
-  }
-  
-  .section-heading {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .marquee__track {
-    animation-duration: 35s;
-  }
-  
-  .marquee-track-left,
-  .marquee-track-right {
-    animation-duration: 35s;
-  }
-}
-
-@media (max-width: 576px) {
-  .client-card { 
-    height: 74px; 
-    padding: 10px 12px; 
-    min-width: 140px;
-  }
-  
-  .client-logo { 
-    max-width: 120px; 
-    max-height: 46px; 
-  }
-  
-  .marquee-container {
-    padding: 1rem 0;
-  }
-  
-  .marquee__track {
-    animation-duration: 35s;
-  }
-  
-  .marquee-track-left,
-  .marquee-track-right {
-    animation-duration: 35s;
-  }
-}
-
-/* Pause animation on hover */
-.marquee:hover .marquee__track,
-.marquee-container:hover .marquee-track-left,
-.marquee-container:hover .marquee-track-right {
-  animation-play-state: paused;
-}
-
-/* Focus states for accessibility */
-.client-card:focus-within {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Print styles */
-@media print {
-  .marquee,
-  .marquee-container {
-    overflow: visible;
-  }
-  
-  .marquee__track,
-  .marquee-track-left,
-  .marquee-track-right {
-    animation: none;
-    transform: none;
+    padding: 3.5rem 0;
   }
   
   .client-card {
-    background: white !important;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
+    height: 72px;
+    min-width: 145px;
+    padding: 10px 14px;
   }
-  
+
   .client-logo {
-    filter: none !important;
-    opacity: 1 !important;
+    max-width: 110px;
+    max-height: 42px;
   }
 }
-
-

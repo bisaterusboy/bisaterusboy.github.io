@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../assets/css/priceList.css";
 import '../assets/css/PathnetSlider.css';
 // partner kami 1
@@ -72,82 +72,35 @@ const Icon = ({ iconClass, size = "fs-6" }) => {
 };
 
 function Units() {
-  const [addressQuery, setAddressQuery] = useState('');
-  const [coverageStatus, setCoverageStatus] = useState('');
-  const [checking, setChecking] = useState(false);
-
-  const handleCoverageCheck = (event) => {
-    event.preventDefault();
-    const trimmedQuery = addressQuery.trim();
-    if (!trimmedQuery) {
-      setCoverageStatus('Masukkan alamat lengkap Anda terlebih dahulu.');
-      return;
-    }
-    setChecking(true);
-    setCoverageStatus('');
-    setTimeout(() => {
-      setCoverageStatus('Layanan tersedia di area Anda. Silakan pilih paket di bawah ini!');
-      setChecking(false);
-    }, 900);
-  };
-
-  // --- About Section ---
-  const aboutFeatures = [
-    {
-      icon: "bi bi-speedometer2",
-      title: "Kecepatan Tinggi",
-      description: "Menggunakan teknologi fiber optic terdepan untuk kecepatan internet yang stabil dan cepat",
-      color: "primary"
-    },
-    {
-      icon: "bi bi-shield-check",
-      title: "Keamanan Terjamin",
-      description: "Sistem keamanan jaringan tingkat enterprise dengan monitoring 24/7",
-      color: "secondary"
-    },
-    {
-      icon: "bi bi-headset",
-      title: "Support 24/7",
-      description: "Tim support profesional siap membantu Anda kapan saja dengan response time cepat",
-      color: "accent"
-    },
-    {
-      icon: "bi bi-graph-up-arrow",
-      title: "Monitoring Real-time",
-      description: "Sistem monitoring PRTG untuk memastikan kualitas layanan tetap optimal",
-      color: "primary"
-    }
-  ];
-
-
-
   // --- Services Section ---
   const services = [
-   {
-    title: "Internet Home & Business",
-    description: "Paket internet Terjangkau, cepat dan stabil untuk bisnis.",
-    icon: "bi bi-wifi",
-    color: "primary",
-    image: imgInternet,
-    images: [imgInternet, imgInternet2, imgInternet3]
-  },
-  {
-    title: "CCTV & Security",
-    description: "Instalasi dan maintenance CCTV serta layanan CCTV Security.",
-    icon: "bi bi-camera-video",
-    color: "primary",
-    image: imgCctv,
-    images: [imgCctv, imgCctv2, imgCctv3]
-  },
-  {
-    title: "IT Solution & Konsultasi",
-    description: "Solusi IT, konsultasi, dan pengembangan sistem sesuai kebutuhan.",
-    icon: "bi bi-lightbulb",
-    color: "secondary",
-    image: imgKonsultan,
-    images: [imgKonsultan, imgKonsultan2, imgKonsultan3]
-  },
-
+    {
+      title: "Internet Home & Business",
+      description: "Paket internet Terjangkau, cepat dan stabil untuk bisnis.",
+      icon: "bi bi-wifi",
+      path: "/business",
+      badge: "Home & Business",
+      image: imgInternet,
+      images: [imgInternet, imgInternet2, imgInternet3],
+    },
+    {
+      title: "CCTV & Security",
+      description: "Instalasi dan maintenance CCTV serta layanan CCTV Security.",
+      icon: "bi bi-camera-video",
+      path: "/kamera",
+      badge: "Keamanan & Hiburan",
+      image: imgCctv,
+      images: [imgCctv, imgCctv2, imgCctv3],
+    },
+    {
+      title: "IT Solution & Konsultasi",
+      description: "Solusi IT, konsultasi, dan pengembangan sistem sesuai kebutuhan.",
+      icon: "bi bi-lightbulb",
+      path: "/konsultan",
+      badge: "Konsultasi & Pengembangan",
+      image: imgKonsultan,
+      images: [imgKonsultan, imgKonsultan2, imgKonsultan3],
+    },
   ];
 
   // --- Portfolio Section ---
@@ -225,63 +178,6 @@ function Units() {
       popular: false
     }
   ];
-
-  // --- Contact Section ---
-  const contactInfo = [
-    {
-      icon: "bi bi-geo-alt",
-      title: "Alamat",
-      content: "Jl. Raya Indramayu - Cirebon No. 123, Indramayu, Jawa Barat",
-      color: "primary"
-    },
-    {
-      icon: "bi bi-telephone",
-      title: "Telepon",
-      content: "+62 822-6060-1982",
-      link: "tel:+6282260601982",
-      color: "secondary"
-    },
-    {
-      icon: "bi bi-envelope",
-      title: "Email",
-      content: "info@mitracom.id",
-      link: "mailto:info@mitracom.id",
-      color: "accent"
-    },
-    {
-      icon: "bi bi-clock",
-      title: "Jam Operasional",
-      content: "Senin - Minggu: 08:00 - 22:00 WIB",
-      color: "primary"
-    }
-  ];
-
-  // --- Utilitas Color Class ---
-  const getColorClass = (color) => {
-    switch (color) {
-      case 'primary':
-        return 'text-primary-custom';
-      case 'secondary':
-        return 'text-secondary-custom';
-      case 'accent':
-        return 'text-accent-custom';
-      default:
-        return 'text-primary-custom';
-    }
-  };
-
-  const getBgClass = (color) => {
-    switch (color) {
-      case 'primary':
-        return 'bg-primary-custom';
-      case 'secondary':
-        return 'bg-secondary-custom';
-      case 'accent':
-        return 'bg-accent-custom';
-      default:
-        return 'bg-primary-custom';
-    }
-  };
 
 	const logos = [
 		{ id: 1, name: '', url: logo1 },
@@ -394,6 +290,7 @@ function Units() {
                             eslog4
                           }
                           alt={`${pkg.name} Logo`}
+                          // alt={`${pkg.name || 'Paket'} Logo`}
                           style={{
                             width: '100%',
                             height: '',
@@ -405,28 +302,31 @@ function Units() {
                     </div>
                   </div>
                   
-                  <div className="d-flex justify-content-center mb-3">
-                    <span className="badge rounded-pill px-4 py-2 fw-bold" style={{ 
-                      background: 'rgba(255,255,255,0.2)', 
-                      color: 'white',
-                      backdropFilter: 'blur(10px)',
-                      fontSize:'1.5rem',
-                      border: '1px solid rgba(255,255,255,0.3)'
-                    }}>
-                      {pkg.name} 
-                    </span>
-                  </div>
+                  {pkg.name ? (
+                    <div className="d-flex justify-content-center mb-3">
+                      <span className="badge rounded-pill px-4 py-2 fw-bold" style={{ 
+                        background: 'rgba(255,255,255,0.2)', 
+                        color: 'white',
+                        backdropFilter: 'blur(10px)',
+                        fontSize:'1.5rem',
+                        border: '1px solid rgba(255,255,255,0.3)'
+                      }}>
+                        {pkg.name} 
+                      </span>
+                    </div>
+                  ) : null}
                                     {/* Logo Section */}
 
-                  <div className="text-center my-4">
-                    <div className="display-6 fw-bold mb-1" style={{ 
-                      color: 'white',
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-                    }}>
-                      {pkg.speed.replace(' (Up to*)', '')}
+                  {pkg.speed ? (
+                    <div className="text-center my-4">
+                      <div className="display-6 fw-bold mb-1" style={{ 
+                        color: 'white',
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                      }}>
+                        {pkg.speed.replace(' (Up to*)', '')}
+                      </div>
                     </div>
-                    {/* <div className="small" style={{ color: 'rgba(255,255,255,0.8)' }}>Kecepatan hingga</div> */}
-                  </div>
+                  ) : null}
                   <div className="text-center mb-4">
                     <div className="h2 fw-bold mb-0" style={{ 
                       color: 'white',
@@ -478,96 +378,97 @@ function Units() {
       
 
       {/* Services Section */}
-      <section className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      <section className="section-padding services-overview-section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div className="text-center mb-4">
+          <div className="text-center mb-5">
+            <span className="services-tag-badge">
+              <i className="bi bi-grid-fill"></i> LAYANAN UNGGULAN
+            </span>
             <h2 className="section-title">Layanan Kami</h2>
-            <p className="section-subtitle">Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan anda</p>
+            <p className="section-subtitle">
+              Kami menghadirkan produk dan jasa unggulan yang dirancang khusus untuk memenuhi kebutuhan anda
+            </p>
           </div>
 
-        <div className="row g-4">
-          {services.map((srv, idx) => (
-            <div key={idx} className="col-md-4">
-              <div className="card h-100 border-0 shadow-sm service-card"
-                style={{
-                  minHeight: '280px',
-                  background: '#d5eff7ff',
-                  color: '#9e1d1dff',
-                  transition: 'transform 0.2s, box-shadow 0.5s',
-                  boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)'
-                }}
-                onMouseOver={e => {
-                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)';
-                  e.currentTarget.style.boxShadow = '0 16px 40px 0 rgba(31,38,135,0.28)';
-                }}
-                onMouseOut={e => {
-                  e.currentTarget.style.transform = 'none';
-                  e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.18)';
-                }}
-              >
-                <div className={` mb-3 d-flex align-items-center justify-content-center`} style={{ 
-                  gap: '8px', padding: '8px', borderRadius: '12px', 
-                  // boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
-                  }}>
-                  {(srv.images || [srv.image, srv.image, srv.image]).map((img, i) => (
-                    <div key={i} className="d-inline-block" style={{ width: '100px', height: '120px', borderRadius: '12px', overflow: 'hidden' }}>
-                      <img src={img} alt={`${srv.title} ${i+1}`} className="img-fluid" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                  ))}
-                </div>
-                <h4 className="fw-bold mb-2" style={{ color: '#000000ff', fontSize: '1.35rem', letterSpacing: '1px' }}>{srv.title}</h4>
-                <p className="mb-2" style={{ color: '#000000ff', fontSize: '1.08rem' }}>{srv.description}</p>
-                <div className="mt-3">
-                  <span className="badge bg-warning" style={{ fontSize: '0.95rem', padding: '0.5em 1em', background: 'var(--primary-color)', color: '#fff', borderRadius: '12px' }}>
-                    <a href="/business" style={{textDecoration: 'none'}}>{srv.title.includes('Internet') && 'Home & Business'}</a>
-                    <a href="/hardwaresoftware" style={{textDecoration: 'none'}}>{srv.title.includes('Komputer') && 'Hardware & Software'}</a>
-                    <a href="/maintenanceinternet" style={{textDecoration: 'none'}}>{srv.title.includes('Maintenance') && 'Jaringan LAN/WiFi'}</a>
-                    <a href="/kamera" style={{textDecoration: 'none'}}>{srv.title.includes('CCTV') && 'Keamanan & Hiburan'}</a>
-                    <a href="/konsultan" style={{textDecoration: 'none'}}>{srv.title.includes('IT Solution') && 'Konsultasi & Pengembangan'}</a>
-                    <a href="/webdesign" style={{textDecoration: 'none'}}>{srv.title === 'Web Design' && 'Desain Modern'}</a>
-                    <a href="/aplikasiweb" style={{textDecoration: 'none'}}>{srv.title === 'Web Development' && 'Aplikasi Web'}</a>
-                    <a href="/marketing" style={{textDecoration: 'none'}}>{srv.title === 'Marketing' && 'Promosi Online'}</a>
-                  </span>
+          <div className="row g-4">
+            {services.map((srv, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6">
+                <div className="modern-service-card">
+                  {/* Photo Strip Gallery */}
+                  <div className="service-photos-strip">
+                    {srv.images.map((img, i) => (
+                      <div key={i} className="service-photo-frame">
+                        <img
+                          src={img}
+                          alt={`${srv.title} dokumentasi ${i + 1}`}
+                          className="service-photo-thumb"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="service-card-content">
+                    <span className="service-badge-pill">{srv.badge}</span>
+                    <h3 className="service-card-title">
+                      <i className={srv.icon}></i> {srv.title}
+                    </h3>
+                    <p className="service-card-desc">{srv.description}</p>
+                    
+                    <Link to={srv.path} className="service-card-btn">
+                      <span>Pelajari Layanan</span>
+                      <i className="bi bi-arrow-right"></i>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Partner Section */}
-      <section className="pathnet py-5">
-        <h2 className="section-heading text-center mb-4">PARTNER KAMI</h2>
+      <section className="pathnet">
+        <div className="partner-header">
+          <span className="partner-badge">
+            <i className="bi bi-shield-check"></i> MITRA & REKANAN RESMI
+          </span>
+          <h2 className="partner-heading">PARTNER KAMI</h2>
+          <div className="partner-heading-line"></div>
+          <p className="partner-subtitle">
+            Dipercaya oleh puluhan instansi pemerintah, institusi publik, dan perusahaan terkemuka di seluruh Indonesia.
+          </p>
+        </div>
+
         <div className="brand-rows">
           <div className="marquee" role="list" aria-label="logo marquee top">
             <div className="marquee__track">
               {rowItems.map((item, idx) => (
                 <div key={`top-${item.id}-${idx}`} className="brand-slide" role="listitem">
-                  <div className="client-card d-flex align-items-center justify-content-center">
-                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
+                  <div className="client-card">
+                    <img src={item.url} alt={`Partner ${idx + 1}`} className="client-logo" loading="lazy" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="marquee marquee--reverse mt-3" role="list" aria-label="logo marquee center">
+          <div className="marquee marquee--reverse mt-2" role="list" aria-label="logo marquee center">
             <div className="marquee__track">
               {rowItems1.map((item, idx) => (
                 <div key={`bottom-${item.id}-${idx}`} className="brand-slide" role="listitem">
-                  <div className="client-card d-flex align-items-center justify-content-center">
-                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
+                  <div className="client-card">
+                    <img src={item.url} alt={`Partner B ${idx + 1}`} className="client-logo" loading="lazy" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="marquee" role="list" aria-label="logo marquee top">
+          <div className="marquee mt-2" role="list" aria-label="logo marquee bottom">
             <div className="marquee__track">
               {rowItems3.map((item, idx) => (
-                <div key={`top-${item.id}-${idx}`} className="brand-slide" role="listitem">
-                  <div className="client-card d-flex align-items-center justify-content-center">
-                    <img src={item.url} alt={item.name} className="client-logo" loading="lazy" />
+                <div key={`third-${item.id}-${idx}`} className="brand-slide" role="listitem">
+                  <div className="client-card">
+                    <img src={item.url} alt={`Partner C ${idx + 1}`} className="client-logo" loading="lazy" />
                   </div>
                 </div>
               ))}
@@ -578,25 +479,68 @@ function Units() {
 
       
       {/* CTA Section */}
-      <section className="section-padding">
+      <section className="modern-cta-section">
         <div className="container">
-          <div className="row align-items-center g-4">
-            <div className="col-lg-8">
-              <div className="p-4 rounded-4" style={{ background: 'var(--bg-secondary)' }}>
-                <h4 className="mb-2">Butuh Bantuan?</h4>
-                <p className="text-muted mb-0">Tim support kami siap membantu setiap saat. Hubungi kami melalui WhatsApp atau Telepon.</p>
+          <div className="modern-cta-card">
+            {/* Ambient Background Glows */}
+            <div className="cta-ambient-glow cta-glow-1"></div>
+            <div className="cta-ambient-glow cta-glow-2"></div>
+            <div className="cta-ambient-glow cta-glow-3"></div>
+
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <span className="cta-badge-pill">
+                  <Icon iconClass="bi bi-headset" />
+                  <span className="ms-1">KONSULTASI & DUKUNGAN 24/7</span>
+                </span>
+                <h2 className="cta-title">
+                  Butuh Bantuan atau Solusi Internet Khusus?
+                </h2>
+                <p className="cta-desc">
+                  Tim teknis dan konsultan Mitracom siap membantu Anda memilih paket terbaik, penjadwalan instalasi cepat, hingga kebutuhan integrasi jaringan bisnis dan instansi.
+                </p>
+
+                <div className="cta-features-list">
+                  <span className="cta-feature-item">
+                    <Icon iconClass="bi bi-lightning-charge-fill" />
+                    <span className="ms-1">Instalasi Cepat</span>
+                  </span>
+                  <span className="cta-feature-item">
+                    <Icon iconClass="bi bi-shield-check" />
+                    <span className="ms-1">Dukungan NOC 24/7</span>
+                  </span>
+                  <span className="cta-feature-item">
+                    <Icon iconClass="bi bi-chat-quote-fill" />
+                    <span className="ms-1">Konsultasi Gratis</span>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4 text-lg-end">
-              <div className="d-flex gap-2 justify-content-lg-center">
-                <a href="https://wa.me/6287727999117" className="btn btn-success rounded-pill">
-                  <Icon iconClass="bi bi-whatsapp" />
-                  <span className="ms-2">WhatsApp</span>
-                </a>
-                <a href="tel:+6287727999117" className="btn btn-primary rounded-pill">
-                  <Icon iconClass="bi bi-telephone" />
-                  <span className="ms-2">Telepon</span>
-                </a>
+
+              <div className="col-lg-5">
+                <div className="cta-actions-box">
+                  <a
+                    href="https://wa.me/6287727999117?text=Hallo%20Mitracom,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20internet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn-wa"
+                  >
+                    <Icon iconClass="bi bi-whatsapp" size="fs-5" />
+                    <span>Chat WhatsApp Sekarang</span>
+                  </a>
+
+                  <a
+                    href="tel:+6287727999117"
+                    className="cta-btn-tel"
+                  >
+                    <Icon iconClass="bi bi-telephone-fill" size="fs-6" />
+                    <span>Hubungi Sales (+62 877-2799-9117)</span>
+                  </a>
+
+                  <div className="cta-status-badge">
+                    <span className="cta-pulse-dot"></span>
+                    <span>Customer Support & NOC Siap Melayani 24 Jam</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,224 +1,270 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import ScrollToTop from "./ScrollToTop";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTiktok,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import eLogo1 from "../assets/img/eslog2.png";
 import "../assets/css/footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const servicesLinks = [
-    { name: "Home Broadband", link: "/services" },
-    { name: "Business Internet", link: "/services" },
-    { name: "Wifi Hotspot", link: "/services" },
-    { name: "Dedicated Internet", link: "/services" },
-    { name: "Cloud CCTV", link: "/services" },
+
+  const services = [
+    { name: "Internet Home & Business", icon: "bi bi-wifi", path: "/business" },
+    { name: "IT Solution & Konsultasi", icon: "bi bi-cpu", path: "/konsultan" },
+    { name: "Service Komputer & Laptop", icon: "bi bi-laptop", path: "/hardwaresoftware" },
+    { name: "Maintenance Jaringan", icon: "bi bi-hdd-network", path: "/maintenanceinternet" },
+    { name: "CCTV & Security System", icon: "bi bi-camera-video", path: "/kamera" },
+    { name: "Web & Aplikasi Custom", icon: "bi bi-code-slash", path: "/aplikasiweb" },
   ];
 
-  const hoursItems = [
-    { label: "Office", value: "Senin - Jumat 08.00–17.00" },
-    { label: "Teknis", value: "Senin - Minggu 08.00–24.00" },
-  ];
-
-  const contacts = [
-    { label: "Telepon", display: "+62 821-1777-7187", href: "tel:+6282117777187" },
-    { label: "Email", display: "info@mitracom.id", href: "mailto:info@mitracom.id" },
-    { label: "Website", display: "mitracom.id", href: "https://mitracom.id", external: true },
-  ];
-
-  const columns = [
-    { key: 'brand', type: 'brand' },
-    { key: 'services', type: 'links', title: 'Layanan Kami', items: servicesLinks },
-    { key: 'hours', type: 'hours', title: 'Jam Operasional', items: hoursItems },
-    { key: 'contacts', type: 'contacts', title: 'Kontak Kami', items: contacts },
-  ];
   return (
-    <>
-      <div
-        className="info pt-3 pb-3"
-        style={{
-          backgroundImage:
-            "linear-gradient(-0deg, rgb(158, 156, 32) 10%, rgb(36, 130, 184) 50%)", 
-          backgroundSize: "120% 120%",
-          // borderTop: "3px solid var(--primary-color)",
-          // borderBottom: "3px solid var(--primary-color)",
-          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        }}
-      >
+    <footer className="site-footer">
+      {/* Main Footer Content */}
+      <div className="footer-main">
         <div className="container">
-          <div className="row gy-4">
-            <div className="col-lg-4 col-md-12">
-              <div className="py-1 d-flex flex-column justify-content-between">
-                <div  style={{ height: "40px" }}> {/* Container untuk logo */}
-                  <img src={eLogo1} alt="Logo" style={{ 
-                      height: "35px" 
-                    }}
-                                                        
+          <div className="row gy-4 gx-lg-5">
+            {/* Column 1: Brand & Info */}
+            <div className="col-lg-4 col-md-6">
+              <div className="footer-brand-section">
+                <Link to="/" className="d-inline-block text-decoration-none">
+                  <img
+                    src={eLogo1}
+                    alt="PT Mitracom Solusi Teknologi"
+                    className="footer-brand-logo"
                   />
+                </Link>
+                <div className="footer-company-name">
+                  PT. MITRACOM SOLUSI TEKNOLOGI
                 </div>
-                <address className="footer-contact pt mb-0" style={{ color: "var(--text-light)", fontSize: "1.1rem" }}>
-                  <div className="mypont"><span style={{ marginRight: "4px"}}></span><b>PT. MITRACOM SOLUSI TEKNOLOGI</b></div>
-                  <div><span style={{ marginRight: "4px" }}></span><i>The Best Partner Your Internet Connection</i></div>
-                  {/* <div className="mt-3">
-                    <strong><span style={{ marginRight: "6px" }}></span>Phone:</strong> <span>+62 877-2799-9117</span>
-                  </div> */}
-                  {/* <div>
-                    <strong><span style={{ marginRight: "6px" }}>📩</span>Email:</strong>{" "}
+                <div className="footer-tagline">
+                  &ldquo;The Best Partner for Your Internet Connection&rdquo;
+                </div>
+                <p className="footer-desc">
+                  Penyedia layanan internet broadband berkecepatan tinggi, integrasi
+                  infrastruktur IT, keamanan CCTV, serta pemeliharaan teknis terpercaya
+                  untuk kebutuhan rumah tangga, perkantoran, dan instansi.
+                </p>
+
+                {/* Social Media Links */}
+                <ul className="footer-social-list">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/mitracomindramayu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-social-btn fb"
+                      aria-label="Facebook Mitracom"
+                      title="Facebook"
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/mitracom.id/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-social-btn ig"
+                      aria-label="Instagram Mitracom"
+                      title="Instagram"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@mitracom.id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-social-btn tt"
+                      aria-label="TikTok Mitracom"
+                      title="TikTok"
+                    >
+                      <FontAwesomeIcon icon={faTiktok} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@mitracom_id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-social-btn yt"
+                      aria-label="YouTube Mitracom"
+                      title="YouTube"
+                    >
+                      <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Column 2: Layanan Kami */}
+            <div className="col-lg-3 col-md-6">
+              <h4 className="footer-heading">Layanan Kami</h4>
+              <ul className="footer-links-list">
+                {services.map((service, idx) => (
+                  <li key={idx} className="footer-link-item">
+                    <Link to={service.path} className="footer-nav-link">
+                      <span className="link-icon">
+                        <i className={service.icon}></i>
+                      </span>
+                      <span>{service.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Jam Operasional */}
+            <div className="col-lg-2 col-md-6">
+              <h4 className="footer-heading">Jam Operasional</h4>
+              <div className="operational-block">
+                <div className="hour-card">
+                  <div className="hour-card-header">
+                    <span className="hour-card-title">
+                      <i className="bi bi-building"></i> Office
+                    </span>
+                  </div>
+                  <p className="hour-card-detail">
+                    Senin - Sabtu<br />
+                    <span className="hour-highlight">08:00 - 17:00 WIB</span>
+                  </p>
+                </div>
+
+                <div className="hour-card">
+                  <div className="hour-card-header">
+                    <span className="hour-card-title">
+                      <i className="bi bi-headset"></i> NOC / Support
+                    </span>
+                    <span className="hour-badge-online">
+                      <span className="pulse-dot"></span> 24/7
+                    </span>
+                  </div>
+                  <p className="hour-card-detail">
+                    Senin - Minggu<br />
+                    <span className="hour-highlight">24 Jam Nonstop</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 4: Kontak & Alamat */}
+            <div className="col-lg-3 col-md-6">
+              <h4 className="footer-heading">Kontak Kami</h4>
+              <ul className="footer-contact-list">
+                <li className="footer-contact-item">
+                  <div className="contact-icon-bubble">
+                    <i className="bi bi-telephone-fill"></i>
+                  </div>
+                  <div className="contact-text-wrap">
+                    <span className="contact-label">Telepon / CS</span>
+                    <a
+                      href="tel:+6282117777187"
+                      className="contact-value-link"
+                    >
+                      +62 821-1777-7187
+                    </a>
+                  </div>
+                </li>
+
+                <li className="footer-contact-item">
+                  <div className="contact-icon-bubble">
+                    <i className="bi bi-whatsapp"></i>
+                  </div>
+                  <div className="contact-text-wrap">
+                    <span className="contact-label">WhatsApp Support</span>
+                    <a
+                      href="https://wa.me/6287727999117"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="contact-value-link"
+                    >
+                      +62 877-2799-9117
+                    </a>
+                  </div>
+                </li>
+
+                <li className="footer-contact-item">
+                  <div className="contact-icon-bubble">
+                    <i className="bi bi-envelope-fill"></i>
+                  </div>
+                  <div className="contact-text-wrap">
+                    <span className="contact-label">Email Resmi</span>
                     <a
                       href="mailto:info@mitracom.id"
-                      style={{ color: "#fff", textDecoration: "none", fontWeight: "bold" }}
+                      className="contact-value-link"
                     >
                       info@mitracom.id
                     </a>
-                  </div> */}
-                </address>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="py h-100">
-                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" ,}}>Layanan Kami</h4>
-                <ul className="list-unstyled mx-2" >
-                    {[
-                      { name: "Internet Home & Bussiness", icon: "🏠", link: "/business" },
-                      { name: "IT Solution & Konsultasi", icon: "👥", link: "/konsultan" },
-                      { name: "Service Komputer & Laptop", icon: "🛠️", link: "/hardwaresoftware" },
-                      { name: "Maintenance Jaringan", icon: "📄", link: "/maintenanceinternet" },
-                      { name: "CCTV & Security", icon: "🔒", link: "/kamera" },
-                    ].map((item, idx) => (
-                      <li key={idx}>
-                        <a
-                          href={item.link}
-                          className="footer-link"
-                          style={{
-                            color: "var(--text-light)",
-                            textDecoration: "none",
-                            transition: "color 0.3s, border-bottom 0.3s",
-                            borderBottom: "2px solid transparent",
-                            paddingLeft: "2px",
-                          }}
-                          onMouseOver={e => {
-                            e.target.style.color = "var(--primary-color)";
-                            e.target.style.borderBottom = "2px solid var(--primary-color)";
-                          }}
-                          onMouseOut={e => {
-                            e.target.style.color = "var(--text-light)";
-                            e.target.style.borderBottom = "2px solid transparent";
-                          }}
-                        >
-                          <span style={{ marginRight: "6px" }}>{item.icon}</span>{item.name}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="py h-100">
-                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>
-                  
-                  Jam Operasional
-                </h4>
-                <div className="operational-hours">
-                  <div className="mx-2">
-                    <h5 style={{ color: "#fff", marginBottom: "8px" }}>
-                      
-                      Office
-                    </h5>
-                    <div style={{ color: "var(--text-light)" }}>
-                      <div>
-                        Senin - Sabtu: <span style={{ fontWeight: "500" }}>08:00-17:00</span>
-                      </div>
-                    </div>
                   </div>
-                  <div className="mx-2"> 
-                    <h5 style={{ color: "#fff", marginBottom: "8px" }}>
-                      Technical Support
-                    </h5>
-                    <div style={{ color: "var(--text-light)" }}>
-                      <div>
-                         <span style={{ fontWeight: "500" }}>24 Jam | 7 Hari</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </li>
 
-            <div className="col-lg-2 col-md-12">
-              <div className="py h-8 d-flex flex-column justify-content-between">
-                <h4 className="mx-2" style={{ color: "#fff", letterSpacing: "1px" }}>Kontak Kami</h4>
-                              <ul className="list-unstyled mb-0">
-                    
-                    {[
-                      { name: "Kontak", icon: "📞", link: "/contact" },
-                      { name: "info@mitracom.id", icon: "📩", link: "mailto:info@mitracom.id" }, 
-                      { name: "mitracom.id", icon: "🌐", link: "/" },
-                      { name: "Kebijakan & Privasi", icon: "🔒", link: "/privacy-policy" },
-                    ].map((item, idx) => (
-                      <li key={idx}>
-                        <a
-                          href={item.link}
-                          className="footer-link"
-                          style={{
-                            color: "var(--text-light)",
-                            textDecoration: "none",
-                            transition: "color 0.3s, border-bottom 0.3s",
-                            borderBottom: "2px solid transparent",
-                            paddingLeft: "2px",
-                          }}
-                          onMouseOver={e => {
-                            e.target.style.color = "var(--primary-color)";
-                            e.target.style.borderBottom = "2px solid var(--primary-color)";
-                          }}
-                          onMouseOut={e => {
-                            e.target.style.color = "var(--text-light)";
-                            e.target.style.borderBottom = "2px solid transparent";
-                          }}
-                        >
-                          <span style={{ marginRight: "6px" }}>{item.icon}</span>{item.name}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
+                <li className="footer-contact-item">
+                  <div className="contact-icon-bubble">
+                    <i className="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div className="contact-text-wrap">
+                    <span className="contact-label">Lokasi Kantor</span>
+                    <span className="contact-value-link" style={{ cursor: "default" }}>
+                      Indramayu, Jawa Barat - Indonesia
+                    </span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Credit Section */}
-      <footer className="footer" id="footer-credit" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      {/* Footer Bottom Bar / Copyright */}
+      <div className="footer-bottom-bar">
         <div className="container">
-          <div id="credit-center">
-                       
-            © Copyright {currentYear} PT Mitracom Solusi Teknologi. All Rights Reserved 
-            <a
-              className="sitename"
-              href=""
-              title="Terjangkau hingga pelosok negri"
-              style={{ color: 'var(--text-light)' }}
-            >
-              {" "}
-              
-            </a>
-            
+          <div className="footer-bottom-content">
+            <p className="footer-copy-text">
+              © Copyright 2010 - {currentYear} <strong>PT. MITRACOM SOLUSI TEKNOLOGI</strong>. All Rights Reserved.
+            </p>
+            <ul className="footer-bottom-links">
+              <li>
+                <Link to="/" className="footer-bottom-link">
+                  Beranda
+                </Link>
+              </li>
+              <li className="footer-link-divider">•</li>
+              <li>
+                <Link to="/about" className="footer-bottom-link">
+                  Tentang Kami
+                </Link>
+              </li>
+              <li className="footer-link-divider">•</li>
+              <li>
+                <Link to="/services" className="footer-bottom-link">
+                  Layanan
+                </Link>
+              </li>
+              <li className="footer-link-divider">•</li>
+              <li>
+                <Link to="/contact" className="footer-bottom-link">
+                  Kontak
+                </Link>
+              </li>
+              <li className="footer-link-divider">•</li>
+              <li>
+                <Link to="/privacy-policy" className="footer-bottom-link">
+                  Kebijakan Privasi
+                </Link>
+              </li>
+            </ul>
           </div>
-          {/* <div id="credit-kanan">
-            Design by{" "}
-            <a href="http://www.duniakomputer.net/" title="Mas Kholis" style={{ color: 'var(--text-light)' }}>
-              {" "}
-              MITRACOM
-            </a>
-            <br />
-            powered by <a href="//www.blogger.com"> </a>
-          </div> */}
         </div>
-      </footer>
-      {/* <ScrollToTop /> */}
-    </>
+      </div>
+    </footer>
   );
 };
 
-// ...existing code...
 export default Footer;

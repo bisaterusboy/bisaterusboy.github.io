@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview & Referensi Slider Partner - PT Mitracom Solusi Teknologi</title>
+  <link rel="icon" type="image/svg+xml" href="public/mst.svg">
+  <!-- Google Fonts & Bootstrap Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+      
+      /* Light Mode */
+      --bg-body: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-elevated: #f1f5f9;
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-faint: #94a3b8;
+      
+      /* Brand Accent Colors */
+      --primary: #007bff;
+      --primary-rgb: 0, 123, 255;
+      --primary-hover: #0056b3;
+      --primary-soft: rgba(0, 123, 255, 0.08);
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --accent-purple: #8b5cf6;
+      --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+      --card-shadow-hover: 0 12px 28px -4px rgba(0, 123, 255, 0.16);
+      
+      --marquee-speed: 38s;
+      --mask-width: 12%;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #090d16;
+      --bg-surface: #0f172a;
+      --bg-card: #131d33;
+      --bg-elevated: #1e293b;
+      --border-color: #24324c;
+      --border-subtle: #1e2a40;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --card-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.45);
+      --card-shadow-hover: 0 12px 32px -4px rgba(0, 123, 255, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.5;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION CONTROL BAR
+       ========================================================================== */
+    .preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-top {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #007bff, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ctrl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ctrl-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    /* Tabs Bar */
+    .tabs-bar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 8px 24px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs-bar::-webkit-scrollbar { display: none; }
+
+    .tab-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 50rem;
+      border: 1px solid var(--border-color);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .tab-pill:hover {
+      color: var(--text-main);
+      border-color: var(--text-muted);
+    }
+
+    .tab-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+    }
+
+    .tab-pill .badge-num {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 7px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+    }
+
+    /* ==========================================================================
+       CONTAINER & SECTION COMMONS
+       ========================================================================== */
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .option-card-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 36px 28px;
+      margin-bottom: 48px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .option-card-wrapper:hover {
+      box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08);
+    }
+
+    .option-header {
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .option-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 50rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+
+    .tag-recommended { background: rgba(16, 185, 129, 0.12); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.25); }
+    .tag-modern { background: rgba(0, 123, 255, 0.12); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.25); }
+    .tag-structured { background: rgba(139, 92, 246, 0.12); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.25); }
+    .tag-bold { background: rgba(245, 158, 11, 0.12); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.25); }
+    .tag-compact { background: rgba(6, 182, 212, 0.12); color: #06b6d4; border: 1px solid rgba(6, 182, 212, 0.25); }
+
+    .option-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.4px;
+      margin-bottom: 6px;
+    }
+
+    .option-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .badge-pill-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    /* Masking Edge Gradient on marquee rows */
+    .edge-fade-mask {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black var(--mask-width), black calc(100% - var(--mask-width)), transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black var(--mask-width), black calc(100% - var(--mask-width)), transparent 100%);
+    }
+
+    /* Common Marquee Engine */
+    .mq-container {
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      user-select: none;
+    }
+
+    .mq-track {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 200%;
+      animation: mq-scroll var(--marquee-speed) linear infinite;
+      will-change: transform;
+    }
+
+    .mq-reverse .mq-track {
+      animation-direction: reverse;
+    }
+
+    .mq-container:hover .mq-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes mq-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       OPSI 1: MONOKROM TO COLOR (STRIPE / VERCEL STYLE)
+       ========================================================================== */
+    .op1-preview-stage {
+      background: var(--bg-elevated);
+      border-radius: 16px;
+      padding: 32px 0;
+      border: 1px dashed var(--border-color);
+      position: relative;
+    }
+
+    .op1-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 12px 22px;
+      height: 76px;
+      min-width: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .op1-logo {
+      max-width: 130px;
+      max-height: 44px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.55);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .op1-card:hover {
+      transform: translateY(-4px) scale(1.04);
+      background: #ffffff;
+      border-color: rgba(0, 123, 255, 0.4);
+      box-shadow: 0 12px 24px -4px rgba(0, 123, 255, 0.18);
+    }
+
+    [data-theme="dark"] .op1-card:hover {
+      background: #1e293b;
+      box-shadow: 0 12px 24px -4px rgba(0, 123, 255, 0.3);
+    }
+
+    .op1-card:hover .op1-logo {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       OPSI 2: DUAL-ROW GLASSMORPHISM & VIGNETTE
+       ========================================================================== */
+    .op2-preview-stage {
+      background: radial-gradient(circle at 50% 50%, rgba(0, 123, 255, 0.08) 0%, transparent 80%), var(--bg-elevated);
+      border-radius: 16px;
+      padding: 36px 0;
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .op2-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      border-radius: 18px;
+      padding: 14px 26px;
+      height: 84px;
+      min-width: 185px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] .op2-card {
+      background: rgba(22, 33, 56, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.35);
+    }
+
+    .op2-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #007bff;
+      box-shadow: 0 14px 30px -4px rgba(0, 123, 255, 0.22);
+    }
+
+    [data-theme="dark"] .op2-card:hover {
+      background: rgba(30, 41, 68, 0.95);
+    }
+
+    .op2-logo {
+      max-width: 140px;
+      max-height: 48px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .op2-card:hover .op2-logo {
+      transform: scale(1.08);
+    }
+
+    /* ==========================================================================
+       OPSI 3: CATEGORIZED INTERACTIVE TABS (BENTO GRID)
+       ========================================================================== */
+    .op3-stage {
+      background: var(--bg-elevated);
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid var(--border-color);
+    }
+
+    .op3-filters {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .op3-filter-btn {
+      padding: 8px 18px;
+      border-radius: 50rem;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .op3-filter-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .op3-filter-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    .op3-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .op3-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 16px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: all 0.25s ease;
+      animation: fadeIn 0.35s ease forwards;
+    }
+
+    .op3-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.12);
+      border-color: rgba(0, 123, 255, 0.4);
+    }
+
+    .op3-item img {
+      max-width: 120px;
+      max-height: 42px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.7);
+      transition: all 0.25s ease;
+    }
+
+    .op3-item:hover img {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.08);
+    }
+
+    .op3-badge-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-faint);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ==========================================================================
+       OPSI 4: 3D ANGLED CYBER TICKER
+       ========================================================================== */
+    .op4-preview-stage {
+      background: linear-gradient(135deg, #090e1a 0%, #03060f 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 50px 0;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 123, 255, 0.2);
+    }
+
+    .op4-ambient {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 210, 255, 0.2) 0%, transparent 70%);
+      top: -100px;
+      left: 20%;
+      pointer-events: none;
+    }
+
+    .op4-skew-wrapper {
+      transform: rotate(-2.5deg) scale(1.04);
+      margin: 10px 0;
+    }
+
+    .op4-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 12px 24px;
+      height: 78px;
+      min-width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .op4-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #00e5ff;
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.35);
+    }
+
+    .op4-logo {
+      max-width: 130px;
+      max-height: 44px;
+      object-fit: contain;
+      filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+    }
+
+    /* ==========================================================================
+       OPSI 5: SINGLE-ROW COMPACT RIBBON + TRUST METRIC
+       ========================================================================== */
+    .op5-preview-stage {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px 0 28px;
+      position: relative;
+    }
+
+    .op5-header-ribbon {
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .op5-pill-metric {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 123, 255, 0.08);
+      border: 1px solid rgba(0, 123, 255, 0.2);
+      padding: 6px 16px;
+      border-radius: 50rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .op5-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 10px 20px;
+      height: 64px;
+      min-width: 155px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+
+    .op5-card:hover {
+      background: var(--bg-card);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 123, 255, 0.15);
+    }
+
+    .op5-logo {
+      max-width: 120px;
+      max-height: 38px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: all 0.25s ease;
+    }
+
+    .op5-card:hover .op5-logo {
+      filter: grayscale(0%) opacity(1);
+    }
+
+    /* ==========================================================================
+       COMPARISON TABLE & CODE MODAL
+       ========================================================================== */
+    .comparison-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 32px;
+      margin-top: 50px;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comp-table th {
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .rating-stars {
+      color: #f59e0b;
+      font-size: 0.85rem;
+    }
+
+    /* Floating quick jump button */
+    .btn-apply-direct {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .btn-apply-direct:hover {
+      background: var(--primary-hover);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .header-top { flex-direction: column; align-items: flex-start; }
+      .main-container { padding: 24px 14px 60px; }
+      .option-card-wrapper { padding: 22px 16px; }
+      .option-title { font-size: 1.25rem; }
+      .comp-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <!-- PREVIEW CONTROL HEADER -->
+  <header class="preview-header">
+    <div class="header-top">
+      <div class="brand-wrap">
+        <div class="brand-badge">M</div>
+        <div>
+          <h1 class="brand-title">Mitracom Slider Partner Showcase</h1>
+          <p class="brand-subtitle">5 Pilihan Desain & Referensi Slider Logo Rekanan Resmi</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Speed Control -->
+        <button class="ctrl-btn" id="speedToggleBtn" onclick="toggleSpeed()" title="Ubah Kecepatan Marquee">
+          <i class="bi bi-speedometer2"></i>
+          <span id="speedLabel">Kecepatan: Normal</span>
+        </button>
+
+        <!-- Pause / Play -->
+        <button class="ctrl-btn" id="playPauseBtn" onclick="togglePlayPause()" title="Jeda / Putar Marquee">
+          <i class="bi bi-pause-fill" id="playPauseIcon"></i>
+          <span id="playPauseLabel">Pause</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="ctrl-btn" onclick="toggleTheme()" title="Ubah Tema Light/Dark">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+          <span id="themeLabel">Dark Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TABS BAR -->
+    <div class="tabs-bar">
+      <button class="tab-pill active" onclick="filterOption('all')">
+        <i class="bi bi-grid-fill"></i> Tampilkan Semua (Overview)
+      </button>
+      <button class="tab-pill" onclick="filterOption('op1')">
+        <span class="badge-num">1</span> Opsi 1: Monokrom to Color (Stripe/Vercel)
+      </button>
+      <button class="tab-pill" onclick="filterOption('op2')">
+        <span class="badge-num">2</span> Opsi 2: 2-Baris Glassmorphism
+      </button>
+      <button class="tab-pill" onclick="filterOption('op3')">
+        <span class="badge-num">3</span> Opsi 3: Tab Kategori Interaktif
+      </button>
+      <button class="tab-pill" onclick="filterOption('op4')">
+        <span class="badge-num">4</span> Opsi 4: 3D Angled Cyber
+      </button>
+      <button class="tab-pill" onclick="filterOption('op5')">
+        <span class="badge-num">5</span> Opsi 5: Single-Row Ribbon
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="main-container">
+
+    <!-- ======================================================================
+         OPSI 1: MONOKROM TO COLOR (RECOMMENDED)
+         ====================================================================== -->
+    <section class="option-card-wrapper" id="section-op1">
+      <div class="option-header">
+        <div>
+          <span class="option-tag tag-recommended">
+            <i class="bi bi-star-fill"></i> Paling Direkomendasikan
+          </span>
+          <h2 class="option-title">Opsi 1: Sleek Monokrom & Vivid Color on Hover</h2>
+          <p class="option-desc">
+            Semua logo tampil dalam format monokrom halus (grayscale 60% opacity) yang tenang dan menyatu dengan tema. Saat kursor diarahkan, logo kembali menjadi berwarna penuh (*vivid*), kartu terangkat halus, dan marquee berhenti otomatis agar nyaman dilihat.
+          </p>
+        </div>
+        <div class="badge-pill-soft">
+          <i class="bi bi-check-circle-fill text-success"></i> Standar Vercel & Stripe
+        </div>
+      </div>
+
+      <!-- Preview Stage -->
+      <div class="op1-preview-stage edge-fade-mask">
+        <!-- Row 1: Left -->
+        <div class="mq-container">
+          <div class="mq-track">
+            <div class="op1-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/ntt.png" alt="NTT" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/mvnet.png" alt="MVNet" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/tis.png" alt="TIS" class="op1-logo"></div>
+            <!-- Duplikasi untuk infinite marquee -->
+            <div class="op1-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/ntt.png" alt="NTT" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/mvnet.png" alt="MVNet" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/tis.png" alt="TIS" class="op1-logo"></div>
+          </div>
+        </div>
+
+        <!-- Row 2: Reverse Right -->
+        <div class="mq-container mq-reverse" style="margin-top: 14px;">
+          <div class="mq-track">
+            <div class="op1-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD Indramayu" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/polytama.png" alt="PT Polytama" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/djp.png" alt="DJP" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Ditpolairud.png" alt="Ditpolairud" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/DPUPR.jpg" alt="DPUPR" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Puskesmas.png" alt="Puskesmas" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Wifique.png" alt="Wifique" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/pulsanet.png" alt="Pulsanet" class="op1-logo"></div>
+            <!-- Duplikasi untuk infinite marquee -->
+            <div class="op1-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD Indramayu" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/polytama.png" alt="PT Polytama" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/djp.png" alt="DJP" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Ditpolairud.png" alt="Ditpolairud" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/DPUPR.jpg" alt="DPUPR" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Puskesmas.png" alt="Puskesmas" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/Wifique.png" alt="Wifique" class="op1-logo"></div>
+            <div class="op1-card"><img src="./src/assets/img/partner/pulsanet.png" alt="Pulsanet" class="op1-logo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         OPSI 2: DUAL-ROW GLASSMORPHISM
+         ====================================================================== -->
+    <section class="option-card-wrapper" id="section-op2">
+      <div class="option-header">
+        <div>
+          <span class="option-tag tag-modern">
+            <i class="bi bi-droplet-fill"></i> Modern & Elegan
+          </span>
+          <h2 class="option-title">Opsi 2: Dual-Row Glassmorphism & Soft Ambient Vignette</h2>
+          <p class="option-desc">
+            Merampingkan 3 baris menjadi 2 baris yang seimbang dan hemat ruang vertikal. Menggunakan material kartu kaca buram (*glassmorphism*) dengan pantulan halus dan efek fade tepi yang lebar.
+          </p>
+        </div>
+        <div class="badge-pill-soft">
+          <i class="bi bi-aspect-ratio"></i> Hemat Ruang Vertikal 35%
+        </div>
+      </div>
+
+      <!-- Preview Stage -->
+      <div class="op2-preview-stage edge-fade-mask">
+        <!-- Row 1 -->
+        <div class="mq-container">
+          <div class="mq-track">
+            <div class="op2-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/hsp.png" alt="HSP" class="op2-logo"></div>
+            <!-- Duplicate -->
+            <div class="op2-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/hsp.png" alt="HSP" class="op2-logo"></div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="mq-container mq-reverse" style="margin-top: 16px;">
+          <div class="mq-track">
+            <div class="op2-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD Indramayu" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/grahasudirman.png" alt="Graha Sudirman" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Ditpolairud.png" alt="Ditpolairud" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/smr.png" alt="SMR" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Wifique.png" alt="Wifique" class="op2-logo"></div>
+            <!-- Duplicate -->
+            <div class="op2-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD Indramayu" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/grahasudirman.png" alt="Graha Sudirman" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Ditpolairud.png" alt="Ditpolairud" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/smr.png" alt="SMR" class="op2-logo"></div>
+            <div class="op2-card"><img src="./src/assets/img/partner/Wifique.png" alt="Wifique" class="op2-logo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         OPSI 3: CATEGORIZED INTERACTIVE TABS (BENTO GRID)
+         ====================================================================== -->
+    <section class="option-card-wrapper" id="section-op3">
+      <div class="option-header">
+        <div>
+          <span class="option-tag tag-structured">
+            <i class="bi bi-diagram-3-fill"></i> Terstruktur & Kredibilitas Tinggi
+          </span>
+          <h2 class="option-title">Opsi 3: Categorized Tabs (Filter Interaktif Berbasis Sektor)</h2>
+          <p class="option-desc">
+            Memberikan kontrol kepada pengunjung untuk memfilter mitra berdasarkan sektor: <strong>Pemerintah & BUMN</strong>, <strong>Telekomunikasi & Jaringan</strong>, atau <strong>Korporat Swasta</strong>. Sangat kuat untuk memenangkan tender dan meyakinkan institusi pemerintah!
+          </p>
+        </div>
+        <div class="badge-pill-soft">
+          <i class="bi bi-shield-lock-fill"></i> Social Proof Maksimal
+        </div>
+      </div>
+
+      <!-- Stage with Tabs -->
+      <div class="op3-stage">
+        <div class="op3-filters">
+          <button class="op3-filter-btn active" onclick="filterCategory('all', this)">
+            <i class="bi bi-grid-fill"></i> Semua Mitra (<span id="count-all">16</span>)
+          </button>
+          <button class="op3-filter-btn" onclick="filterCategory('gov', this)">
+            <i class="bi bi-bank2"></i> Instansi Pemerintah (<span id="count-gov">6</span>)
+          </button>
+          <button class="op3-filter-btn" onclick="filterCategory('telco', this)">
+            <i class="bi bi-router-fill"></i> Telco & Network Peer (<span id="count-telco">6</span>)
+          </button>
+          <button class="op3-filter-btn" onclick="filterCategory('corp', this)">
+            <i class="bi bi-buildings-fill"></i> Korporat & Bisnis (<span id="count-corp">4</span>)
+          </button>
+        </div>
+
+        <div class="op3-grid" id="op3Grid">
+          <!-- Pemerintah -->
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi">
+            <span class="op3-badge-label">Kementerian Komdigi</span>
+          </div>
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo">
+            <span class="op3-badge-label">Diskominfo Indramayu</span>
+          </div>
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/Setda.png" alt="Setda">
+            <span class="op3-badge-label">Setda Kabupaten</span>
+          </div>
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/rsud.png" alt="RSUD Indramayu">
+            <span class="op3-badge-label">RSUD Indramayu</span>
+          </div>
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan">
+            <span class="op3-badge-label">Kejaksaan Negeri</span>
+          </div>
+          <div class="op3-item" data-cat="gov">
+            <img src="./src/assets/img/partner/Ditpolairud.png" alt="Ditpolairud">
+            <span class="op3-badge-label">Ditpolairud</span>
+          </div>
+
+          <!-- Telco / Jaringan -->
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/apjii.png" alt="APJII">
+            <span class="op3-badge-label">Asosiasi ISP (APJII)</span>
+          </div>
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/iforte.png" alt="iForte">
+            <span class="op3-badge-label">iForte Solusi</span>
+          </div>
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta">
+            <span class="op3-badge-label">Lintasarta BUMN</span>
+          </div>
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik">
+            <span class="op3-badge-label">MikroTik Certified</span>
+          </div>
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus">
+            <span class="op3-badge-label">Cyberplus Net</span>
+          </div>
+          <div class="op3-item" data-cat="telco">
+            <img src="./src/assets/img/partner/ntt.png" alt="NTT">
+            <span class="op3-badge-label">NTT Communications</span>
+          </div>
+
+          <!-- Korporat & Bisnis -->
+          <div class="op3-item" data-cat="corp">
+            <img src="./src/assets/img/partner/polytama.png" alt="PT Polytama">
+            <span class="op3-badge-label">PT Polytama Propindo</span>
+          </div>
+          <div class="op3-item" data-cat="corp">
+            <img src="./src/assets/img/partner/grahasudirman.png" alt="Graha Sudirman">
+            <span class="op3-badge-label">Graha Sudirman</span>
+          </div>
+          <div class="op3-item" data-cat="corp">
+            <img src="./src/assets/img/partner/smr.png" alt="Semesta Marga Raya">
+            <span class="op3-badge-label">PT Semesta Marga Raya</span>
+          </div>
+          <div class="op3-item" data-cat="corp">
+            <img src="./src/assets/img/partner/thc.png" alt="THC">
+            <span class="op3-badge-label">Trans Hybrid Corp</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         OPSI 4: 3D ANGLED CYBER TICKER
+         ====================================================================== -->
+    <section class="option-card-wrapper" id="section-op4">
+      <div class="option-header">
+        <div>
+          <span class="option-tag tag-bold">
+            <i class="bi bi-lightning-charge-fill"></i> Futuristic & Bold
+          </span>
+          <h2 class="option-title">Opsi 4: 3D Angled Cyber Ticker (Gaya High-Tech Event)</h2>
+          <p class="option-desc">
+            Slider dimiringkan secara presisi dengan sudut perspektif 3D (-2.5 derajat) dengan latar gelap bertabur ambient cyan glow. Tampilan ini memberi kesan Mitracom sebagai ISP generasi mutakhir yang tangguh dan mutakhir.
+          </p>
+        </div>
+        <div class="badge-pill-soft">
+          <i class="bi bi-gpu-card"></i> High Production Value
+        </div>
+      </div>
+
+      <!-- Preview Stage -->
+      <div class="op4-preview-stage edge-fade-mask">
+        <div class="op4-ambient"></div>
+        <div class="op4-skew-wrapper">
+          <!-- Row 1 -->
+          <div class="mq-container">
+            <div class="mq-track">
+              <div class="op4-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op4-logo"></div>
+              <!-- Duplicate -->
+              <div class="op4-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/cyberplus.png" alt="Cyberplus" class="op4-logo"></div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="mq-container mq-reverse" style="margin-top: 18px;">
+            <div class="mq-track">
+              <div class="op4-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/djp.png" alt="DJP" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/grahasudirman.png" alt="Graha" class="op4-logo"></div>
+              <!-- Duplicate -->
+              <div class="op4-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/djp.png" alt="DJP" class="op4-logo"></div>
+              <div class="op4-card"><img src="./src/assets/img/partner/grahasudirman.png" alt="Graha" class="op4-logo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         OPSI 5: SINGLE-ROW COMPACT RIBBON
+         ====================================================================== -->
+    <section class="option-card-wrapper" id="section-op5">
+      <div class="option-header">
+        <div>
+          <span class="option-tag tag-compact">
+            <i class="bi bi-phone-fill"></i> Ringkas & Ramah Mobile
+          </span>
+          <h2 class="option-title">Opsi 5: Single-Row Compact Ribbon + Trust Metric Badge</h2>
+          <p class="option-desc">
+            Satu baris tunggal horizontal yang berjalan lembut tanpa memakan tinggi layar. Disertai chip metrik kredibilitas di bagian atas. Sangat efektif untuk mempertahankan fokus pengunjung ke paket internet & tombol konversi.
+          </p>
+        </div>
+        <div class="badge-pill-soft">
+          <i class="bi bi-arrows-collapse"></i> Minimalis 100%
+        </div>
+      </div>
+
+      <!-- Preview Stage -->
+      <div class="op5-preview-stage edge-fade-mask">
+        <div class="op5-header-ribbon">
+          <div class="op5-pill-metric">
+            <i class="bi bi-award-fill"></i> Dipercaya Oleh 50+ Instansi Pemerintah, BUMN & Swasta
+          </div>
+        </div>
+
+        <div class="mq-container">
+          <div class="mq-track">
+            <div class="op5-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op5-logo"></div>
+            <!-- Duplicate -->
+            <div class="op5-card"><img src="./src/assets/img/partner/apjii.png" alt="APJII" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/iforte.png" alt="iForte" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/Komdigi.png" alt="Komdigi" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/lintasarta.png" alt="Lintasarta" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/rsud.png" alt="RSUD" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/Setda.png" alt="Setda" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/mikrotik.png" alt="MikroTik" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/polytama.png" alt="Polytama" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/diskominfo.jpg" alt="Diskominfo" class="op5-logo"></div>
+            <div class="op5-card"><img src="./src/assets/img/partner/kejaksaan.png" alt="Kejaksaan" class="op5-logo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         COMPARISON TABLE & SUMMARY
+         ====================================================================== -->
+    <section class="comparison-section">
+      <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 8px;">
+        <i class="bi bi-clipboard2-check-fill text-primary"></i> Rekomendasi Pilihan Terbaik
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+        Bandingkan karakteristik teknis dan nilai visual masing-masing opsi sebelum diterapkan pada halaman utama website Mitracom:
+      </p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Opsi Desain</th>
+            <th>Karakter Visual</th>
+            <th>Tinggi Layar</th>
+            <th>Nilai Kerapihan</th>
+            <th>Rekomendasi Penggunaan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Opsi 1: Monokrom to Color</strong></td>
+            <td>Elegan, Netral, Tech Vercel</td>
+            <td>Sedang (~200px)</td>
+            <td class="rating-stars">★★★★★ (5/5)</td>
+            <td><strong>Sangat Direkomendasikan</strong> untuk citra korporat profesional kelas atas.</td>
+          </tr>
+          <tr>
+            <td><strong>Opsi 2: Dual-Row Glassmorphism</strong></td>
+            <td>Modern, Segar, Glossy</td>
+            <td>Sedang (~220px)</td>
+            <td class="rating-stars">★★★★☆ (4/5)</td>
+            <td>Cocok jika tetap menyukai bentuk kartu dengan efek kaca kekinian.</td>
+          </tr>
+          <tr>
+            <td><strong>Opsi 3: Tab Kategori Interaktif</strong></td>
+            <td>Informatif, Kredibel, Terstruktur</td>
+            <td>Fleksibel Grid</td>
+            <td class="rating-stars">★★★★★ (5/5)</td>
+            <td>Cocok jika ingin menonjolkan portofolio klien instansi dinas & BUMN.</td>
+          </tr>
+          <tr>
+            <td><strong>Opsi 4: 3D Angled Cyber</strong></td>
+            <td>Futuris, Bold, High Energy</td>
+            <td>Sedang (~250px)</td>
+            <td class="rating-stars">★★★☆☆ (3.5/5)</td>
+            <td>Cocok untuk nuansa gaming / tech summit / next-gen cyber ISP.</td>
+          </tr>
+          <tr>
+            <td><strong>Opsi 5: Single-Row Ribbon</strong></td>
+            <td>Minimalis, Ringkas, Cepat</td>
+            <td>Sangat Kecil (~120px)</td>
+            <td class="rating-stars">★★★★☆ (4/5)</td>
+            <td>Paling efisien jika ingin fokus konversi ke tabel paket harga.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script>
+    // Tab Filter Logic
+    function filterOption(opId) {
+      document.querySelectorAll('.tab-pill').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const sections = ['op1', 'op2', 'op3', 'op4', 'op5'];
+      if (opId === 'all') {
+        sections.forEach(id => {
+          const el = document.getElementById('section-' + id);
+          if (el) el.style.display = 'block';
+        });
+      } else {
+        sections.forEach(id => {
+          const el = document.getElementById('section-' + id);
+          if (el) {
+            el.style.display = (id === opId) ? 'block' : 'none';
+          }
+        });
+      }
+    }
+
+    // Category Filter for Option 3
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.op3-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.op3-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Speed Control
+    let currentSpeed = 38;
+    const speedLevels = [
+      { speed: '55s', label: 'Kecepatan: Lambat' },
+      { speed: '38s', label: 'Kecepatan: Normal' },
+      { speed: '20s', label: 'Kecepatan: Cepat' }
+    ];
+    let speedIdx = 1;
+
+    function toggleSpeed() {
+      speedIdx = (speedIdx + 1) % speedLevels.length;
+      document.documentElement.style.setProperty('--marquee-speed', speedLevels[speedIdx].speed);
+      document.getElementById('speedLabel').textContent = speedLevels[speedIdx].label;
+    }
+
+    // Play / Pause Control
+    let isPaused = false;
+    function togglePlayPause() {
+      isPaused = !isPaused;
+      const tracks = document.querySelectorAll('.mq-track');
+      tracks.forEach(track => {
+        track.style.animationPlayState = isPaused ? 'paused' : 'running';
+      });
+
+      const icon = document.getElementById('playPauseIcon');
+      const label = document.getElementById('playPauseLabel');
+      if (isPaused) {
+        icon.className = 'bi bi-play-fill';
+        label.textContent = 'Play';
+      } else {
+        icon.className = 'bi bi-pause-fill';
+        label.textContent = 'Pause';
+      }
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+
+      const icon = document.getElementById('themeIcon');
+      const label = document.getElementById('themeLabel');
+      if (newTheme === 'dark') {
+        icon.className = 'bi bi-sun-fill';
+        label.textContent = 'Light Mode';
+      } else {
+        icon.className = 'bi bi-moon-stars-fill';
+        label.textContent = 'Dark Mode';
+      }
+    }
+  </script>
+</body>
+</html>

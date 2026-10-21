@@ -1,0 +1,456 @@
+/* ==========================================================================
+   CONTACT PAGE STYLES - PT MITRACOM SOLUSI TEKNOLOGI
+   ========================================================================== */
+
+.contact-page {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ambient Glow */
+.contact-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 123, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header Section */
+.contact-header {
+  position: relative;
+  z-index: 1;
+  padding: 3.5rem 0 2rem;
+  text-align: center;
+}
+
+.contact-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.15rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.contact-breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.contact-breadcrumb span.current {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(0, 123, 255, 0.2);
+  border-radius: 50rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.contact-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Cards Grid */
+.contact-cards-section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 3.5rem;
+}
+
+.contact-method-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-method-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contact-method-card:hover::before {
+  opacity: 1;
+}
+
+/* Theme variations for cards */
+.contact-method-card.whatsapp {
+  color: #25d366;
+}
+.contact-method-card.whatsapp:hover {
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
+.contact-method-card.email {
+  color: #007bff;
+}
+.contact-method-card.email:hover {
+  border-color: rgba(0, 123, 255, 0.4);
+}
+
+.contact-method-card.phone {
+  color: #f59e0b;
+}
+.contact-method-card.phone:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.contact-icon-bubble {
+  width: 12px;
+  height: 33px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.35s ease;
+}
+
+.contact-method-card.whatsapp .contact-icon-bubble {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;
+}
+
+.contact-method-card.email .contact-icon-bubble {
+  background: rgba(0, 123, 255, 0.12);
+  color: #007bff;
+}
+
+.contact-method-card.phone .contact-icon-bubble {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.contact-method-card:hover .contact-icon-bubble {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.contact-card-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.contact-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.75rem;
+  width: fit-content;
+}
+
+.contact-card-badge i {
+  color: currentColor;
+}
+
+.contact-action-btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.contact-method-card.whatsapp .contact-action-btn {
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+.contact-method-card.whatsapp .contact-action-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.contact-method-card.email .contact-action-btn {
+  background: #007bff;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+}
+.contact-method-card.email .contact-action-btn:hover {
+  background: #0069d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.contact-method-card.phone .contact-action-btn {
+  background: #f59e0b;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+.contact-method-card.phone .contact-action-btn:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  text-decoration: none;
+}
+
+/* Info & Interactive Consultation Box */
+.contact-detail-grid {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 3.5rem;
+}
+
+.contact-info-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.panel-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.panel-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.panel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.panel-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.panel-item-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: rgba(0, 123, 255, 0.08);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.panel-item-content h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.panel-item-content p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Map Card Section */
+.contact-map-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.map-header-left h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.map-header-left p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.map-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 50rem;
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.map-directions-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.map-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Form Panel */
+.contact-form-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.form-control-custom {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.65rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-control-custom:focus {
+  background-color: var(--bg-card);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+  color: var(--text-primary);
+}
+
+.form-label-custom {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    padding: 2.5rem 0 1.5rem;
+  }
+  .map-frame-wrapper {
+    height: 320px;
+  }
+}
